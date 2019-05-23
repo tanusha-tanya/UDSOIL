@@ -1,4 +1,12 @@
 @import
+  'owl.carousel',
+  'owl.theme.default',
   'breackpoints',
   'typography',
-  'common'
+  'variables', 
+  'common',
+  '../templates/components/topslider/topslider',
+  '../templates/components/headerLogo/headerLogo',
+  '../templates/components/headerLang/headerLang',
+  '../templates/components/gamburger/gamburger',
+  '../templates/components/headerWidget/headerWidget'

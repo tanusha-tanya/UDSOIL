@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    margin: 0 auto;
+    font-family: $font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #282828;
+}
+.header{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;    
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 13px; 
+        padding-bottom: 11px; 
+        position: relative;  
+        align-items: center;
+    }
+}
+.container{
+    position: relative;
+    padding: 0 32px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

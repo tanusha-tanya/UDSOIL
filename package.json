@@ -1,21 +1,13 @@
 {
-  "name": "udsoil",
+  "name": "UDSOIL",
   "version": "1.0.0",
-  "description": "UDSOIL\r gulp s - to run server\r gulp - to build",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tanusha-tanya/UDSOIL.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tanusha-tanya/UDSOIL/issues"
-  },
-  "homepage": "https://github.com/tanusha-tanya/UDSOIL#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
     "gulp-babel": "^7.0.1",
