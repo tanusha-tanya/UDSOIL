@@ -10,11 +10,13 @@ body{
     font-size: 14px;
     line-height: 24px;
     color: #282828;
+    overflow-x: hidden;
 }
 .header{
     position: relative;
     width: 100%;
-    margin: 0 auto;    
+    margin: 0 auto;  
+    height: 550px;  
     &-top{
         display: flex;
         justify-content: space-between;
@@ -30,4 +32,8 @@ body{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+}
+.articles-items{
+    background: #FAFBFC;
+    padding: 5px 32px;
 }

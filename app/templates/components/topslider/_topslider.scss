@@ -56,7 +56,43 @@
     }
     &-icon{
         position: absolute;
-        right: 0;
-        bottom: 0;
+        left: 0;
+        bottom: -85px;
+    }
+    &-arrows{
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 -8px;
+        width: calc(100% - 30px);
+        .owl-prev, .owl-next{
+            width: 48px;
+            height: 48px;
+            background: #FFCC08;
+            margin: 0 4px;
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            padding-top: 15px;
+            cursor: pointer; 
+            span{
+                font-size: 0;
+                display: inline-block;                
+                width: 9px;
+                height: 9px;                            
+            }
+        }
+        .owl-prev span{
+            transform: rotate(-40deg);
+            border-top: 3px #282828 solid;
+            border-left:  3px #282828 solid;    
+        }
+        .owl-next span{
+            transform: rotate(40deg);
+            border-top: 3px #282828 solid;
+            border-right:  3px #282828 solid;    
+        }
     }
 }

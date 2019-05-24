@@ -1,0 +1,7 @@
+mixin newsPreview(image, text, date)
+    article.articles-item
+        .articles-preview
+            img.articles-img(src=image)
+        .articles-notice
+            p= text            
+        time.articles-date= date

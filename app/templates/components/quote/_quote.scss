@@ -1,0 +1,47 @@
+.quote{
+    background: #FFFDF9;
+    padding: 56px 32px;
+    position: relative;
+    margin: 0 auto;
+    &-text{
+        &:before{
+            content: '';
+            width: 36px;
+            height: 32px;
+            display: block;
+            background: url('../images/svg/quote.svg');
+            margin-bottom: 27px;
+        }  
+        p{
+           margin: 27px 0;
+           font-weight: 500; 
+        }
+    }
+    &-pick{
+        height: auto;
+        position: relative;
+        line-height: 0;
+        margin: 15px 0;
+        &:after{
+            content: '';
+            width: calc(100% - 40px);
+            height: 4px;
+            background: #FFCC08;
+            display: block;
+        }
+    }
+    &-img{
+        width: 100%;
+        height: auto;
+    }
+    &-figcaption{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        span{
+            display: inline-block;
+            font-size: 12px;
+            color: #828282;
+        }
+    }
+}

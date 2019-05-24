@@ -6,6 +6,9 @@ $(document).ready(function() {
         loop:true,
         items:1,
         smartSpeed:450,
-        nav: false     
+        dots: false,
+        nav: true,
+        navElement: 'div',
+        navContainer: '.topslider-arrows',
     });
 });

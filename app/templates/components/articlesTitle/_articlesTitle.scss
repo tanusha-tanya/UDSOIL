@@ -1,0 +1,22 @@
+.articles-title{
+    position: relative;
+    height: 56px;
+    &:before{
+        content: '';
+        background: #FFCC08;
+        position: absolute;
+        left: 0;
+        right: 32px;
+        top: 0;
+        bottom: 0;
+        display: block;
+        z-index: -1;
+    }
+} 
+.articles-h2{
+    position: absolute;
+    bottom: -3px;
+    left: 32px;
+    display: block;
+    font-size: 24px;
+}

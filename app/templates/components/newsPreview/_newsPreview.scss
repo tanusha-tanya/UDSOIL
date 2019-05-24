@@ -1,0 +1,39 @@
+.articles{
+    &-item{
+        position: relative;
+        margin: 27px auto;
+    }
+    &-preview{
+        overflow: hidden;
+        position: relative;
+        height: 0;
+        padding-top: 52%;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+    &-img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &-notice{
+        margin-top: 15px;
+        margin-bottom: 10px;
+        p{
+            font-weight: 700;             
+            line-height: 18px;
+            font-size: 14px;
+            margin: 10px 0;
+        }        
+    }
+    &-date{
+        color: #9A9A9A;
+        font-size: 12px;  
+        font-weight: 500;         
+    }
+}
