@@ -11,4 +11,13 @@
         left: 0;
         right: 0;
     }
+    &-title{
+       color: #000; 
+       position: absolute;
+       z-index: 999;
+       top: 47px;
+       left: 32px;
+       font-weight: 600;
+       font-size: 24px;
+    }
 }
