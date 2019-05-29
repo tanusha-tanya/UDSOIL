@@ -18,7 +18,7 @@
             height: 4px;
             background: #FFCC08;
             bottom: -10px;
-        }
+        } 
     }
     &-content{
         p{
@@ -30,6 +30,17 @@
         position: relative;
         height: 0;
         padding-top:62%;
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            width: 25px;
+            height: 25px;
+            background: #FFCC08;
+            display: block;
+            z-index: 1;
+        }
     }
     &-youtube{
         position: absolute;
@@ -54,17 +65,6 @@
             top: calc(50% - 20px);
             left: calc(50% - 20px);
             cursor: pointer;
-        }
-        &:after{
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            right: -4px;
-            width: 25px;
-            height: 25px;
-            background: #FFCC08;
-            display: block;
-            z-index: 1;
         }
     }
 }
