@@ -9,6 +9,8 @@
     &-graph{
         margin: 20px 0;
         position: relative;
+        box-sizing: border-box;
+        height: 282px;
     }  
     &-content{
         background: #FAFBFC;
@@ -59,7 +61,7 @@
     }
     &-canvas{
         width: calc(100% - 30px);
-        height: 282px;
+        
         margin-left: 30px;
     }
 }
