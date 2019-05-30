@@ -10,13 +10,17 @@
     z-index: -1;
     &-item{
         width: 100%;
-        height: 100%;
+        height: 550px;
         box-sizing: border-box;
         background-size: cover;
         background-position: 32% top;
         background-repeat: no-repeat;
         padding: 130px 31px 103px 32px;
         position: relative;
+        @media(min-width: $tablet){
+            padding: 158px 72px 225px 72px;
+            height: 640px;
+        }
         &:before{
             content: '';
             background: rgba(40, 40, 40, 0.50);
@@ -26,7 +30,7 @@
             top: 0;
             bottom: 0;
             left: 0;
-            right: 0;
+            right: 0;            
         }
     }
     &-container{
@@ -41,6 +45,10 @@
             left: -31px;
             width: 20px;
             top: 12px;
+            @media(min-width: $tablet){
+                width: 48px;
+                left: -72px;
+            }
         }
     }
     &-title{
@@ -48,16 +56,28 @@
         line-height: 32px;
         font-weight: 500;
         color: #fff;
+        @media(min-width: $tablet){
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 40px;
+        }
     }
     &-text{
         font-weight: 300;
         color: #fff;
         margin: 16px 0;
+        @media(min-width: $tablet){
+            max-width: 500px;
+        }
     }
     &-icon{
         position: absolute;
-        left: 0;
-        bottom: -85px;
+        left: 30px;
+        bottom: 40px;
+        @media(min-width: $tablet){
+            left: 72px;
+            bottom: 48px;
+        }
     }
     &-arrows{
         position: absolute;
@@ -66,7 +86,11 @@
         display: flex;
         justify-content: flex-end;
         margin: 0 -8px;
-        width: calc(100% - 30px);
+        width: calc(100% - 30px); 
+        @media(min-width: $tablet){
+            bottom: 48px;
+            right: 72px;
+        }        
         .owl-prev, .owl-next{
             width: 48px;
             height: 48px;
@@ -76,6 +100,11 @@
             display: inline-block;
             text-align: center;
             padding-top: 15px;
+            @media(min-width: $tablet){
+                width: 64px;
+                height: 64px;
+                padding-top: 23px;
+            }   
             cursor: pointer; 
             span{
                 font-size: 0;

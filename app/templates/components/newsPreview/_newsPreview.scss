@@ -2,6 +2,9 @@
     &-item{
         position: relative;
         margin: 27px auto;
+        @media(min-width: $tablet){
+            display: flex;
+        }
     }
     &-preview{
         overflow: hidden;
@@ -10,7 +13,6 @@
         padding-top: 52%;
         width: 100%;
         box-sizing: border-box;
-
     }
     &-img{
         width: 100%;
@@ -24,6 +26,9 @@
     &-notice{
         margin-top: 15px;
         margin-bottom: 10px;
+        @media(min-width: $tablet){
+            margin-top: -5px;
+        }
         p{
             font-weight: 700;             
             line-height: 18px;
@@ -35,5 +40,13 @@
         color: #9A9A9A;
         font-size: 12px;  
         font-weight: 500;         
+    }
+    &-left{
+        @media(min-width: $tablet){
+            width: 224px;
+            margin-right: 15px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
     }
 }

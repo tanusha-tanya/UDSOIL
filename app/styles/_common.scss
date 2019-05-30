@@ -11,12 +11,28 @@ body{
     line-height: 24px;
     color: #282828;
     overflow-x: hidden;
+    &.dark{
+        overflow-y: hidden; 
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0,0,0, 0.5);
+            z-index: 800;
+        } 
+    }
 }
 .header{
     position: relative;
     width: 100%;
     margin: 0 auto;  
     height: 550px;  
+    @media(min-width: $tablet){
+        height: 640px;  
+    }
     &-top{
         display: flex;
         justify-content: space-between;
@@ -24,6 +40,10 @@ body{
         padding-bottom: 11px; 
         position: relative;  
         align-items: center;
+        box-sizing: border-box;
+        @media(min-width: $tablet){
+            padding-bottom: 13px; 
+        }
     }
 }
 .container{
@@ -32,10 +52,19 @@ body{
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    @media(min-width: $tablet){
+        padding: 0 72px;
+    }
 }
 .articles-items{
     background: #FAFBFC;
     padding: 5px 32px;
+    @media(min-width: $tablet){
+        margin: 0 72px;
+        box-sizing: border-box;
+        padding: 32px 80px;
+        padding-bottom: 5px;
+    }
 }
 .checklist{
     margin: 19px 0;

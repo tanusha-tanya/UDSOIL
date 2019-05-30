@@ -12,4 +12,9 @@
     padding-top: 12px;
     text-decoration: none;
     color: #282828;
+    @media(min-width: $tablet){
+        position: absolute;
+        right: 100px;
+        top: 10px;
+    }
 }

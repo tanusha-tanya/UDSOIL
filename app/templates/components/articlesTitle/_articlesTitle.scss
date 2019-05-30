@@ -1,6 +1,10 @@
 .articles-title{
     position: relative;
     height: 56px;
+    @media(min-width: $tablet){
+        height: 112px;    
+        margin-bottom: -60px;  
+    }
     &:before{
         content: '';
         background: #FFCC08;
@@ -11,6 +15,10 @@
         bottom: 0;
         display: block;
         z-index: -1;
+        @media(min-width: $tablet){
+            right: auto; 
+            width: 538px;     
+        }        
     }
 } 
 .articles-h2{
@@ -19,4 +27,14 @@
     left: 32px;
     display: block;
     font-size: 24px;
+    @media(min-width: $tablet){
+        writing-mode: tb-rl;    
+        transform: rotate(180deg);
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 40px;
+        left: 16px;
+        bottom: auto;
+        top: 52px;
+    } 
 }

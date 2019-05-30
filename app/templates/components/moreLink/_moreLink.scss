@@ -50,4 +50,9 @@
         transition: right .3s;
     }
 }
-   
+.main-articles {
+    .more-link{
+        margin: 0 72px;
+        width: calc(100% - 144px);
+    }
+}

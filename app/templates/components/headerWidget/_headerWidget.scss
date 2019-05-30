@@ -2,5 +2,107 @@
     background: #fff;
     height: 32px;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box;  
+    position: relative;  
+    font-family: $roboto;
+    font-size: 9.5px;
+    line-height: 16px;
+    color: #282828;
+    @media(min-width: $tablet){
+        margin: 0 72px;
+        width: calc(100% - 144px);
+    }
+}
+.widget{   
+    &-left{
+        height: 100%;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        z-index:100;
+    }
+    &-date{   
+        font-weight: 600;
+        font-size: 9.5px;
+        line-height: 16px;
+        color: #9A9A9A;
+        box-sizing: border-box;
+        padding: 8px;
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+    &-line{       
+        overflow-y: hidden;        
+        flex-shrink: 1;
+        flex-grow: 0;
+        margin-left: 100px;
+        align-content: center;
+        height: 100%;
+        box-sizing: border-box;       
+    }
+    &-items{
+        display: flex;
+        align-content: center;
+        height: 100%;             
+        &:hover {
+            animation-play-state: paused
+        }             
+    }
+    &-item{
+        display: flex;
+        margin: 0 10px;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    &-name{
+        font-family: $font;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.15px;
+        margin-right: 3px;
+        letter-spacing: 0.15px;
+    }
+    &-progress{
+        display: flex;
+        margin-left: 23px;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute; 
+            border: 5px solid transparent;   
+            left: -20px;
+            bottom: 5px;        
+        }
+        &-item{
+            padding: 1px 3px;
+            box-sizing: border-box; 
+            margin: 0 1px;          
+        }
+        &__green{           
+            &:before{              
+                border-bottom-color: #6CD599;
+                border-top: 0;
+            }
+            .widget-progress-item{
+                background: #8AF3B7;
+            }
+        }
+        &__red{
+            &:before{              
+                border-top-color:  #EF4242;
+                border-bottom: 0;
+            }
+            .widget-progress-item{
+                background: #FFC4C4; 
+            }
+        }
+    }
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-350%, 0); }    
 }
