@@ -37,3 +37,39 @@ body{
     background: #FAFBFC;
     padding: 5px 32px;
 }
+.checklist{
+    margin: 19px 0;
+    padding: 0;
+    &-li{
+        list-style: none;
+        margin-bottom: 28px;
+        padding-left: 50px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.15px;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            border: 1px solid #E6E7E8;
+            box-sizing: border-box;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 13px;
+            width: 5px;
+            height: 9px;
+            transform: rotate(45deg);
+            border-bottom: 1.4px solid #FFCC08;
+            border-right: 1.4px solid #FFCC08;
+        }
+    }
+}
