@@ -68,10 +68,11 @@ ymaps.ready(init);
     });       
    }   
   }); 
+  let zoomer = 5;
 
   var myMap = new ymaps.Map("map", {        
     center: [58.01, 56.22],        
-    zoom: 5,     
+    zoom: zoomer,     
     controls: []  
   });        
 }

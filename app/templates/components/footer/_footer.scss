@@ -3,6 +3,9 @@
     padding-top: 40px;
     padding-bottom: 33px;
     color: #FFFFFF;
+    @media(min-width: $tablet){
+        padding-top: 60px; 
+    }
     &-phone{
         font-weight: 600;
         font-size: 26px;
@@ -11,9 +14,16 @@
         display: block;
         text-decoration: none;
         color: #FFFFFF;
+        @media(min-width: $tablet){
+            width: 50%;
+            margin: 0;
+        }
     }
     &-item{
         margin: 20px 0;
+        @media(min-width: $tablet){
+            max-width: 235px;
+        }
     }
     &-title{
         color: #9A9A9A;
@@ -53,12 +63,51 @@
         font-weight: 600;
         font-size: 10px;
         line-height: 16px;
+        @media(min-width: $tablet){
+            display: flex;
+            justify-content: space-between;
+        }
         p{
             margin: 15px 0;
+            @media(min-width: $tablet){
+                margin: 0;
+            }
         }
         &-link{
             text-decoration: none;
             color: #fff;
+        }
+    }
+    &-flex{
+        @media(min-width: $tablet){
+            display: flex;
+        }
+    }
+    &-logo{
+        @media(min-width: $tablet){
+            width: 50%
+        }
+    }
+    &-contacts{
+        @media(min-width: $tablet){
+            display: flex;
+            margin-top: 20px;
+        }
+    } 
+    &-right{
+        @media(min-width: $tablet){
+            width: 50%;
+            order: 1;
+        }
+    }
+    &-left{
+        @media(min-width: $tablet){
+            width: 50%;
+        }
+    }
+    &-uds{
+        @media(min-width: $tablet){
+            order: -1;
         }
     }
 }

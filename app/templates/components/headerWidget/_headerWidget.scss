@@ -12,6 +12,12 @@
         margin: 0 72px;
         width: calc(100% - 144px);
     }
+    @media(min-width: $notebook){
+        width: 180px;
+        margin: 0;
+        height: auto;
+        border-left: 1px solid  #E6E7E8;
+    }
 }
 .widget{   
     &-left{
@@ -22,6 +28,9 @@
         top: 0;
         background: #fff;
         z-index:100;
+        @media(min-width: $notebook){
+            position: static;
+        }
     }
     &-date{   
         font-weight: 600;
@@ -40,7 +49,10 @@
         margin-left: 100px;
         align-content: center;
         height: 100%;
-        box-sizing: border-box;       
+        box-sizing: border-box;  
+        @media(min-width: $notebook){
+            margin-left: 0;
+        }     
     }
     &-items{
         display: flex;
@@ -69,18 +81,27 @@
         display: flex;
         margin-left: 23px;
         position: relative;
+        @media(min-width: $notebook){
+           margin-left: 15px;
+        }
         &:before{
             content: '';
             display: block;
             position: absolute; 
             border: 5px solid transparent;   
             left: -20px;
-            bottom: 5px;        
+            bottom: 5px;
+            @media(min-width: $notebook){
+                left: -13px;
+            }         
         }
         &-item{
             padding: 1px 3px;
             box-sizing: border-box; 
-            margin: 0 1px;          
+            margin: 0 1px;
+            @media(min-width: $notebook){
+                padding: 0 4px;
+            }           
         }
         &__green{           
             &:before{              

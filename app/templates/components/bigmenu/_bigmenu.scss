@@ -1,0 +1,100 @@
+.bigmenu{
+    display: none;
+    @media(min-width: $notebook){
+        display: block;
+        margin: 0 15px;
+        box-sizing: border-box;
+        padding: 8px 0;
+    }
+    &-ul{
+        display: flex;
+        align-items: center;
+        &.open{
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                display: block;
+                background: #fff;
+                height: 96px;
+            }
+            .bigmenu-li > .bigmenu-link{
+                opacity: .5;
+            }
+            .bigmenu-li__sub span{
+                opacity: .5;
+            }
+            .bigmenu-li__sub.open span{
+                opacity: 1;
+            }
+        }
+    }
+    &-li{
+        margin: 0 10px;
+        list-style: none;
+        position: relative;
+        &__sub{
+            padding-right: 10px;
+            &:after{
+                content: '';
+                display: block;
+                width: 5px;
+                height: 5px;
+                border-bottom: 1px solid #FFCC08;
+                border-right: 1px solid #FFCC08;
+                position: absolute;
+                right: -3px;
+                top: 8px;
+                transform: rotate(40deg);
+                transition: transform .3s;
+            }
+            span{
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+                transition: opacity .3s;
+            }
+            &.open{
+                &:after{
+                    transform: rotate(-135deg) translate(-5px);                    
+                }
+                .bigmenu-sub-ul{
+                    display: flex;
+                    position: absolute;
+                    top: 80px;
+                    z-index: 500; 
+                    margin: 0 -20px;                   
+                }
+                .bigmenu-sub-li{
+                    list-style: none;
+                    margin: 0 20px;
+                    display: block;
+                    .bigmenu-link{
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 24px;
+                        display: block;
+                    }
+                }                
+            }
+        }
+    }
+    &-sub{
+        &-ul{
+            display: none;
+        }
+    }
+    &-link{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: #282828;
+        text-decoration: none;
+        display: block;
+        transition: opacity .3s;
+    }
+}

@@ -5,15 +5,30 @@
         font-size: 24px;
         line-height: 32px;
         margin: 4px 0;
+        @media(min-width:$tablet){
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
     }
     &-content{
         font-weight: 500;
         font-size: 12px;
         line-height: 16px;
+        p{
+            @media(min-width:$tablet){
+                max-width: 384px;
+                margin-top: 18px;
+            }
+        }        
     }
     &-figure{
         margin: 28px 0;
         text-align: center;
+        @media(min-width:$tablet){
+            margin-top: 46px;
+            width: 37%;
+        }
     }
     &-img{
         border-radius: 100%;
@@ -39,5 +54,19 @@
         font-size: 14px;
         line-height: 24px;
         margin: 28px 0;
+        @media(min-width:$tablet){
+            width: calc(67% - 50px);
+            margin-left: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &-flex{
+        @media(min-width:$tablet){
+            display: flex;
+            width: 100%;
+            align-content: flex-start;
+        }
     }
 }

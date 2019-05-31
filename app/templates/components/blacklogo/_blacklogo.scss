@@ -1,0 +1,6 @@
+.header-blacklogo{
+    display: none;
+    @media(min-width: $notebook){
+        display: block;
+    }
+}

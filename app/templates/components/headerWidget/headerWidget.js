@@ -3,7 +3,7 @@ if(headerWidget){
     let items = document.querySelector('.widget-items'),
        widgetWidth = items.scrollWidth,
        header = document.querySelector('.header-widget'),
-       maxWidth = header.offsetWidth;
+       maxWidth = header.scrollWidth;
        console.log(widgetWidth + ' '+ maxWidth)
     if(widgetWidth > maxWidth){
         items.style.paddingLeft = '100%';    

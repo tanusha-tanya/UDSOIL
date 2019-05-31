@@ -2,21 +2,39 @@
     margin: 60px auto;
     position: relative;
     padding: 0 32px;
+    @media(min-width: $tablet){
+        margin: 80px auto;
+        padding: 0 40px;
+    }
     &-title{
         font-size: 24px;
         font-weight: 600;
+        @media(min-width: $tablet){
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
     }
     &-graph{
         margin: 20px 0;
         position: relative;
         box-sizing: border-box;
         height: 282px;
+        @media(min-width: $tablet){
+            margin-bottom: 0;
+            margin-left: 30px;
+            margin-right: 30px;
+            height: 385px;
+        }
     }  
     &-content{
         background: #FAFBFC;
         margin: 0 -32px;
         position: relative;
         padding: 18px 32px;
+        @media(min-width: $tablet){
+            margin: 0;
+        }
     } 
     &-item{
         margin-bottom: 17px;

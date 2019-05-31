@@ -4,12 +4,21 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     padding: 40px 32px;
+    @media(min-width: $tablet){
+        padding: 32px 72px 68px 72px;
+        background-size: contain;
+    }
     &-title{
         font-size: 24px;
         line-height: 32px;
         position: relative;
         display: block;
         margin-bottom: 10px;
+        @media(min-width: $tablet){
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
         &:after{
             content: '';
             display: block;
@@ -18,18 +27,33 @@
             height: 4px;
             background: #FFCC08;
             bottom: -10px;
+            @media(min-width: $tablet){
+                bottom: auto;
+                top: 70px;
+                width: 40px;
+            }
         } 
     }
     &-content{
         p{
             margin: 20px 0;
             font-weight: 600;
+            @media(min-width: $tablet){
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+                margin: 25px 0;
+            }
+        }
+        @media(min-width: $tablet){
+            padding: 0 83px 30px 83px;
         }
     }
     &-video{
         position: relative;
         height: 0;
-        padding-top:62%;
+        padding-top:62%;       
         &:after{
             content: '';
             position: absolute;
@@ -40,6 +64,43 @@
             background: #FFCC08;
             display: block;
             z-index: 1;
+            @media(min-width: $tablet){
+                width: 32px;
+                height: 32px;
+            }
+        }
+        &-button{            
+            cursor: pointer;
+            position: absolute;
+            top: calc(50% - 20px);
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            z-index: 50;
+            @media(min-width: $tablet){
+                display: flex;
+                width: 175px;
+                height: 48px;                
+                align-items: center;
+                background: #FFCC08;
+                border-radius: 50px;
+                left: calc(50% - 88px);
+            }
+            svg{
+                width: 40px;
+                height: 40px;
+                display: block;
+                z-index: 50;
+            }
+            span{
+                display: none;
+                @media(min-width: $tablet){
+                    display: block;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
         }
     }
     &-youtube{
@@ -55,16 +116,5 @@
         background-repeat: no-repeat; 
         z-index: 20;
         cursor: pointer;
-        &:before{
-            content: '';
-            width: 40px;
-            height: 40px;
-            display: block;
-            position: absolute;
-            background: url(../images/svg/button.svg);
-            top: calc(50% - 20px);
-            left: calc(50% - 20px);
-            cursor: pointer;
-        }
     }
 }

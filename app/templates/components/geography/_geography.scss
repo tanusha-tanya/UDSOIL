@@ -2,6 +2,9 @@
     padding-top: 148%;
     height: 0;
     position: relative;
+    @media(min-width: $tablet){
+        padding-top: 83%;
+    }
     &-map{
         position: absolute;
         height: 100%;
@@ -19,5 +22,11 @@
        left: 32px;
        font-weight: 600;
        font-size: 24px;
+       @media(min-width: $tablet){
+            font-size: 34px;
+            line-height: 40px;        
+            letter-spacing: 0.25px;
+            color: #282828;
+        }   
     }
 }
