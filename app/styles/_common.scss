@@ -33,6 +33,9 @@ body{
     @media(min-width: $tablet){
         height: 640px;  
     }
+    @media(min-width: $notebook){
+        height: 659px;  
+    }
     &-top{
         display: flex;
         justify-content: space-between;
@@ -103,6 +106,13 @@ body{
         padding: 32px 80px;
         padding-bottom: 5px;        
     }
+    @media(min-width: $notebook){
+        margin: 0 auto;
+        padding: 64px 80px;
+        position: relative;
+        max-width: 1040px;  
+        display: flex;    
+    }
 }
 .main-articles{
     @media(min-width: $tablet){       
@@ -115,6 +125,9 @@ body{
         right: 37px;
         bottom: 350px;
         height: 162px;
+    }
+    @media(min-width: $notebook){
+        bottom: 100px;
     }
     svg{
         display: none;

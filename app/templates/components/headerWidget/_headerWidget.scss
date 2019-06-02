@@ -52,6 +52,7 @@
         box-sizing: border-box;  
         @media(min-width: $notebook){
             margin-left: 0;
+            overflow: hidden;
         }     
     }
     &-items{

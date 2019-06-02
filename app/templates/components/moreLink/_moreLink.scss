@@ -54,5 +54,12 @@
     .more-link{
         margin: 0 72px;
         width: calc(100% - 144px);
+        @media(min-width: $notebook){
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            max-width: 1040px;
+            display: block;
+        }
     }
 }

@@ -6,7 +6,20 @@
         margin: 0 72px;
         padding: 70px 80px;
     }
+    @media(min-width: $notebook){
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1040px;
+        display: flex;
+        padding: 0;
+    }
     &-text{
+        @media(min-width:$notebook){
+                width: 59%;
+                box-sizing: border-box;
+                padding: 70px 90px 110px 90px;
+        }
         &:before{
             content: '';
             width: 36px;
@@ -21,7 +34,7 @@
                 background-size: cover;
                 margin-left: -80px;
             }
-        }  
+        } 
         p{
            margin: 27px 0;
            font-weight: 500; 
@@ -37,17 +50,30 @@
         position: relative;
         line-height: 0;
         margin: 15px 0;
+        @media(min-width: $notebook){
+             margin-top: 50px;
+        }
         &:after{
             content: '';
             width: calc(100% - 40px);
             height: 4px;
             background: #FFCC08;
             display: block;
+             @media(min-width: $notebook){
+                position: absolute;
+                left: -80%;
+                bottom: 30px;
+            } 
         }
     }
     &-img{
         width: 100%;
         height: auto;
+    }
+    &-figure{
+        @media(min-width:$notebook){
+            width: 41%;
+        }
     }
     &-figcaption{
         font-weight: 600;
@@ -55,6 +81,11 @@
         line-height: 16px;
         @media(min-width:$tablet){
             margin-top: 15px;
+        }
+        @media(min-width: $notebook){
+                position: absolute;
+                bottom: 72px;
+                left: 272px;
         }
         span{
             display: block;

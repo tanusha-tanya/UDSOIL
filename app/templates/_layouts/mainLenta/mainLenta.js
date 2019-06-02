@@ -8,7 +8,14 @@ function checkPosition()
             slidesToShow: 3,
             slidesToScroll: 1,
             dots: true,
-            appendDots: $('.articles-dots')
+            appendDots: $('.articles-dots'),
+            mobileFirst: true,
+            responsive: [{
+                breakpoint: 1280,
+                settings: {
+                      vertical: false,
+                }
+            }]
         });
     } else {
         

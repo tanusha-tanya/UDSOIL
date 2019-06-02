@@ -14,13 +14,15 @@
         box-sizing: border-box;
         background-size: cover;
         background-position: 32% top;
-        background-repeat: no-repeat;
-        
+        background-repeat: no-repeat;        
         padding: 130px 31px 103px 32px;
         position: relative;
         @media(min-width: $tablet){
             padding: 158px 72px 225px 72px;
             height: 640px;
+        }
+        @media(min-width: $notebook){
+            height: 659px;  
         }
         &:before{
             content: '';

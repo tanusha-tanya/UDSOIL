@@ -5,6 +5,9 @@
         @media(min-width: $tablet){
             display: flex;
         }
+        @media(min-width: $notebook){
+            margin: 0 10px;
+        }
     }
     &-preview{
         overflow: hidden;
@@ -47,10 +50,17 @@
             margin-right: 15px;
             flex-grow: 1;
             flex-shrink: 0;
-        }        
+        }      
+        @media(min-width: $notebook){
+            width: 100%;
+            margin: 0;
+        }  
     }
     &-right{
         width: 50%;
+        @media(min-width: $notebook){
+            width: 100%;
+        } 
     }
 }
 .main-articles{
@@ -64,6 +74,9 @@
         }
         @media(min-width:$tablet){
             display: flex;
+        }
+        @media(min-width: $notebook){
+             display: block;
         }
     }
 }
