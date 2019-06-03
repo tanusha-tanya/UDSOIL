@@ -11,14 +11,13 @@ function checkPosition()
             appendDots: $('.articles-dots'),
             mobileFirst: true,
             responsive: [{
-                breakpoint: 1280,
+                breakpoint: 1279,
                 settings: {
                       vertical: false,
+                      margin: 10
                 }
             }]
         });
-    } else {
-        
     }
 }
 checkPosition()

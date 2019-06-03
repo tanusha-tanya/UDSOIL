@@ -18,12 +18,33 @@
             width: 50%;
             margin: 0;
         }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 56px;
+        }
+    }
+    &-svg{
+        @media(min-width: $desktop){
+           width: 184px;
+           height: 41px; 
+        }
     }
     &-item{
         margin: 20px 0;
         @media(min-width: $tablet){
             max-width: 235px;
         }
+        @media(min-width: $notebook){
+           width: 33%;
+           max-width: 33%;
+        }
+        &__laptop{
+          display: none;  
+            @media(min-width: $notebook){
+                display: block;
+            }
+        } 
     }
     &-title{
         color: #9A9A9A;
@@ -32,12 +53,21 @@
         line-height: 16px;
         letter-spacing: 0.15px;
         margin: 7px 0;
+        @media(min-width: $desktop){
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     &-info{
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.15px;
+        @media(min-width: $desktop){
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
     &-email{
         display: block;
@@ -47,6 +77,11 @@
         line-height: 20px;
         letter-spacing: 0.15px;
         text-decoration: none;
+        @media(min-width: $desktop){
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
     &-link{
         display: block;
@@ -56,6 +91,11 @@
         line-height: 20px;
         letter-spacing: 0.15px;
         text-decoration: none;
+        @media(min-width: $desktop){
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
     &-copyright{
         margin: 33px 0;
@@ -67,16 +107,32 @@
             display: flex;
             justify-content: space-between;
         }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+        }
         p{
             margin: 15px 0;
             @media(min-width: $tablet){
                 margin: 0;
+            }
+            @media(min-width: $notebook){
+                width: 33%;
+            }
+            @media(min-width: $desktop){
+                width: 34%;
             }
         }
         &-link{
             text-decoration: none;
             color: #fff;
         }
+        .footer-uds{
+            @media(min-width: $notebook){
+                width: auto;
+            }
+        }        
     }
     &-flex{
         @media(min-width: $tablet){
@@ -87,11 +143,17 @@
         @media(min-width: $tablet){
             width: 50%
         }
+        @media(min-width: $notebook){
+            width: 33%;
+        }
     }
     &-contacts{
         @media(min-width: $tablet){
             display: flex;
             margin-top: 20px;
+        }
+        @media(min-width: $desktop){
+            margin-top: 42px;
         }
     } 
     &-right{
@@ -99,11 +161,18 @@
             width: 50%;
             order: 1;
         }
+        @media(min-width: $notebook){
+            display: none;
+        }        
     }
     &-left{
         @media(min-width: $tablet){
             width: 50%;
         }
+        @media(min-width: $notebook){
+            width: 100%;
+            display: flex;            
+        } 
     }
     &-uds{
         @media(min-width: $tablet){

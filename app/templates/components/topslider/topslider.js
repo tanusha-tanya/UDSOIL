@@ -9,6 +9,7 @@ $(document).ready(function() {
         dots: false,
         nav: true,
         navElement: 'div',
+        autoHeight: true,
         navContainer: '.topslider-arrows',
     });
 });

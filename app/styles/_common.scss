@@ -11,6 +11,7 @@ body{
     line-height: 24px;
     color: #282828;
     overflow-x: hidden;
+    max-width: 2880px;
     &.dark{
         overflow-y: hidden; 
         &:after{
@@ -36,6 +37,9 @@ body{
     @media(min-width: $notebook){
         height: 659px;  
     }
+    @media(min-width: $desktop){
+        height: 944px;
+    } 
     &-top{
         display: flex;
         justify-content: space-between;
@@ -63,7 +67,7 @@ body{
             height: 72px;
             padding: 0 25px;
             //justify-content: space-between;
-            align-items: center;            
+            align-items: center;                        
             &:after{
                 content: '';
                 position: absolute;
@@ -73,12 +77,24 @@ body{
                 background: rgba(0, 0, 0, 0.07);
             }
         }
+        @media(min-width: $desktop){
+            max-width: 1504px;
+            top: 64px;
+            height: 104px;
+            &:after{
+                top: 104px;
+            }
+        }
         .lang-link{
             display: none;
             @media(min-width: $notebook){
                 display: block;
                 position: static;
                 margin: 0 24px;
+            }
+            @media(min-width: $tablet){
+                margin: 0;
+                margin-right: 24px;
             }
         }
     }
@@ -96,6 +112,9 @@ body{
         padding: 0;
         max-width: 1040px;     
     }
+    @media(min-width: $desktop){
+        max-width: 1504px;
+    }    
 }
 .articles-items{
     background: #FAFBFC;
@@ -113,6 +132,10 @@ body{
         max-width: 1040px;  
         display: flex;    
     }
+    @media(min-width: $desktop){
+        max-width: 1504px;
+        padding: 60px 105px;
+    } 
 }
 .main-articles{
     @media(min-width: $tablet){       
@@ -127,7 +150,11 @@ body{
         height: 162px;
     }
     @media(min-width: $notebook){
-        bottom: 100px;
+        bottom: 150px;
+        right: 100px;
+    }
+    @media(min-width: $desktop){
+        bottom: 200px;        
     }
     svg{
         display: none;
@@ -136,13 +163,26 @@ body{
             position: absolute;
             top: 0;
         }
+        @media(min-width: $desktop){
+           width: 64px;
+           height: 64px;
+           top: -123px;
+           left: -13px;
+        }
     }
 }
 .slick-dotted.slick-slider{
     margin-bottom: 0;
 }
+.slick-dots li{
+    @media(min-width: $desktop){
+        margin: 10px 5px;
+    }
+}
+
 .slick-dots li button:before{
     color: #E0E0E0;
+    opacity: 1;
 }
 .slick-dots li.slick-active button:before{    
     color: #fff;
@@ -156,6 +196,14 @@ body{
     position: relative;
     left: 7px;
     padding: 0;
+    @media(min-width: $desktop){
+        width: 16px;
+        height: 16px;
+        left: 4px;
+    }
+}
+.slick-dots li.slick-active button:before{
+    opacity: 0;
 }
 .checklist{
     margin: 19px 0;
@@ -169,6 +217,13 @@ body{
         line-height: 22px;
         letter-spacing: 0.15px;
         position: relative;
+        @media(min-width:$desktop){
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+            padding-left: 72px;
+            margin-bottom: 40px;
+        }
         &:before{
             content: '';
             position: absolute;
@@ -179,6 +234,11 @@ body{
             border-radius: 100%;
             border: 1px solid #E6E7E8;
             box-sizing: border-box;
+            @media(min-width:$desktop){
+                width: 48px;
+                height: 48px;
+                top: -5px;
+            }
         }
         &:after{
             content: '';
@@ -190,6 +250,15 @@ body{
             transform: rotate(45deg);
             border-bottom: 1.4px solid #FFCC08;
             border-right: 1.4px solid #FFCC08;
+            @media(min-width:$desktop){                             
+                top: 8px;
+                left: 17px;
+                width: 13px;
+                height: 15px;                         
+                border-bottom: 2px solid #FFCC08;
+                border-right: 2px solid #FFCC08;
+                
+            }
         }
     }
 }

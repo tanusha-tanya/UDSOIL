@@ -4,4 +4,8 @@
         width: 120px;
         height: 27px;
     }
+    @media(min-width: $desktop){
+        width: 171px;
+        height: 38px;
+    }
 }

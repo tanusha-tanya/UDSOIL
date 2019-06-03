@@ -5,6 +5,12 @@
     @media(min-width: $tablet){
         padding-top: 83%;
     }
+    @media(min-width: $notebook){
+        padding-top: 46%;
+    }
+    @media(min-width: $desktop){
+        padding-top: 44%
+    }
     &-map{
         position: absolute;
         height: 100%;
@@ -27,6 +33,14 @@
             line-height: 40px;        
             letter-spacing: 0.25px;
             color: #282828;
-        }   
+        }  
+        @media(min-width: $notebook){
+            font-size: 48px;
+            line-height: 64px;
+        } 
+        @media(min-width: $desktop){
+            font-size: 72px;
+            line-height: 90px;
+        } 
     }
 }

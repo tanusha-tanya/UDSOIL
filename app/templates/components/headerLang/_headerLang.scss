@@ -17,4 +17,11 @@
         right: 100px;
         top: 10px;
     }
+    @media(min-width: $desktop){
+        width: 56px;
+        height: 56px;
+        padding-top: 20px;
+        font-weight: 600;
+        font-size: 14px;
+    }
 }

@@ -9,6 +9,10 @@
         height: 184px;    
         margin-bottom: -101px;  
     }
+    @media(min-width: $desktop){ 
+        height: 296px;    
+        margin-bottom: -170px;       
+    }
     &:before{
         content: '';
         background: #FFCC08;
@@ -25,7 +29,18 @@
         }
         @media(min-width: $notebook){ 
             width: 984px;     
+        } 
+        @media(min-width: $desktop){ 
+            width: 1454px;     
         }        
+    }
+    &-container{
+        @media(min-width: $desktop){ 
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            max-width: 1504px;
+        }
     }
 } 
 .articles-h2{
@@ -44,11 +59,17 @@
         bottom: auto;
         top: 52px;
     } 
-    @media(min-width: $tablet){
+    @media(min-width: $notebook){
         font-weight: 600;
         font-size: 48px;
         line-height: 64px;
         top: 79px;
         left: 35px;
+    }
+    @media(min-width: $desktop){
+        font-size: 72px;
+        line-height: 90px;
+        left: -177px;
+        top: 123px;
     }
 }

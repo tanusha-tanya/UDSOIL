@@ -2,6 +2,7 @@
     padding: 56px 32px;
     position: relative;
     margin: 0 auto;
+    box-sizing: border-box;
     @media(min-width:$tablet){
         margin: 0 72px;
         padding: 70px 80px;
@@ -14,12 +15,21 @@
         display: flex;
         padding: 0;
     }
+    @media(min-width: $desktop){
+        max-width: 1504px;
+        padding:  160px 0;
+    } 
     &-text{
         @media(min-width:$notebook){
                 width: 59%;
                 box-sizing: border-box;
                 padding: 70px 90px 110px 90px;
         }
+        @media(min-width: $desktop){
+            padding: 160px 120px;
+            position: relative;
+            width: 50%;
+        }         
         &:before{
             content: '';
             width: 36px;
@@ -28,11 +38,19 @@
             background-repeat: no-repeat;
             background: url('../images/svg/quote.svg');
             margin-bottom: 27px;
+            position: relative;
             @media(min-width:$tablet){
                 width: 54px;
                 height: 48px;
                 background-size: cover;
                 margin-left: -80px;
+            }
+            @media(min-width:$desktop){
+                width: 72px;
+                height: 64px;
+                position: absolute;
+                top: 30px;
+                left: 90px;
             }
         } 
         p{
@@ -42,6 +60,11 @@
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: 0.15px;
+            }
+            @media(min-width: $desktop){
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 32px;
             }
         }
     }
@@ -53,16 +76,24 @@
         @media(min-width: $notebook){
              margin-top: 50px;
         }
+
         &:after{
             content: '';
             width: calc(100% - 40px);
             height: 4px;
             background: #FFCC08;
             display: block;
-             @media(min-width: $notebook){
+            @media(min-width: $notebook){
                 position: absolute;
                 left: -80%;
                 bottom: 30px;
+                width: 424px;
+            }
+            @media(min-width: $desktop){
+                height: 8px;
+                width: 480px;
+                left: -60%;
+                bottom: 50px
             } 
         }
     }
@@ -71,8 +102,13 @@
         height: auto;
     }
     &-figure{
+        position: relative;
         @media(min-width:$notebook){
             width: 41%;
+        }
+        @media(min-width: $desktop){
+            width: 50%;
+            padding-right: 120px;
         }
     }
     &-figcaption{
@@ -83,9 +119,17 @@
             margin-top: 15px;
         }
         @media(min-width: $notebook){
-                position: absolute;
-                bottom: 72px;
-                left: 272px;
+            position: absolute;
+            bottom: 66px;
+            right: calc(100% - 83px);
+            width: 100%;
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            bottom: 14px;
+            right: calc(100% - 389px);
         }
         span{
             display: block;
@@ -93,6 +137,11 @@
             color: #828282;
             @media(min-width:$tablet){
                 margin-top: 10px;
+            }
+            @media(min-width: $desktop){
+                font-weight: 600;
+                font-size: 18px;
+                margin-top: 0;
             }
         }
     }

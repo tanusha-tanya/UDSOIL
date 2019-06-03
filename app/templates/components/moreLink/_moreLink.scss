@@ -17,10 +17,20 @@
         &:hover{
             .more-arrow:before{
                 width: 29px;
+                @media(min-width: $desktop){
+                    width: 36px;
+                }
             }
             .more-svg{
                 right: -5px;
             }
+        }
+        @media(min-width: $desktop){
+            height: 88px;
+            padding-top: 32px;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 500;
         }
     }
     &-text{
@@ -31,6 +41,9 @@
         width: 32px;
         display: inline-block;
         position: relative;
+        @media(min-width: $desktop){
+            width: 41px;
+        }
         &:before{
             content: '';
             width: 24px;
@@ -41,6 +54,9 @@
             left:0;
             bottom: 3px;
             transition: width .3s;
+            @media(min-width: $desktop){
+                width: 31px;
+            }
         }
     }
     &-svg{
@@ -48,12 +64,19 @@
         right:0;
         bottom: -2px;
         transition: right .3s;
+        @media(min-width: $desktop){
+            width: 11px;
+            height: 14px;
+            bottom: -3px;
+        }
     }
 }
 .main-articles {
     .more-link{
-        margin: 0 72px;
-        width: calc(100% - 144px);
+        @media(min-width: $tablet){
+            margin: 0 72px;
+            width: calc(100% - 144px);
+        }
         @media(min-width: $notebook){
             margin: 0 auto;
             width: 100%;
@@ -61,5 +84,8 @@
             max-width: 1040px;
             display: block;
         }
+        @media(min-width: $desktop){
+            max-width: 1504px;
+        } 
     }
 }

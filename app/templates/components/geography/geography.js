@@ -26,7 +26,11 @@ ymaps.ready(init);
           //Удмуртская республика
         }
       ];  
-      var highlightedDistrict;     
+      var highlightedDistrict;  
+      let iconImageSize =  [32, 47];
+      if($(window).width() > 1919){
+        iconImageSize =  [48,56];
+      }       
       for(let i = 0; i < regions.length; i++){
         var geoObject = new ymaps.GeoObject(regions[i].code, {fillColor: '#FCCA00',
           strokeColor: '#FCCA00',
@@ -40,7 +44,7 @@ ymaps.ready(init);
         }, {
           iconLayout: 'default#image',
           iconImageHref: '../images/svg/mapoil.svg',
-          iconImageSize: [32, 47],
+          iconImageSize: iconImageSize,
         })
         myMap.geoObjects.add(geoObject)
         myMap.geoObjects.add(myPlacemark);        
@@ -69,7 +73,10 @@ ymaps.ready(init);
    }   
   }); 
   let zoomer = 5;
-
+  if($(window).width() > 1919){
+    zoomer = 6;
+  }  
+  console.log(zoomer)
   var myMap = new ymaps.Map("map", {        
     center: [58.01, 56.22],        
     zoom: zoomer,     

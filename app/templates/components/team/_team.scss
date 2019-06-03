@@ -8,6 +8,9 @@
         padding: 32px 72px 68px 72px;
         background-size: contain;
     }
+    @media(min-width: $notebook){
+        padding: 64px 0;        
+    }
     &-title{
         font-size: 24px;
         line-height: 32px;
@@ -18,6 +21,14 @@
             font-size: 34px;
             line-height: 40px;
             letter-spacing: 0.25px;
+        }
+        @media(min-width: $notebook){
+            font-size: 48px;
+            line-height: 64px;
+        }
+        @media(min-width: $desktop){
+            font-size: 72px;
+            line-height: 90px;
         }
         &:after{
             content: '';
@@ -32,6 +43,12 @@
                 top: 70px;
                 width: 40px;
             }
+            @media(min-width: $desktop){
+                height: 8px;
+                width: 32px;
+                bottom: auto;
+                top: 130px;
+            }
         } 
     }
     &-content{
@@ -45,9 +62,22 @@
                 letter-spacing: 0.15px;
                 margin: 25px 0;
             }
+            @media(min-width: $desktop){
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 32px;
+            }   
         }
         @media(min-width: $tablet){
             padding: 0 83px 30px 83px;
+        }
+        @media(min-width: $notebook){
+            width: calc(41% - 20px);
+        }
+    }
+    &-right{
+        @media(min-width: $notebook){
+            width: calc(59% - 20px);
         }
     }
     &-video{
@@ -67,7 +97,7 @@
             @media(min-width: $tablet){
                 width: 32px;
                 height: 32px;
-            }
+            }            
         }
         &-button{            
             cursor: pointer;
@@ -116,5 +146,27 @@
         background-repeat: no-repeat; 
         z-index: 20;
         cursor: pointer;
+    }    
+    &-flex{
+        @media(min-width: $notebook){
+            display: flex;
+            align-content: flex-start;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1040px;
+        }
+        @media(min-width: $desktop){
+            max-width: 1504px;
+        } 
+    }
+    &-head{
+        @media(min-width: $notebook){
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1040px;
+        }
+        @media(min-width: $desktop){
+            max-width: 1504px;
+        } 
     }
 }

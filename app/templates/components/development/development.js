@@ -1,4 +1,4 @@
-var ctx = document.getElementById('graph').getContext('2d');
+/*var ctx = document.getElementById('graph').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -73,4 +73,4 @@ var myChart = new Chart(ctx, {
             }
         }  
     }
-});
+});*/
