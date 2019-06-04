@@ -1,4 +1,22 @@
-/*var ctx = document.getElementById('graph').getContext('2d');
+var ctx = document.getElementById('graph').getContext('2d');
+var canvasHeight = 280;
+var canvasWidth = 278;
+if ($(window).width() > 767){
+    canvasHeight = 365;
+    canvasWidth = 666;
+}
+else if ($(window).width() > 1280){
+    canvasHeight = 384;
+    canvasWidth = 637;
+}
+else if ($(window).width() > 1990){
+    canvasHeight = 552;
+    canvasWidth = 916;
+}
+
+ctx.canvas.height = canvasHeight;
+ctx.canvas.width = canvasWidth;
+
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -7,19 +25,19 @@ var myChart = new Chart(ctx, {
             data: [104, 125, 260, 275, 391, 600, 600],
             borderColor: '#FFCC08',
             backgroundColor:'transparent',        
-            borderWidth: 2
+            borderWidth: 2,
+            pointBorderColor: "#FFCC08",
+            pointBackgroundColor: "#fff",
+            pointRadius: 4
         }]
     },    
-    options: { 
+    options: {
+        elements: {
+            line: {
+                tension: 0 
+            }
+        }, 
         geometry: 'vertical',
-        majorTicks: {
-            interval: 100,	// if interval is 0 then ticks do not display
-            customValues: [], // array of custom values
-            width: 6,
-            height: 100,
-            offset: 0, // offset from center of the chart
-            color: '#fff'
-        },
         plugins: {
             datalabels: {
                 color: '#282828',
@@ -35,7 +53,6 @@ var myChart = new Chart(ctx, {
             xAxes: [{
                 ticks: {     
                     autoSkip: false,               
-                    max: 900,
                     min: 0,
                     stepSize: 100
                 },
@@ -48,29 +65,15 @@ var myChart = new Chart(ctx, {
                     display:false
                 },
                 ticks: {
-                    fontSize: 0,                    
+                    fontSize: 0, 
+                    max: 700,
+                    min: 0,
+                    //stepSize: 500                   
                 },   
             }]
         },
         legend: {
             display: false
-        },              
-        tooltips: {
-            custom: function(tooltip) {
-                if (!tooltip) return;
-                // disable displaying the color box;
-                tooltip.displayColors = false;
-            },
-            callbacks: {
-                // use label callback to return the desired label
-                label: function(tooltipItem, data) {
-                    return  tooltipItem.xLabel + ": " + tooltipItem.yLabel;
-                },
-                // remove title
-                title: function(tooltipItem, data) {
-                    return;
-                }
-            }
-        }  
+        }
     }
-});*/
+});
