@@ -63,6 +63,7 @@
         @media(min-width: $notebook){
             width: calc(44% - 20px);
             display: block; 
+            margin-left: 20px;
         }
     } 
     &-item{

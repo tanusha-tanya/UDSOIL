@@ -1,4 +1,3 @@
-ymaps.ready(init);
   function init(){
     ymaps.borders.load('RU', {
       lang: "ru",
@@ -76,10 +75,13 @@ ymaps.ready(init);
   if($(window).width() > 1919){
     zoomer = 6;
   }  
-  console.log(zoomer)
   var myMap = new ymaps.Map("map", {        
     center: [58.01, 56.22],        
     zoom: zoomer,     
     controls: []  
   });        
+}
+const geographyMap = document.getElementById('map');
+if(geographyMap){
+  ymaps.ready(init);
 }
