@@ -58,7 +58,8 @@
             top: 0;
             bottom: 0;
             left: 0;
-            right: 0;            
+            right: 0;      
+            z-index: 100;      
         }
     }
     &-container{
@@ -206,13 +207,17 @@
             @media(min-width: $desktop){
                 width: 96px;
                 height: 96px;
-                padding-top: 40px;
+                padding-top: 37px;
             }
             span{
                 font-size: 0;
                 display: inline-block;                
                 width: 9px;
-                height: 9px;                            
+                height: 9px;   
+                @media(min-width: $desktop){
+                    width: 15px;
+                    height: 15px;
+                }                         
             }
         }
         .owl-prev span{
@@ -237,4 +242,7 @@
             max-width: 1504px;
         } 
     }
+}
+video.topslider-background{
+    height: auto;
 }

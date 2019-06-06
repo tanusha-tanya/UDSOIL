@@ -18,7 +18,11 @@ body{
     overflow-x: hidden;
     max-width: 2880px;
     &.dark{
-        overflow-y: hidden; 
+        height: 100vh;
+        overflow-y: hidden;
+        @media(min-width: $notebook){
+            height: 100%;
+        } 
         &:after{
             content: '';
             position: absolute;
@@ -28,6 +32,9 @@ body{
             bottom: 0;
             background: rgba(0,0,0, 0.5);
             z-index: 800;
+            @media(min-width: $notebook){
+                display: none;                                 
+            }
         } 
     }
 }
