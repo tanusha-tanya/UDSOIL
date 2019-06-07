@@ -1,4 +1,4 @@
-.topslider{
+.topslider{ 
     position: absolute;
     top: 0;
     bottom: 0;
@@ -14,6 +14,7 @@
         padding: 130px 31px 103px 32px;
         position: relative;
         box-sizing: border-box;
+        overflow: hidden;
         @media(min-width: $tablet){
             padding: 158px 72px 225px 72px;
             height: 640px;
@@ -39,16 +40,16 @@
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        @media(min-width: $tablet){            
-            height: 640px;
+        bottom: 0; 
+        @media(min-width: $tablet){
+            height: 640px;                
         }
         @media(min-width: $notebook){
             height: 659px;  
         }
         @media(min-width: $desktop){
             height: 944px;
-        }     
+        }                
         &:before{
             content: '';
             background: rgba(40, 40, 40, 0.50);            
@@ -60,6 +61,25 @@
             left: 0;
             right: 0;      
             z-index: 100;      
+        }
+        &-video{
+            display: none;
+            @media(min-width: $tablet){
+                display: block;   
+                width: 100%;             
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;               
+                height: 640px;                
+            }
+            @media(min-width: $notebook){
+                height: 659px;  
+            }
+            @media(min-width: $desktop){
+                height: 944px;
+            }            
         }
     }
     &-container{
@@ -93,6 +113,11 @@
             @media(min-width: $notebook){
                 width: 88px;
                 left: -110px;
+                transform: translate(-100px, 0);
+                animation-name: movetranslate; 
+                animation-duration: 3s;
+                animation-delay: .3s; 
+                animation-fill-mode: forwards;         
             }
             @media(min-width: $desktop){
                 width: 157px;
@@ -111,6 +136,14 @@
             font-weight: 600;
             font-size: 36px;
             line-height: 40px;
+        }
+        @media(min-width: $notebook){
+            text-indent: 200px;
+            transform: translate(-120px, 0);
+            animation-name: movetranslate; 
+            animation-duration: 3s;
+            animation-delay: .3s; 
+            animation-fill-mode: forwards;                  
         }
         @media(min-width: $desktop){
             font-size: 56px;
@@ -154,7 +187,7 @@
             margin: 0 auto;
             width: 100%;
             max-width: 1040px;            
-            svg{
+            svg, iframe{
                 position: absolute;
                 top: -350px;
                 left: 0;
@@ -162,7 +195,7 @@
         }
         @media(min-width: $desktop){
             max-width: 1504px;
-            svg{
+            svg, iframe{
                 width: 60px;
                 height: 60px;
                 top: -390px;
@@ -185,6 +218,11 @@
         @media(min-width: $notebook){
             top: 468px;
             right: 0;
+            transform: translate(0, 50px);
+            animation-name: movetranslate; 
+            animation-duration: 3s;
+            animation-delay: .3s; 
+            animation-fill-mode: forwards;
         } 
         @media(min-width: $desktop){
             top: 600px;
@@ -246,3 +284,5 @@
 video.topslider-background{
     height: auto;
 }
+
+

@@ -78,8 +78,12 @@ body{
             background: #FFFFFF;
             height: 72px;
             padding: 0 25px;
-            //justify-content: space-between;
-            align-items: center;                        
+            align-items: center; 
+            transform: translate(0, -50px);
+            animation-name: movetranslate; 
+            animation-duration: 3s;
+            animation-delay: .3s; 
+            animation-fill-mode: forwards;                     
             &:after{
                 content: '';
                 position: absolute;
@@ -268,9 +272,14 @@ body{
                 width: 13px;
                 height: 15px;                         
                 border-bottom: 2px solid #FFCC08;
-                border-right: 2px solid #FFCC08;
-                
+                border-right: 2px solid #FFCC08;                
             }
         }
+    }
+}
+@keyframes movetranslate{    
+    to {
+        transform: translate(0, 0);
+        text-indent: 0;
     }
 }
