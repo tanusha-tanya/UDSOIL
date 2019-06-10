@@ -44,32 +44,34 @@
     }
 } 
 .articles-h2{
-    position: absolute;
-    bottom: -3px;
-    left: 32px;
-    display: block;
-    font-size: 24px;
-    @media(min-width: $tablet){
-        writing-mode: tb-rl;    
-        transform: rotate(180deg);
-        font-weight: 600;
-        font-size: 34px;
-        line-height: 40px;
-        left: 16px;
-        bottom: auto;
-        top: 52px;
-    } 
-    @media(min-width: $notebook){
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 64px;
-        top: 79px;
-        left: 35px;
-    }
-    @media(min-width: $desktop){
-        font-size: 72px;
-        line-height: 90px;
-        left: -177px;
-        top: 123px;
+    h2{
+        position: absolute;
+        bottom: -3px;
+        left: 32px;
+        display: block;
+        font-size: 24px;
+        @media(min-width: $tablet){
+            writing-mode:  vertical-lr;    
+            transform: rotate(180deg);
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 40px;
+            left: 16px;
+            bottom: auto;
+            top: 52px;
+        } 
+        @media(min-width: $notebook){
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 64px;
+            top: 79px;
+            left: 35px;
+        }
+        @media(min-width: $desktop){
+            font-size: 72px;
+            line-height: 90px;
+            left: -177px;
+            top: 123px;
+        }
     }
 }

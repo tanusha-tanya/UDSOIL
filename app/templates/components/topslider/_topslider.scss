@@ -166,42 +166,50 @@
             letter-spacing: 0.15px;
         }
     }
-    &-icon{
+    &-icon{        
         position: absolute;
-        left: 30px;
-        top: 467px;
-        z-index: 100;        
+        display: block;
+        left: 32px;
+        top: 469px;
+        z-index: 100;          
+        box-sizing: border-box;      
         svg{
             color:#FFCC08;
             fill:#FFCC08;
+            @media(min-width: $tablet){
+                display: none;
+            }
+        }
+        img{
+            display: none;
+            @media(min-width: $tablet){
+                display: block;
+                position: relative;
+                z-index: 90;
+            }
+            @media(min-width: $desktop){
+                width: 64px;
+                height: 64px; 
+            } 
         }
         @media(min-width: $tablet){
             left: 72px;
-            bottom: 48px;
             top: 530px;
+            width: 40px;
+            height: 40px;
         }
         @media(min-width: $notebook){
-            position: relative;
             left: 0;
-            bottom: 0;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 1040px;            
-            svg, iframe{
-                position: absolute;
-                top: -350px;
-                left: 0;
-            }
-        }
+            top: 470px;
+            margin: 0 auto;                     
+        }  
         @media(min-width: $desktop){
-            max-width: 1504px;
-            svg, iframe{
-                width: 60px;
-                height: 60px;
-                top: -390px;
-                left: calc(50% - 30px);
-            }
-        } 
+            left: 0;
+            top: 600px;
+            left: calc(50% - 63px);
+            width: 64px;
+            height: 64px;              
+        }        
     }
     &-arrows{
         position: absolute;
@@ -209,8 +217,7 @@
         right: 30px;
         display: flex;
         justify-content: flex-end;
-        margin: 0 -8px;
-        width: calc(100% - 30px); 
+        margin: 0 -8px;        
         @media(min-width: $tablet){
             bottom: 48px;
             right: 72px;

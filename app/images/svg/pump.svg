@@ -1,61 +1,14 @@
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<style>
-        #first{
-			animation-name: changeScale; 
-            animation-duration: 1.5s;
-            animation-delay: .3s;   
-			animation-iteration-count: infinite;			
-		}
-		@keyframes changeScale {
-			from { height: 15.625px; y: 20.6251}
-			50% { height: 10px; y: 27}
-			to { height: 15.625px; y: 20.6251}
-		}
-		#second{
-			animation-name: move; 
-            animation-duration: 1.5s;
-            animation-delay: .3s;   
-			animation-iteration-count: infinite;
-		}
-		@keyframes move{
-			from { transform: translate(0, 0)}			
-			50% { transform: translate(0, 5px)}			
-			to{ transform: translate(0, 0)}			
-		}
-		#third{
-			animation-name: rotation; 
-            animation-duration: 1.5s;
-            animation-delay: .3s;   
-			animation-iteration-count: infinite;
-		}
-		@keyframes rotation{
-			from { transform: translate(0, 0) rotate(0)}
-			50% { transform:  translate(-5px, 10px) rotate(-30deg)}
-			to { transform: translate(0, 0) rotate(0)}
-		}
-		#fourth{
-			animation-name: fourth; 
-            animation-duration: 1.5s;
-            animation-delay: .3s;   
-			animation-iteration-count: infinite;
-		}
-		@keyframes fourth {
-			from { height: 8.75px; y: 20.6251}
-			50% { height: 15px; y: 15}
-			to { height: 8.75px; y: 20.6251}
-		}
-    </style>
 <rect x="2.5" y="36.2501" width="35" height="1.25" fill="currentColor"/>
-<path fill-rule="evenodd" id="third" clip-rule="evenodd" d="M11.6944 12.1682L11.1388 14.3274L33.8002 20.1467L34.3558 17.9875L11.6944 12.1682ZM33.5013 21.3605C34.1649 21.531 34.8368 21.1338 35.0076 20.4702L35.5632 18.311C35.7365 17.6375 35.3282 16.9466 34.6547 16.7736L10.7953 10.6467L9.61656 15.2271L33.5013 21.3605Z" fill="red"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6944 12.1682L11.1388 14.3274L33.8002 20.1467L34.3558 17.9875L11.6944 12.1682ZM33.5013 21.3605C34.1649 21.531 34.8368 21.1338 35.0076 20.4702L35.5632 18.311C35.7365 17.6375 35.3282 16.9466 34.6547 16.7736L10.7953 10.6467L9.61656 15.2271L33.5013 21.3605Z" fill="currentColor"/>
 <rect width="1.25" height="20" transform="matrix(0.984808 -0.173648 0.166956 0.985964 20 17.0922)" fill="currentColor"/>
 <rect width="1.25" height="20" transform="matrix(0.984808 0.173648 -0.166956 0.985964 17.0889 16.8751)" fill="currentColor"/>
-<rect id="fourth" x="31.25" y="20.6251" width="1.25" height="8.75" fill="red"/>
-<rect id="first" x="6.875" y="20.6251" width="1.25" height="15.625" fill="red"/>
+<rect x="31.25" y="20.6251" width="1.25" height="8.75" fill="currentColor"/>
+<rect x="6.875" y="20.6251" width="1.25" height="15.625" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M33.125 30.0001H30.625V36.2501H33.125V30.0001ZM30.625 28.7501C29.9346 28.7501 29.375 29.3098 29.375 30.0001V37.5001H34.375V30.0001C34.375 29.3098 33.8154 28.7501 33.125 28.7501H30.625Z" fill="currentColor"/>
 <rect x="15.625" y="30.0001" width="6.875" height="1.25" fill="currentColor"/>
 <rect x="16.875" y="24.3751" width="5" height="1.25" fill="currentColor"/>
 <rect width="7.5" height="1.25" transform="matrix(0.707107 -0.707107 0.692929 0.721006 15.625 30.3033)" fill="currentColor"/>
-<path fill-rule="evenodd" id="second" clip-rule="evenodd" d="M9.31634 5.35682C9.69511 5.07274 10.2019 5.02704 10.6254 5.23878L12.3216 6.0869C12.8545 6.35337 13.1253 6.95897 12.9685 7.53383L9.51432 20.1992C9.33541 20.8553 8.66489 21.2479 8.0052 21.083L6.51748 20.7111C6.01346 20.5851 5.63992 20.1604 5.57921 19.6444L4.42167 9.8053C4.36963 9.36301 4.55684 8.92645 4.9131 8.65925L9.31634 5.35682ZM11.7626 7.20493L10.0663 6.35682L5.6631 9.65925L6.82065 19.4984L8.30837 19.8703L11.7626 7.20493Z" fill="red"/>
-
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.31634 5.35682C9.69511 5.07274 10.2019 5.02704 10.6254 5.23878L12.3216 6.0869C12.8545 6.35337 13.1253 6.95897 12.9685 7.53383L9.51432 20.1992C9.33541 20.8553 8.66489 21.2479 8.0052 21.083L6.51748 20.7111C6.01346 20.5851 5.63992 20.1604 5.57921 19.6444L4.42167 9.8053C4.36963 9.36301 4.55684 8.92645 4.9131 8.65925L9.31634 5.35682ZM11.7626 7.20493L10.0663 6.35682L5.6631 9.65925L6.82065 19.4984L8.30837 19.8703L11.7626 7.20493Z" fill="currentColor"/>
 </svg>
 

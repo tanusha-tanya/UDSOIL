@@ -3,9 +3,6 @@
         .topslider-container
             h2.topslider-title «УДС нефть» занимается разработкой и эксплуатацией нефтяных и газовых месторождений 
             p.topslider-text Компания добывает, готовит, транспортирует, хранит и сдает нефть в систему магистральных нефтепроводов ПАО «Транснефть»
-        .topslider-icon
-            //-svg.icon-svg(role="img")(width="40")(height="40"): use(xlink:href="#pump") 
-            iframe(src="/images/svg/1.svg" border-fram)(width="40")(height="40")(frameborder="0")
         .topslider-background(style="background-image:url(/images/uds-mainslider1.jpg)")   
             //-video(autoplay muted).topslider-background-video    
                 source(src="../video/video_women.mp4" type='video/mp4')
@@ -13,10 +10,11 @@
         .topslider-container
             h2.topslider-title «УДС нефть» занимается разработкой и эксплуатацией нефтяных и газовых месторождений 
             p.topslider-text Компания добывает, готовит, транспортирует, хранит и сдает нефть в систему магистральных нефтепроводов ПАО «Транснефть»
-        .topslider-icon
-             iframe(src="/images/svg/1.svg" border-fram)(width="40")(height="40")(frameborder="0")
         .topslider-background(style="background-image:url(/images/uds-mainslider2.jpg)")   
             //-video(autoplay muted).topslider-background-video
                 source(src="../video/video_up.mp4" type='video/mp4')    
 .topslider-nav
+    a(href="#").topslider-icon#js-bottomscroll
+        svg.topslider-icon-static(role="img")(width="40")(height="40"): use(xlink:href="#pump") 
+        img.topslider-icon-move(src="/images/svg/pump_move.svg" border-fram)(width="40")(height="40")(frameborder="0")
     .topslider-arrows

@@ -1,0 +1,38 @@
+.screen-dotes{
+    display: none;
+    &.showed{
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 50vh;
+    }
+    &-li{
+        margin: 24px 15px;
+        list-style: none;        
+    }
+    &-link{
+        font-size:0;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        width: 10px;
+        height: 10px;
+        &:before{
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background: #E0E0E0;            
+        }
+        &.active{
+            &:after{
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px; 
+                border: 22px solid #000000;
+            }
+        }
+    }   
+}

@@ -16,3 +16,10 @@ $(document).ready(function() {
         });
     }
 });
+const bottomScroll = document.querySelector('#js-bottomscroll');
+if(bottomScroll){    
+    bottomScroll.addEventListener('click', (e) =>{        
+        e.preventDefault();
+        window.scrollTo(0, document.querySelector(".header").scrollHeight);
+    })   
+}
