@@ -15,6 +15,7 @@ $(document).ready(function() {
             navContainer: '.topslider-arrows',
         });
     }
+    
 });
 const bottomScroll = document.querySelector('#js-bottomscroll');
 if(bottomScroll){    
@@ -23,3 +24,12 @@ if(bottomScroll){
         window.scrollTo(0, document.querySelector(".header").scrollHeight);
     })   
 }
+AOS.init({
+    disable: window.innerWidth < 767
+});
+$(window).resize(function() {     
+    AOS.init({
+        disable: window.innerWidth < 767
+    }); 
+  
+});

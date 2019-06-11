@@ -1,46 +1,56 @@
-.geography{
-    padding-top: 148%;
-    height: 0;
-    position: relative;
-    @media(min-width: $tablet){
-        padding-top: 83%;
-    }
-    @media(min-width: $notebook){
-        padding-top: 46%;
-    }
-    @media(min-width: $desktop){
-        padding-top: 44%
-    }
+.geography{    
     &-map{
-        position: absolute;
-        height: 100%;
+        height: 472px;
         width: 100%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-    &-title{
-       color: #000; 
-       position: absolute;
-       z-index: 999;
-       top: 47px;
-       left: 32px;
-       font-weight: 600;
-       font-size: 24px;
-       @media(min-width: $tablet){
-            font-size: 34px;
-            line-height: 40px;        
-            letter-spacing: 0.25px;
-            color: #282828;
-        }  
+        position: relative;
+        @media(min-width: $tablet){
+            height: 640px;
+        }
         @media(min-width: $notebook){
-            font-size: 48px;
-            line-height: 64px;
+            height: 584px;
+        }
+        @media(min-width: $desktop){
+            height: 856px;
+        }
+    }    
+    &-title{
+        position: relative;
+        margin: 0 32px;
+        @media(min-width: $tablet){
+            margin: 0 70px;
+        }
+        @media(min-width: $notebook){
+            margin: 0 auto;
+            max-width: 1041px
         } 
         @media(min-width: $desktop){
-            font-size: 72px;
-            line-height: 90px;
+            max-width: 1504px
         } 
+        h2{
+            color: #000;       
+            z-index: 999;       
+            font-weight: 600;
+            font-size: 24px;
+            position: absolute;
+            left:0;
+            top: 20px;
+            @media(min-width: $tablet){
+                font-size: 34px;
+                line-height: 40px;        
+                letter-spacing: 0.25px;
+                color: #282828;
+                top: 32px;
+            }  
+            @media(min-width: $notebook){
+                font-size: 48px;
+                line-height: 64px;
+                top: 51px;
+            } 
+            @media(min-width: $desktop){
+                font-size: 72px;
+                line-height: 90px;
+                top: 77px;
+            } 
+        }
     }
 }

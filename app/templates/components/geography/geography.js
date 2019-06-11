@@ -3,7 +3,7 @@
       lang: "ru",
       quality: 1       
     },{
-      balloonPanelMaxMapArea: 0
+      balloonPanelMaxMapArea: 0,
     }).then(function (geojson) {         
       var regions = [
         {
@@ -68,7 +68,7 @@
         myMap.balloon.open(district.geometry._bounds[0], regions[i].balloonContent);
         district.options.set({fillOpacity: 1});
         highlightedDistrict = district;
-    });       
+    });      
    }   
   }); 
   let zoomer = 5;
@@ -78,8 +78,10 @@
   var myMap = new ymaps.Map("map", {        
     center: [58.01, 56.22],        
     zoom: zoomer,     
-    controls: []  
-  });        
+    controls: ['zoomControl'],
+  });   
+  myMap.behaviors.disable('scrollZoom');
+  myMap.behavior.disable('MultiTouch');
 }
 const geographyMap = document.getElementById('map');
 if(geographyMap){

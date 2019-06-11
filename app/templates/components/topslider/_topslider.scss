@@ -63,18 +63,15 @@
             z-index: 100;      
         }
         &-video{
-            display: none;
-            @media(min-width: $tablet){
+            display: none;            
+            @media(min-width: $notebook){
                 display: block;   
                 width: 100%;             
                 position: absolute;
                 top: 0;
                 left: 0;
                 right: 0;
-                bottom: 0;               
-                height: 640px;                
-            }
-            @media(min-width: $notebook){
+                bottom: 0;           
                 height: 659px;  
             }
             @media(min-width: $desktop){

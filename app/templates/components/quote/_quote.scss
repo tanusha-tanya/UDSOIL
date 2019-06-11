@@ -75,27 +75,7 @@
         margin: 15px 0;
         @media(min-width: $notebook){
              margin-top: 50px;
-        }
-
-        &:after{
-            content: '';
-            width: calc(100% - 40px);
-            height: 4px;
-            background: #FFCC08;
-            display: block;
-            @media(min-width: $notebook){
-                position: absolute;
-                left: -80%;
-                bottom: 30px;
-                width: 424px;
-            }
-            @media(min-width: $desktop){
-                height: 8px;
-                width: 480px;
-                left: -60%;
-                bottom: 50px
-            } 
-        }
+        }        
     }
     &-img{
         width: 100%;
@@ -113,12 +93,13 @@
             width: 50%;
             padding-right: 120px;
             max-width: 100%;
-        }
+        }        
     }
     &-figcaption{
         font-weight: 600;
         font-size: 16px;
         line-height: 16px;
+        position: relative;
         @media(min-width:$tablet){
             margin-top: 15px;
         }
@@ -134,6 +115,25 @@
             line-height: 32px;
             bottom: 14px;
             right: calc(100% - 389px);
+        }
+        &:before{
+            content: '';
+            width: calc(100% - 40px);
+            height: 4px;
+            background: #FFCC08;
+            display: block;
+            position: absolute;
+            top: -15px;
+            left:0;
+            @media(min-width: $notebook){                
+                bottom: 30px;
+                width: 424px;
+            }
+            @media(min-width: $desktop){
+                height: 8px;
+                width: 480px;                
+                bottom: 50px;
+            } 
         }
         span{
             display: block;

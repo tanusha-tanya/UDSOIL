@@ -1,14 +1,31 @@
 .screen-dotes{
     display: none;
-    &.showed{
-        display: block;
-        position: fixed;
-        right: 20px;
-        top: 50vh;
+    &.showed{     
+        @media(min-width:$tablet){   
+            display: block;
+            position: fixed;
+            right: 20px;
+            top: 50vh;
+        }
+        @media(min-width:$notebook){ 
+            right: 50px;            
+        }
+        @media(min-width:$desktop){
+            right: 80px;  
+        }  
+    }
+    &-icon{
+        @media(min-width:$desktop){
+            width: 64px;
+            height: 64px;
+        }       
     }
     &-li{
         margin: 24px 15px;
-        list-style: none;        
+        list-style: none;
+        @media(min-width:$desktop){
+            margin: 28px 30px;
+        }        
     }
     &-link{
         font-size:0;
@@ -17,6 +34,10 @@
         box-sizing: border-box;
         width: 10px;
         height: 10px;
+        @media(min-width:$desktop){
+            width: 30px;
+            height: 30px;
+        }
         &:before{
             content: '';
             display: block;
@@ -26,12 +47,23 @@
             background: #E0E0E0;            
         }
         &.active{
+            &:before{
+                background: transparent;  
+            }
             &:after{
                 content: '';
                 display: block;
                 width: 8px;
                 height: 8px; 
-                border: 22px solid #000000;
+                border: 2px solid #000000;
+                border-radius: 100%;                
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                @media(min-width:$desktop){
+                    width: 16px;
+                    height: 16px; 
+                }
             }
         }
     }   
