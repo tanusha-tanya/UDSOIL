@@ -15,3 +15,14 @@ script.
   div.innerHTML = ajax.responseText;
   document.body.insertBefore(div, document.body.childNodes[0]);
   };
+script.
+  AOS.init({
+      once: true,
+      disable: window.innerWidth < 767
+  });
+  $(window).resize(function () {
+      AOS.init({
+          once: true,
+          disable: window.innerWidth < 767
+      });
+  });

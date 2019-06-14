@@ -40,7 +40,7 @@ gulp.task('scripts', function () {
   return gulp.src('app/templates/**/*.js')
     .pipe(plumber({
       errorHandler: notify.onError('Error: <%= error.message %>')
-    }))    
+    }))
     .pipe(sourcemaps.init())
     .pipe(babel({
         presets: ['es2015', 'env']
@@ -49,6 +49,20 @@ gulp.task('scripts', function () {
     .pipe(sourcemaps.write('.'))
     .pipe(changed('.tmp/scripts'))
     .pipe(gulp.dest('.tmp/scripts'))
+});
+
+gulp.task('js-libs', function() {
+    return gulp.src([
+					'./node_modules/jquery/dist/jquery.js',
+					'app/libs/foreachpolyfill.js',
+                   './node_modules/aos/dist/aos.js',
+				   './node_modules/owl.carousel/dist/owl.carousel.js',
+				   './node_modules/chart.js/dist/Chart.js',
+				   './node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js'
+				   
+               ])
+               .pipe(concat('libs.js'))
+               .pipe(gulp.dest('.tmp/scripts'))               
 });
 
 gulp.task('template', function () {
@@ -105,7 +119,7 @@ gulp.task('svg', function () {
     .pipe(gulp.dest('.tmp/images'));
 });
 
-gulp.task('html', ['template', 'styles', 'scripts'], function() {
+gulp.task('html', ['template', 'styles', 'scripts', 'js-libs'], function() {
   return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe(useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe(gulp.dest('.tmp'));
@@ -155,10 +169,9 @@ gulp.task('watch', function () {
   gulp.watch('app/templates/**/*.pug', ['template']);
   gulp.watch('app/images/svg/**/*.svg', ['svg']);
   gulp.watch('app/images/sprite/**/*.png', ['sprites']);
-  gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('s', ['styles', 'scripts', 'template', 'sprites', 'svg', 'watch'], function() {
+gulp.task('s', ['styles', 'scripts', 'js-libs', 'template', 'sprites', 'svg', 'watch'], function() {
   browserSync.init({
     notify: false,
     port: 9000,

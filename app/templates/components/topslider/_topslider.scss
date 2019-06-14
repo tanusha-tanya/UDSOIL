@@ -241,6 +241,10 @@
             text-align: center;
             padding-top: 15px;
             cursor: pointer; 
+            transition:  background .3s;
+            &:hover{
+             background: #F4C40A;
+            }
             @media(min-width: $tablet){
                 width: 64px;
                 height: 64px;

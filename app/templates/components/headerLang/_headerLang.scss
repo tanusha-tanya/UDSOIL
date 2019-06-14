@@ -12,6 +12,10 @@
     padding-top: 12px;
     text-decoration: none;
     color: #282828;
+    transition: background .3s;
+    &:hover{
+        background: #F4C40A;
+    }
     @media(min-width: $tablet){
         position: absolute;
         right: 100px;

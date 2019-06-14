@@ -8,6 +8,7 @@
         padding-top: 20px;
         color: #282828;
         text-decoration: none;
+        transition: background .3s;
         &__grey{
             background: #F0F1F2;
         }
@@ -15,6 +16,7 @@
             background: #FFCC08;
         }
         &:hover{
+            background:#F4C40A;
             .more-arrow:before{
                 width: 29px;
                 @media(min-width: $desktop){

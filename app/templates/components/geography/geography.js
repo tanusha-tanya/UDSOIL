@@ -75,13 +75,14 @@
   if($(window).width() > 1919){
     zoomer = 6;
   }  
+  
   var myMap = new ymaps.Map("map", {        
     center: [58.01, 56.22],        
     zoom: zoomer,     
-    controls: ['zoomControl'],
+    controls: ['zoomControl'],   
   });   
   myMap.behaviors.disable('scrollZoom');
-  myMap.behavior.disable('MultiTouch');
+  myMap.behaviors.disable('drag');
 }
 const geographyMap = document.getElementById('map');
 if(geographyMap){

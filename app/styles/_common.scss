@@ -7,9 +7,13 @@ window{
 }
 html{
     position: relative;
-    margin: 0 auto;
-    overflow-x: hidden;
+    margin: 0 auto;    
     scroll-behavior: smooth;
+    min-width: 320px;
+    overflow-x: auto;
+    @media(min-width: 320px){
+        overflow-x: hidden;
+    }
 }
 body{
     position: relative;
@@ -19,8 +23,12 @@ body{
     font-size: 14px;
     line-height: 24px;
     color: #282828;
-    overflow-x: hidden;
     max-width: 2880px;
+    min-width: 320px;
+    overflow-x: auto;
+    @media(min-width: 320px){
+        overflow-x: hidden;
+    }
     &.dark{
         height: 100vh;
         overflow-y: hidden;
