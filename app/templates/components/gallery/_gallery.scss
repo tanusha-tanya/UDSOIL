@@ -1,0 +1,123 @@
+.gallery{
+    position: relative;
+    padding-top: 40px;
+    @media(min-width: $tablet){
+        padding-top: 56px;
+    }
+    @media(min-width: $notebook){
+        padding-top: 88px;
+    }
+    &::before{
+        content: '';
+        width: calc(100% - 32px);
+        height: 112px; 
+        display: block;
+        background: #FFCC08;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media(min-width: $tablet){
+            width: 70%;
+        }
+        @media(min-width:$notebook){
+            height: 184px; 
+        }
+        @media(min-width:$desktop){
+            height: 296px; 
+        }
+    }
+    &-flex{
+        @media(min-width: $tablet){
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin: 0 -8px;
+            box-sizing: border-box;
+        }        
+        @media(min-width:$desktop){
+            margin: 0 -16px;
+        }
+    }  
+    &-figure{
+        max-width: 500px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+    &-pick{
+        position: relative;
+        &::after{
+            content: '';
+            background: #FFCC08;
+            display: block;
+            position: absolute;
+            height: 8px;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+    &-photo{
+        width: 100%;        
+    }
+    &-figcaption{
+        margin: 9px 0;
+        @media(min-width: $tablet){
+            margin: 16px 0;
+        }
+        @media(min-width:$desktop){
+            margin: 25px 0;
+        }
+    }
+    &-item{
+        margin-bottom: 31px;
+        @media(min-width: $tablet){
+            box-sizing: border-box;
+            width: calc(50% - 16px);
+            margin: 0 8px;
+            margin-bottom: 48px;
+        }
+        @media(min-width:$notebook){
+            width: calc(33% - 16px);
+            margin-bottom: 37px;
+        }
+        @media(min-width:$desktop){
+            width: calc(33% - 32px);
+            margin: 0 16px;
+            margin-bottom: 105px;
+        }
+    }
+    &-title{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: #282828;
+        @media(min-width: $tablet){
+            font-size: 17px;
+            line-height: 28px;
+        }
+        @media(min-width:$notebook){
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @media(min-width:$desktop){
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+        }
+    }
+    &-description{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #828282;
+        @media(min-width: $tablet){
+            font-size: 14px;
+            line-height: 24px;
+        }
+        @media(min-width:$desktop){
+            font-size: 18px;
+            margin-top: 8px;
+        }
+    }
+}

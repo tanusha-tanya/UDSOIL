@@ -1,0 +1,13 @@
+mixin headerInner(h1, descript, image)
+    include ../../components/topbanner/topbanner
+    header.header
+        .container
+            .header-top        
+                include ../header/headerTop/headerTop
+        .header-middle
+            include ../../components/blackLogo/blacklogo
+            include ../../components/bigmenu/bigmenu
+            include ../../components/headerLang/headerLang
+            include ../../components/headerWidget/headerWidget
+        .header-topslider
+            +topbanner(h1, descript, image)
