@@ -1,0 +1,11 @@
+extends _layouts/default
+include  _layouts/headerInner/headerInner
+block title
+  title Деятельность
+block header
+  +headerInner('Деятельность', 'background-image:url(/images/actionslider.jpg)')  
+block content
+    main.content-main
+      .container
+        include  components/activity/activity
+block footer

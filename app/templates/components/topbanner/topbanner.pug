@@ -1,9 +1,9 @@
-mixin topbanner(h1, descript, image)
-    .topbanner        
-        .topbanner-container
-            h1.topbanner-title= h1
-            p.topbanner-descript=  descript
-            .topbanner-background(style=image)   
+mixin topbanner(h1, image)
+    .topbanner 
+        .topslider-item   
+            .topslider-container
+                h1.topslider-title= h1
+            .topslider-background(style=image)   
     .topbanner-nav
         a(href="#").topslider-icon#js-bottomscroll
             svg.topslider-icon-static(role="img")(width="40")(height="40"): use(xlink:href="#pump") 

@@ -1,0 +1,65 @@
+.activity{
+    &-flex{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+    }
+    &-regions{
+        box-sizing: border-box;
+        margin: 0 8px 25px 8px;
+        width: calc(50% - 16px);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #282828;
+        svg{
+            color: #FFCC08;
+            fill: #FFCC08;
+        }
+    }
+    &-kinds{
+        margin: 0 8px 25px 8px;
+        width: calc(100% - 16px);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #282828;
+        box-sizing: border-box;
+    }
+    &-yellow{
+        width: 104px;
+        height: 104px;
+        background: #FFCC08;
+        border-radius: 100%;
+        position: relative;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-top: 23px;
+        margin-bottom: 7px;
+    }
+    &-ol{
+        counter-reset: myCounter;
+    }
+    &-li{
+        list-style: none;      
+        display: flex;  
+        width: calc(100% - 16px);
+        margin: 0 8px 23px 8px;
+        align-content: flex-start;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #282828;
+        &:before{
+            counter-increment: myCounter;
+            content:counter(myCounter);
+            font-weight: 600;
+            font-size: 40px;            
+            color:  #FFCC08;
+            margin-right: 8px;
+            margin-top: 8px;
+        }  
+    }
+}

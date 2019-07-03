@@ -3,7 +3,8 @@ include  _layouts/headerInner/headerInner
 block title
   title Команда
 block header
-  +headerInner('Команда', 'Сегодня на объектах UDS oil трудятся 600 человек. Это опытные специалисты с многолетним стажем в нефтяной отрасли и молодые амбициозные сотрудники.', 'background-image:url(/images/comandslider.jpg)')  
-block content  
-  include  components/gallery/gallery
+  +headerInner('Команда', 'background-image:url(/images/comandslider.jpg)')  
+block content 
+  main.content-main
+    include  components/gallery/gallery
 block footer
