@@ -1,0 +1,16 @@
+extends _layouts/default
+include _layouts/headerInner/headerInner
+block title
+  title Тендеры
+block header
+  +headerInner('Тендеры', 'background-image:url(/images/tenderslider.jpg)')  
+block content 
+  main.content-main
+    .container
+        .content   
+            .content-block
+                p Решение о выборе исполнителя заказа на поставку продукции, выполнение работ или оказание услуг принимается на основании проведенных тендеров. Тендер помогает сделать оптимальный выбор исполнителя. Договор заключается с компанией, предложившей наиболее выгодные условия для выполнения заказа. Организатором всех проводимых тендеров и закупок выступает тендерная комиссия «УДС-Групп»        
+        include  components/tenders/tenders
+block footer
+  include components/mobilemenu/mobilemenu
+  include _includes/scripts 

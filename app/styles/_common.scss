@@ -36,6 +36,7 @@ body{
     &.dark{
         height: 100vh;
         overflow-y: hidden;
+        display: block;
         @media(min-width: $notebook){
             height: 100%;
         } 
@@ -302,9 +303,20 @@ body{
         text-indent: 0;
     }
 }
-.content{
+.content{    
     &-block{
         margin: 30px 0;
+        @media(min-width: $tablet){
+            margin: 56px auto;
+        }
+        @media(min-width: $notebook){            
+            position: relative;
+            width: 66%;
+            margin: 65px auto; 
+        }
+        @media(min-width: $notebook){
+            margin: 74px auto;            
+        }
     }
     h2{
         font-weight: 600;
@@ -312,12 +324,33 @@ body{
         line-height: 32px;
         color: #282828;
         margin-bottom: 20px;
+        @media(min-width: $tablet){
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 56px;
+        }
     }
     p{
         font-size: 14px;
         line-height: 24px;
         color: #282828;
-        margin: 20px 0;
+        margin: 20px 0;        
+        @media(min-width: $tablet){
+            font-size: 16px;
+            letter-spacing: 0.15px;
+        }
+        @media(min-width: $desktop){
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+        }
     }
     h3{
        margin: 26px 0; 
@@ -326,5 +359,39 @@ body{
        font-weight: 600;
        font-size: 18px;
        line-height: 24px;
+       @media(min-width: $tablet){
+        font-size: 20px;
+        line-height: 32px;
+        margin: 30px 0; 
+       }
+       @media(min-width: $desktop){
+            font-size: 24px;
+       }
+    }
+}
+@media only screen and (max-width : 768px) {
+    [data-aos]{
+        opacity: 1!important;
+        transform: translate3d(0,0,0);
+    }
+    .animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
     }
 }

@@ -21,8 +21,11 @@ script.
       disable: window.innerWidth < 767
   });
   $(window).resize(function () {
-      AOS.init({
+    clearTimeout(window.resizedFinished);
+    window.resizedFinished = setTimeout(function(){
+        AOS.init({
           once: true,
           disable: window.innerWidth < 767
       });
+    }, 250);      
   });
