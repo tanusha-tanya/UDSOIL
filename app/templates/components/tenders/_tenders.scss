@@ -1,0 +1,133 @@
+.table{
+    position: relative;
+    margin: 40px -32px;
+    @media(min-width: $tablet){
+        margin: 56px 0;
+    }
+    &-row{        
+        &__head{
+            display: none;            
+        }
+        &__close{
+            .table-cell{
+                display: none;
+                &__opener{
+                    display: block;                    
+                }
+            }
+        }
+        &__open{
+            background: #FAFBFC;
+            height: auto;
+            .table-cell__opener:before{
+                transform: rotate(90deg);
+            }
+            .table-cell{
+                display: block;                
+                @media(min-width: $tablet){                    
+                    display: flex;                    
+                    &__opener{
+                        display: block;                                            
+                    }
+                }
+            }
+        }
+    }
+    &-cell{
+        margin: 0 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #282828;
+        border-bottom: 1px solid #F0F1F2;
+        padding: 17px 0;
+        &:last-of-type{
+            border-bottom: 0;
+        }
+        @media(min-width: $tablet){
+            margin: 0;
+            padding: 0;
+        }        
+        a{
+            position: relative;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #282828;
+            text-decoration: none;
+            &:after{
+                content: '';
+                background: #FFCC08;
+                height: 2px;
+                position: absolute;
+                width: 32px;
+                left: 0;
+                bottom: -5px; 
+                transition: width .3s;
+            }
+            &:hover{
+                &:after{
+                    width: 0;
+                }
+            }
+        }
+        &:before{
+            content: attr(data-cell);
+            color: #7C7C7C;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 24px;
+            margin-bottom: 5px;
+            display: block;
+            @media(min-width: $tablet){
+                width: 38%;
+                border-right: 1px solid #F0F1F2;
+                flex-shrink: 0;
+                margin-right: 16px;   
+                            
+            }
+        }
+        &__opener{   
+            position: relative;
+            border-bottom: 1px solid #F0F1F2;
+            margin: 0;
+            @media(min-width: $tablet){
+                padding: 17px 0;
+            }
+            &:before{
+                content: '';
+                display: block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 32px;
+                border-radius: 100%;
+                background: url('../images/svg/spoiler.svg');
+                transition: transform .3s;
+            }
+        }
+    }
+    &-title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 24px;
+        margin: 0 50px;
+        position: relative;
+        &:before{
+            content: '№';
+            margin-right: 5px; 
+            font-size: 12px;
+            line-height: 24px;  
+            font-weight: bold;         
+        }
+        @media(min-width: $tablet){
+            font-weight: 600;
+            font-size: 14px;
+            &:before{
+                font-weight: 600;
+                font-size: 14px;          
+            }            
+        }
+    }
+}
