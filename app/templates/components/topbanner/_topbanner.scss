@@ -24,5 +24,21 @@
             }
         }
     }
-        
+    .topslider-title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        @media(min-width:$tablet){
+            font-size: 34px;
+            line-height: 40px;
+        }
+        @media(min-width:$notebook){
+            font-size: 48px;
+            line-height: 64px;
+        }
+        @media(min-width:$desktop){
+            font-size: 72px;
+            line-height: 90px;
+        }
+    }        
 }

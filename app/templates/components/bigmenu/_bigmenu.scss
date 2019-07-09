@@ -50,11 +50,14 @@
                 left: 0;
                 right: 0;
                 width: 100%;
-                top: 60px;
+                top: 45px;
                 display: block;
                 background: transparent;
                 height: 4px;
                 opacity: background .3s;
+                @media(min-width:$desktop){
+                    top: 60px;
+                }
             }
             &:after{
                 content: '';

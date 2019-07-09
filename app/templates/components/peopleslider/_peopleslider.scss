@@ -1,0 +1,63 @@
+.peopleslider{
+    margin: 33px 0;
+    &-title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    &-slider{
+        &-item{
+            padding: 36px 32px 23px 32px;
+            background: #FAFBFC;
+        }
+    }
+    &-controllers{
+        display: flex;
+        justify-content: flex-end;   
+        align-content: center;     
+    } 
+    &-content{
+        display: none;
+        &__active{
+            display: block;
+        }
+    }   
+}
+.controllers{
+    &-toggler{
+        width: 34px;
+        height: 14px;
+        background: rgba(154, 154, 154, .38);      
+        border-radius: 7px;
+        position: relative;
+        z-index:10;
+        margin: 0 8px;
+        &:after{
+            content: '';
+            background: #FFCC08;
+            display: block;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: -3px;
+            opacity: 1;
+            z-index:100;
+        }
+    }
+    &-item{
+        svg{
+            color:#DADADA;
+            fill: #DADADA;
+            transition: fill .3s, color .3s;
+        }  
+        &__active{
+            svg{            
+                color:#FFCC08;
+                fill: #FFCC08;
+            }
+        }      
+    }   
+}

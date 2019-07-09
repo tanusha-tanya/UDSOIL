@@ -1,19 +1,47 @@
 .table{
     position: relative;
-    margin: 40px -32px;
+    margin: 40px -32px;    
     @media(min-width: $tablet){
         margin: 56px 0;
     }
-    &-row{        
+    @media(min-width: $notebook){
+        width: 66%;
+        margin: 56px auto;
+    }
+    @media(min-width: $desktop){
+        width: 100%;        
+        display: table;        
+    }
+    &-row{  
+        @media(min-width: $desktop){                
+            display: table-row;                   
+        }      
         &__head{
-            display: none;            
+            display: none; 
+            @media(min-width: $desktop){
+                display: table-row;
+                background:#FEF8E2;
+                .table-cell{
+                    color:  #7C7C7C;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 16px;
+                    vertical-align: middle;
+                }
+            }           
         }
-        &__close{
+        &__close{            
             .table-cell{
                 display: none;
                 &__opener{
                     display: block;                    
                 }
+                @media(min-width: $desktop){
+                    display: table-cell;
+                    .table-cell__opener{
+                        display: table-cell;                  
+                    }
+                }                
             }
         }
         &__open{
@@ -29,6 +57,12 @@
                     &__opener{
                         display: block;                                            
                     }
+                }
+                @media(min-width: $desktop){
+                    &__opener{
+                        display: table-cell;                                           
+                    }
+                    display: table-cell;
                 }
             }
         }
@@ -47,7 +81,17 @@
         @media(min-width: $tablet){
             margin: 0;
             padding: 0;
-        }        
+        }
+        @media(min-width: $desktop){
+            display: table-cell;
+            padding: 16px 20px;
+            &:first-of-type{
+                padding-left: 32px;
+            }
+            &:last-of-type{
+                padding-right: 32px;     
+            }
+        }    
         a{
             position: relative;
             font-weight: 500;
@@ -84,7 +128,13 @@
                 border-right: 1px solid #F0F1F2;
                 flex-shrink: 0;
                 margin-right: 16px;   
-                            
+                padding: 20px 17px;            
+            }
+            @media(min-width: $notebook){
+                width: 30%;
+            }
+            @media(min-width: $desktop){
+                display: none;
             }
         }
         &__opener{   
@@ -93,6 +143,9 @@
             margin: 0;
             @media(min-width: $tablet){
                 padding: 17px 0;
+            }
+            @media(min-width: $desktop){
+                display: table-cell;
             }
             &:before{
                 content: '';
@@ -104,7 +157,23 @@
                 border-radius: 100%;
                 background: url('../images/svg/spoiler.svg');
                 transition: transform .3s;
+                @media(min-width: $tablet){
+                    left: 17px;
+                    padding: 0;  
+                }
+                @media(min-width: $desktop){
+                    display: none;
+                }
             }
+        }
+    }
+    &-content{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #282828;
+        @media(min-width: $tablet){
+            padding: 20px 17px; 
         }
     }
     &-title{
@@ -128,6 +197,9 @@
                 font-weight: 600;
                 font-size: 14px;          
             }            
+        }
+        @media(min-width: $desktop){
+            margin: 0;
         }
     }
 }
