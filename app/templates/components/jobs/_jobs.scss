@@ -1,0 +1,123 @@
+.jobs{
+    &-title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+        margin: 15px 0;
+    }
+    &-h3{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;  
+        color: #282828;     
+    }
+    &-h4{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px; 
+        margin: 14px 0; 
+        color: #282828; 
+    }   
+    &-openner{
+        display: flex;
+        padding: 11px 32px;
+        border-bottom: 1px solid  #F0F1F2;
+    }
+    &-svg{
+        margin-right: 8px;
+        transition: transform .3s;        
+    }
+    &-content{
+        display: none;
+    }
+    &-li{
+        list-style:none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 15px 0;
+        position: relative;
+        padding-left: 32px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            border: 1px solid #E6E7E8;
+            box-sizing: border-box;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 9px;
+            width: 5px;
+            height: 9px;            
+            transform: rotate(45deg);
+            border-bottom: 1.4px solid #FFCC08;
+            border-right: 1.4px solid #FFCC08;
+        }
+    }
+    &-item__open{
+        background-color: #FAFBFC;
+        background-image: url(../images/svg/team-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        .jobs-content{
+            display: block;
+            padding: 14px 32px;            
+        }
+        .jobs-svg{
+            transform: rotate(90deg)
+        }
+    }
+    &-link{
+        position: relative;
+        margin: 33px auto;
+        width: 229px;
+        display: flex;
+        box-sizing: border-box;
+        background: #FFCC08;
+        border-radius: 50px;
+        padding: 16px 30px;
+        text-decoration: none;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            color: #282828;
+        }
+    }
+    &-arrow{
+        position: relative;
+        &:before{
+            content: '';
+            width: 31px;
+            height: 2px;
+            display: block;
+            background: #282828;
+            position: absolute;
+            top: 12px;
+            left: -30px;
+            transition: width .3s, left .3s;
+        }
+        svg{
+            transform: rotate(180deg); 
+            top: 3px;
+            position: relative;
+        }
+        &:hover{
+            &:before{
+                width: 15px; 
+                left: -14px;
+            }
+        }
+    }
+}

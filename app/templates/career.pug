@@ -1,7 +1,7 @@
 extends _layouts/default
 include _layouts/headerInner/headerInner
 block title
-  title Тендеры
+  title Карьера
 block header
   +headerInner('Карьера', 'background-image:url(/images/careerslider.jpg)')  
 block content 
@@ -13,6 +13,7 @@ block content
                 p Мы создаем комфортные и конкурентоспособные условия труда, реализуем программы мотивации персонала, расширяем возможности для обучения и профессионального роста, стремимся к тому, чтобы наши сотрудники получали уникальный опыт, максимально полно раскрывали свои способности и развивались вместе с компанией.
                 p «УДС нефть» – это команда профессионалов, сплоченная общими целями и ориентированная на результат. И если вы разделяете наши ценности и ищете интересную и динамичную работу, профессиональное развитие и карьерные возможности, добро пожаловать в команду «УДС нефть».
     include  components/peopleslider/peopleslider
+    include  components/jobs/jobs
 block footer
   include components/mobilemenu/mobilemenu
   include _includes/scripts 

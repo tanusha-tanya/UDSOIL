@@ -1,7 +1,7 @@
 .peopleslider
     .container
         h2.peopleslider-title Люди дела
-    .peopleslider-slider
+    .peopleslider-slider.owl-theme.owl-carousel
         .peopleslider-slider-item
             .peopleslider-controllers                
                 svg.controllers-item.controllers-item__active(role="img")(width="18")(height="20"): use(xlink:href="#text")
@@ -14,12 +14,32 @@
             .peopleslider-name
                 .peopleslider-name-bold Имя Фамилия
                 .peopleslider-name-desc Должность
-    .peopleslider-nav
-        .peopleslider-arrows
-            .peopleslider-arrow.peopleslider-arrow__left
-                svg(role="img")(width="11")(height="14"): use(xlink:href="#triangle")                        
-            .peopleslider-arrow.peopleslider-arrow__right
-                svg(role="img")(width="11")(height="14"): use(xlink:href="#triangle")
-        .peopleslider-counter 7/25
-
-            
+        .peopleslider-slider-item
+            .peopleslider-controllers                
+                svg.controllers-item.controllers-item__active(role="img")(width="18")(height="20"): use(xlink:href="#text")
+                .controllers-toggler
+                svg.controllers-item(role="img")(width="18")(height="20"): use(xlink:href="#pick")
+            .peopleslider-content.peopleslider-content__active.peopleslider-text
+                p Водителем я работаю 15 лет, но спецтехникой управляю не так давно – всего год. Для подготовки к конкурсу установил на смартфоне специальную программу по правилам дорожного движения, освежил материал по правилам перевозки опасных грузов. Как результат – сдал теорию без единой ошибки. Очень советую всем пробовать свои силы и участвовать в конкурсах, повышая свой профессиональный уровень
+            .peopleslider-content.peopleslider-pick
+                img(src="assets/person.jpg")
+            .peopleslider-name
+                .peopleslider-name-bold Имя Фамилия
+                .peopleslider-name-desc Должность
+        .peopleslider-slider-item
+            .peopleslider-controllers                
+                svg.controllers-item.controllers-item__active(role="img")(width="18")(height="20"): use(xlink:href="#text")
+                .controllers-toggler
+                svg.controllers-item(role="img")(width="18")(height="20"): use(xlink:href="#pick")
+            .peopleslider-content.peopleslider-content__active.peopleslider-text
+                p Водителем я работаю 15 лет, но спецтехникой управляю не так давно – всего год. Для подготовки к конкурсу установил на смартфоне специальную программу по правилам дорожного движения, освежил материал по правилам перевозки опасных грузов. Как результат – сдал теорию без единой ошибки. Очень советую всем пробовать свои силы и участвовать в конкурсах, повышая свой профессиональный уровень
+            .peopleslider-content.peopleslider-pick
+                img(src="assets/person.jpg")
+            .peopleslider-name
+                .peopleslider-name-bold Имя Фамилия
+                .peopleslider-name-desc Должность
+    .container
+        .peopleslider-nav
+            .peopleslider-arrows
+            .peopleslider-counter
+                

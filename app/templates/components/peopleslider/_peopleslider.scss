@@ -93,7 +93,7 @@
             left: 25px;
             transition: width .3s, transform .3s;
         }
-        &__right{
+        &.owl-next{
             padding: 13px 19px;
             margin-left: 35px;
             &:before{
@@ -111,7 +111,7 @@
         }
     }
     &-nav{
-        padding: 16px 32px;
+        padding: 16px 0;
         display: flex;
         justify-content: space-between;
     }
