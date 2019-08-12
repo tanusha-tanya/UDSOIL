@@ -2,6 +2,32 @@
     .hr-left
         .hr-text
             p Хотите работать в нашей компании, но в списке вакансий желаемой должности пока нет?
-            p Заполните анкету, и мы свяжемся с Вами, как только она появится в компании.
-        
+            p Заполните анкету, и мы свяжемся с Вами, как только она появится в компании.       
+    .hr-contacts
+        img.hr-pick(src="../assets/hr.png")
+        .hr-name    
+            p.hr-big Мария Ожегова
+            p.hr-gray HR-специалист
+            p
+                a.hr-phone(href="tel:+79199120919") +7 (919) 912-09-19
     .hr-right
+        form.js-ajaxform.hr-resume(action="")
+            span
+                label(for="name")
+                input(type="text", id="name", name="name", placeholder="Ф.И.О")
+            span
+                label(for="position")
+                input(type="text", id="position", name="position", placeholder="Интересующая должность") 
+            span
+                label(for="phone")
+                input(type="text", id="phone", name="phone", placeholder="Телефон") 
+            span
+                label(for="email")
+                input(type="text", id="email", name="email", placeholder="E-mail")
+            span
+                label(for="resume")
+                input(type="file", id="resume", name="resume", placeholder="прикрепить резюме")
+            button Отправить
+            span.hr-disclamer Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с Правилами обработки персональных данных
+            
+

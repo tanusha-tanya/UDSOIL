@@ -1,0 +1,32 @@
+.hrform{
+    background: #FAFBFC;
+    padding: 32px;
+    margin-top: 32px;
+    position: relative;
+    &:after{
+       content: '';
+       display: block;
+       position: absolute;
+       right:0;
+       top:-8px;
+       border-top: 8px solid  #FFCC08;
+       border-right: 8px solid  #FFCC08;
+       width: 40px;
+       height: 40px;
+    }
+}
+.hr{
+    &-text{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #282828;
+    }
+    &-pick{
+        float: left;
+        margin-right: 16px;
+        max-width: 120px;
+        width: 100%;
+        border-radius: 100%;
+    }
+}
