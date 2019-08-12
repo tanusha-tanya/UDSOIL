@@ -12,22 +12,24 @@
                 a.hr-phone(href="tel:+79199120919") +7 (919) 912-09-19
     .hr-right
         form.js-ajaxform.hr-resume(action="")
-            span
+            span.hr-fieldset
                 label(for="name")
-                input(type="text", id="name", name="name", placeholder="Ф.И.О")
-            span
+                input.hr-input(type="text", id="name", name="name", placeholder="Ф.И.О")
+            span.hr-fieldset
                 label(for="position")
-                input(type="text", id="position", name="position", placeholder="Интересующая должность") 
-            span
+                input.hr-input(type="text", id="position", name="position", placeholder="Интересующая должность") 
+            span.hr-fieldset
                 label(for="phone")
-                input(type="text", id="phone", name="phone", placeholder="Телефон") 
-            span
+                input.hr-input(type="text", id="phone", name="phone", placeholder="Телефон") 
+            span.hr-fieldset
                 label(for="email")
-                input(type="text", id="email", name="email", placeholder="E-mail")
-            span
-                label(for="resume")
-                input(type="file", id="resume", name="resume", placeholder="прикрепить резюме")
-            button Отправить
+                input.hr-input(type="text", id="email", name="email", placeholder="E-mail")
+            span.hr-fieldset                
+                input.hr-file(type="file", id="resume", name="resume", placeholder="прикрепить резюме")
+                label.hr-file-label(for="resume") 
+                    span.hr-plus
+                    | прикрепить резюме
+            button.hr-button Отправить
             span.hr-disclamer Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с Правилами обработки персональных данных
             
 

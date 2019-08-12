@@ -29,4 +29,118 @@
         width: 100%;
         border-radius: 100%;
     }
+    &-contacts{
+        margin: 24px 0;
+        display: flex;
+        align-items: center;
+    }
+    &-big{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #282828;
+    }
+    &-gray{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px; 
+        color: #4F4F4F;
+    }
+    &-phone{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px; 
+        color: #282828;
+        text-decoration:none;
+    }
+    &-resume{
+        input::placeholder{
+            color:   #9A9A9A;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    &-fieldset{
+        position: relative;
+    }
+    &-input{
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #E0E0E0;
+        padding: 19px 0 12px 0;
+        color: #282828;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        transition: border .3s;
+        outline: none;
+        &:hover, &:focus{
+            border-color:#FFCC08;
+        }
+    }
+    &-file{
+        position: absolute;
+        visibility: hidden;
+        &-label{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            color: #282828;
+            margin: 20px 0 35px 0;
+            display: inline-block;            
+        }
+    }
+    &-plus{
+        font-size: 30px;
+        vertical-align: bottom;
+        margin-right: 20px;
+        position: relative;
+        &:before{
+            content: '';
+            width: 12px;
+            height: 2px;
+            background: #282828;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+        &:after{
+            content: '';
+            height: 12px;
+            width: 2px;
+            background: #282828;
+            display: block;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+    }
+    &-button{
+        background: #FFCC08;
+        border-radius: 50px;
+        color: #282828;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        width: 224px;
+        box-sizing: border-box;
+        padding: 16px;
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        outline: none;
+        display: block;
+        letter-spacing: 0.15px;
+    }
+    &-disclamer{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #282828;
+        margin-top: 15px;
+        display: block;
+    }
 }
