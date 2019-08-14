@@ -6,11 +6,34 @@
         line-height: 32px;
         letter-spacing: 0.15px;
         margin: 23px 0;
+        @media(min-width:$tablet){
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
     }
     &-slider{
         &-item{
             padding: 36px 32px 23px 32px;
             background-color: #FAFBFC;            
+            @media(min-width:$tablet){
+                display: flex;
+                position: relative;
+                padding: 40px 0 40px 72px;
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 72px;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    background: #fff;
+                    top:0;
+                    bottom:0;
+                    z-index: 100;
+                }
+            }
         }
     }
     &-controllers{
@@ -18,6 +41,9 @@
         justify-content: flex-end;   
         align-items: center;    
         margin-bottom: 27px;
+        @media(min-width:$tablet){
+            display: none;
+        }
     } 
     &-content{
         display: none;
@@ -27,9 +53,10 @@
         line-height: 24px;
         &__active{
             display: block;
-        }
-        img{
-            max-width: 100%;
+        }        
+        @media(min-width:$tablet){
+            display: block; 
+            margin: 0;           
         }
     } 
     &-name{
@@ -39,7 +66,12 @@
             width: 75%;
             height: 4px;
             background: #FFCC08;
-            margin: 16px 0;            
+            margin: 16px 0;   
+            @media(min-width:$tablet){
+                width: 304px;
+                height: 2px;
+                margin: 8px 0;
+            }         
         }
         &-bold{
             font-weight: 600;
@@ -52,9 +84,18 @@
             line-height: 24px;
             color: #7C7C7C;
         }
+        @media(min-width:$tablet){
+            position: absolute;
+            bottom: 35px;
+            left: 35%;
+            z-index: 300;
+        }
     }
     &-text{
         position: relative;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
         &:before{
             content: '';
             width: 32px;
@@ -64,10 +105,53 @@
             position: absolute;
             left: 0;
             top: -55px;
+            @media(min-width:$tablet){
+                top: 0;
+                width: 40px;
+                height: 36px;
+                background-size: cover;
+                background-repeat: repeat;
+            }
+        }
+        @media(min-width:$tablet){
+            width: 62%;
+            margin-right: 20px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            font-style: italic;
+            padding-top: 60px;
+            padding-bottom: 80px;
         }        
     } 
+    &-pick{
+        width: 100%;
+        height: 0;
+        padding-top: 110%;
+        position: relative;        
+        @media(min-width:$tablet){
+            width: 37%;
+            height: 392px;
+            padding-top: 0;
+            position: relative;
+            z-index:200;
+        }
+    }
+    &-img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-repeat: no-repeat;        
+        background-position: center;
+    }
     &-arrows{
-        display: flex;        
+        display: flex; 
+        @media(min-width:$tablet){
+            margin-top: 5px;
+        }       
     }
     &-arrow{
         width: 48px;
@@ -114,6 +198,9 @@
         padding: 16px 0;
         display: flex;
         justify-content: space-between;
+        @media(min-width:$tablet){
+            padding: 20px 0;
+        }
     }
     &-counter{
         font-weight: 600;

@@ -44,8 +44,15 @@ if(ajaxforms.length > 0){
             file.addEventListener('change', ()=>{
                 let label = file.parentNode.querySelector('label');
                 if(file.value.length > 0){
-                    label.innerHTML =  file.value
-                }
+                    let fileName = file.value.split(/(\\|\/)/g).pop();
+                    label.innerHTML =  `${fileName} <span class="hr-delete"></span>`
+                };
+                let deleteButton = label.querySelector('.hr-delete');
+                
+                deleteButton.addEventListener('click', ()=>{
+                    file.value = '';
+                    label.innerHTML = `<span class="hr-plus"></span> прикрепить резюме`
+                })
             })
         })
     })

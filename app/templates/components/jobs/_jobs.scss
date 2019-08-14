@@ -5,12 +5,20 @@
         line-height: 32px;
         letter-spacing: 0.15px;
         margin: 15px 0;
+        @media(min-width:$tablet){
+            font-size: 34px;
+            line-height: 40px;
+        }  
     }
     &-h3{
         font-weight: 600;
         font-size: 14px;
         line-height: 16px;  
-        color: #282828;     
+        color: #282828; 
+        @media(min-width:$tablet){
+            font-size: 20px;
+            line-height: 40px;
+        }   
     }
     &-h4{
         font-weight: 600;
@@ -23,10 +31,19 @@
         display: flex;
         padding: 11px 32px;
         border-bottom: 1px solid  #F0F1F2;
+        @media(min-width:$tablet){
+            border: none;
+            padding: 16px 88px;
+        }
     }
     &-svg{
         margin-right: 8px;
         transition: transform .3s;        
+        @media(min-width:$tablet){
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+        }
     }
     &-content{
         display: none;
@@ -69,7 +86,10 @@
         background-position: center bottom;
         .jobs-content{
             display: block;
-            padding: 14px 32px;            
+            padding: 14px 32px; 
+            @media(min-width: $tablet){
+                padding: 20px 48px  20px  144px;
+            }        
         }
         .jobs-svg{
             transform: rotate(90deg)
