@@ -10,7 +10,8 @@
     }
     @media(min-width: $desktop){
         width: 100%;        
-        display: table;        
+        display: table;    
+        margin-bottom: 112px;    
     }
     &-row{  
         @media(min-width: $desktop){                

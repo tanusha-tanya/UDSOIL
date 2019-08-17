@@ -12,6 +12,16 @@
             line-height: 40px;
             letter-spacing: 0.25px;
         }
+        @media(min-width:$notebook){
+            margin: 0 auto;
+            margin-bottom: 32px;
+            max-width: 66%;
+        }
+        @media(min-width:$desktop){
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 64px;
+        }
     }
     &-slider{
         &-item{
@@ -32,6 +42,22 @@
                     top:0;
                     bottom:0;
                     z-index: 100;
+                }
+            }
+            @media(min-width:$notebook){
+                width: 866px;
+            }
+            @media(min-width:$desktop){
+                width: 1248px;
+                padding: 64px 0 64px 96px;
+            }
+        }
+        @media(min-width:$notebook){
+            .owl-item{
+                opacity: 0.5;
+                transition: opacity .3s;
+                &.center{
+                    opacity: 1;
                 }
             }
         }
@@ -71,12 +97,26 @@
                 width: 304px;
                 height: 2px;
                 margin: 8px 0;
-            }         
+            } 
+            @media(min-width:$notebook){
+                width: 336px;
+            }  
+            @media(min-width:$desktop){
+                width: 480px;
+            }      
         }
         &-bold{
             font-weight: 600;
             font-size: 14px;
             line-height: 24px;
+            @media(min-width:$notebook){
+                font-size: 16px;
+                letter-spacing: 0.15px;
+            }
+            @media(min-width:$desktop){
+                font-size: 18px;
+                letter-spacing: 0.5px;
+            }
         }
         &-desc{
             font-weight: 500;
@@ -95,7 +135,7 @@
         position: relative;
         font-weight: 500;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 24px;        
         &:before{
             content: '';
             width: 32px;
@@ -112,6 +152,10 @@
                 background-size: cover;
                 background-repeat: repeat;
             }
+            @media(min-width:$desktop){
+                width: 54px;
+                height: 48px;
+            }
         }
         @media(min-width:$tablet){
             width: 62%;
@@ -121,7 +165,13 @@
             font-style: italic;
             padding-top: 60px;
             padding-bottom: 80px;
-        }        
+        }
+        @media(min-width:$desktop){
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            padding-top: 80px;
+        }      
     } 
     &-pick{
         width: 100%;
@@ -135,6 +185,9 @@
             position: relative;
             z-index:200;
         }
+        @media(min-width:$desktop){
+            height: 560px;
+        }
     }
     &-img{
         position: absolute;
@@ -146,6 +199,9 @@
         bottom: 0;
         background-repeat: no-repeat;        
         background-position: center;
+        @media(min-width:$desktop){
+            background-size: cover;
+        }
     }
     &-arrows{
         display: flex; 
@@ -201,6 +257,14 @@
         @media(min-width:$tablet){
             padding: 20px 0;
         }
+        @media(min-width:$notebook){
+            max-width: 66%;
+            position: relative;
+            margin: 0 auto;
+        } 
+        @media(min-width:$desktop){
+            padding: 32px 0;
+        }
     }
     &-counter{
         font-weight: 600;
@@ -208,6 +272,10 @@
         line-height: 24px;
         letter-spacing: 0.15px;
         color: #7C7C7C;
+        @media(min-width:$desktop){
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
 }
 .controllers{

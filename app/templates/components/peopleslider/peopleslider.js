@@ -24,7 +24,19 @@ if(peopleslider){
                 nav:true,
                 navContainer: '.peopleslider-arrows',
                 navElement: 'div class="peopleslider-arrow"',
-                navText: ['<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>','<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>']
+                navText: ['<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>','<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>'],
+                responsive:{
+                    0:{
+                        items:1                        
+                    },
+                    1280:{
+                        items:2,
+                        center:true,   
+                        loop: true,
+                        autoWidth:true,                   
+                        margin: 17,                      
+                    }
+                }
             }) 
             let items = $('.peopleslider-slider .owl-item:not(.cloned)'),
             total = items.length,

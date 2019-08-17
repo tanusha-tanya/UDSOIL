@@ -1,35 +1,37 @@
 .hrform
-    .hr-left
-        .hr-text
-            p Хотите работать в нашей компании, но в списке вакансий желаемой должности пока нет?
-            p Заполните анкету, и мы свяжемся с Вами, как только она появится в компании.       
-    .hr-contacts
-        img.hr-pick(src="../assets/hr.png")
-        .hr-name    
-            p.hr-big Мария Ожегова
-            p.hr-gray HR-специалист
-            p
-                a.hr-phone(href="tel:+79199120919") +7 (919) 912-09-19
-    .hr-right
-        form.js-ajaxform.hr-resume(action="")
-            span.hr-fieldset
-                label(for="name").hr-label Ф.И.О
-                input.js-input.hr-input(type="text", id="name", name="name")
-            span.hr-fieldset
-                label(for="position").hr-label Интересующая должность
-                input.js-input.hr-input(type="text", id="position", name="position") 
-            span.hr-fieldset
-                label(for="phone").hr-label Телефон
-                input.js-phone.js-input.hr-input(type="text", id="phone", name="phone") 
-            span.hr-fieldset
-                label(for="email").hr-label E-mail
-                input.js-email.js-input.hr-input(type="text", id="email", name="email")
-            span.hr-fieldset                
-                input.js-file.hr-file(type="file", id="resume", name="resume")
-                label.hr-file-label(for="resume") 
-                    span.hr-plus
-                    | прикрепить резюме
-            button.js-button.disabled.hr-button(disabled) Отправить
-            span.hr-disclamer Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с Правилами обработки персональных данных
-            
+    .container
+        .hr-flex
+            .hr-col(data-aos="fade-right" data-aos-duration="3000" data-aos-delay="300" data-aos-anchor-placement="left") 
+                .hr-text
+                    p Хотите работать в нашей компании, но в списке вакансий желаемой должности пока нет?
+                    p Заполните анкету, и мы свяжемся с Вами, как только она появится в компании.       
+                .hr-contacts
+                    img.hr-pick(src="../assets/hr.png")
+                    .hr-name    
+                        p.hr-big Мария Ожегова
+                        p.hr-gray HR-специалист
+                        p
+                            a.hr-phone(href="tel:+79199120919") +7 (919) 912-09-19
+            .hr-col(data-aos="fade-left" data-aos-duration="3000" data-aos-delay="300" data-aos-anchor-placement="left") 
+                form.js-ajaxform.hr-resume(action="")
+                    span.hr-fieldset
+                        label(for="name").hr-label Ф.И.О
+                        input.js-input.hr-input(type="text", id="name", name="name")
+                    span.hr-fieldset
+                        label(for="position").hr-label Интересующая должность
+                        input.js-input.hr-input(type="text", id="position", name="position") 
+                    span.hr-fieldset
+                        label(for="phone").hr-label Телефон
+                        input.js-phone.js-input.hr-input(type="text", id="phone", name="phone") 
+                    span.hr-fieldset
+                        label(for="email").hr-label E-mail
+                        input.js-email.js-input.hr-input(type="text", id="email", name="email")
+                    span.hr-fieldset                
+                        input.js-file.hr-file(type="file", id="resume", name="resume")
+                        label.hr-file-label(for="resume") 
+                            span.hr-plus
+                            | прикрепить резюме
+                    button.js-button.disabled.hr-button(disabled) Отправить
+                    span.hr-disclamer Нажимая на кнопку «Отправить» вы подтверждаете, что согласны с Правилами обработки персональных данных
+                    
 

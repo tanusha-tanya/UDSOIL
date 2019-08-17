@@ -1,9 +1,20 @@
 .hrform{
     background: #FAFBFC;
-    padding: 32px;
+    padding: 32px 0;
     margin-top: 32px;
     position: relative;
-    &:after{
+    @media(min-width: $tablet){
+        margin-top: 58px;
+        padding: 57px 0;
+    }
+    @media(min-width:$notebook){
+        padding-top: 73px;
+    }
+    @media(min-width:$desktop){
+        padding-top: 94px;
+        padding-bottom: 149px;
+    }
+    &:before{
        content: '';
        display: block;
        position: absolute;
@@ -13,6 +24,9 @@
        border-right: 8px solid  #FFCC08;
        width: 40px;
        height: 40px;
+       @media(min-width: $tablet){
+           top: 42px;           
+       }
     }
 }
 .hr{
@@ -21,6 +35,17 @@
         font-size: 14px;
         line-height: 24px;
         color: #282828;
+        @media(min-width: $tablet){
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            p{
+               margin-bottom: 30px; 
+            }
+        }
+        @media(min-width:$notebook){
+            letter-spacing: 0.15px;
+        }
     }
     &-pick{
         float: left;
@@ -28,23 +53,44 @@
         max-width: 120px;
         width: 100%;
         border-radius: 100%;
+        @media(min-width: $tablet){
+            max-width: 224px;
+            margin-right: 24px;
+        }
     }
     &-contacts{
         margin: 24px 0;
         display: flex;
         align-items: center;
+        @media(min-width:$notebook){
+            margin-top: 50px;
+        }
+        @media(min-width:$desktop){
+            margin-top: 89px;
+        }
     }
     &-big{
         font-weight: 600;
         font-size: 14px;
         line-height: 24px;
         color: #282828;
+        @media(min-width: $tablet){
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
     &-gray{
         font-weight: 600;
         font-size: 14px;
         line-height: 24px; 
         color: #4F4F4F;
+        @media(min-width: $tablet){
+            font-weight: 500;
+            font-size: 16px;            
+            letter-spacing: 0.15px;
+            margin: 7px 0;
+        }
     }
     &-phone{
         font-weight: 600;
@@ -52,28 +98,42 @@
         line-height: 24px; 
         color: #282828;
         text-decoration:none;
+        @media(min-width: $tablet){
+            letter-spacing: 0.5px;
+            font-size: 18px;
+        }
     }    
     &-fieldset{
         position: relative;
+        display: block;
     }
     &-label{
         position: absolute;
-        bottom:0;
+        bottom:16px;
         color: #9A9A9A;
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
-        transition: transform .3s;
+        transition: transform .3s, font-size .3s;
         display: inline-block;
+        @media(min-width: $tablet){
+            font-size: 20px;
+            line-height: 32px;
+            bottom: 8px;
+        }
         &:hover, &:focus, &.notempty{
-            transform: translateY(-15px)
+            transform: translateY(-15px);
+            @media(min-width: $tablet){
+                font-size: 14px;
+                transform: translateY(-20px);
+            }            
         }        
     }
     &-input{
         width: 100%;
         border: 0;
         border-bottom: 1px solid #E0E0E0;
-        padding: 19px 0 12px 0;
+        padding: 21px 0 8px 0;
         color: #282828;
         font-weight: 500;
         font-size: 14px;
@@ -81,8 +141,22 @@
         transition: border .3s;
         outline: none;
         background: #FAFBFC;
+        box-sizing: border-box;
+        @media(min-width: $tablet){
+            font-size: 16px;
+            letter-spacing: 0.15px;
+            padding-bottom: 12px;            
+        }
+        @media(min-width:$desktop){
+            padding-top: 53px;
+        }        
         &:hover, &:focus, &.notempty{
-            border-color:#FFCC08;
+            border-color:#FFCC08;             
+        }
+        &.notempty{
+            @media(min-width:$tablet){
+                padding-top: 28px;
+            }
         }
     }
     &-file{
@@ -94,9 +168,22 @@
             line-height: 24px;
             letter-spacing: 0.15px;
             color: #282828;
-            margin: 20px 0 35px 0;
-            display: block;   
-            position: relative;         
+            margin: 20px 0 35px 0;               
+            position: relative; 
+            display: inline-block;
+            padding-right: 40px;
+            @media(min-width: $tablet){
+                margin: 43px 0 51px 0;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 32px;
+            } 
+            @media(min-width:$notebook){
+                margin-bottom: 70px;
+            } 
+            @media(min-width:$desktop){
+                margin-bottom: 75px;
+            }       
         }
     }
     &-plus{        
@@ -111,7 +198,7 @@
             display: block;
             position: absolute;
             bottom: 10px;
-            left: 0;
+            left: 0;            
         }
         &:after{
             content: '';
@@ -121,7 +208,7 @@
             display: block;
             position: absolute;
             left: 5px;
-            bottom: 5px;
+            bottom: 5px;            
         }
     }
     &-button{
@@ -141,6 +228,9 @@
         display: block;
         letter-spacing: 0.15px;
         cursor: pointer;
+        @media(min-width: $tablet){
+            margin: 0;
+        }
         &.disabled{
             background: #9A9A9A;
             cursor: text; 
@@ -153,6 +243,14 @@
         color: #282828;
         margin-top: 15px;
         display: block;
+        @media(min-width: $tablet){
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 28px;
+        }
+        @media(min-width:$desktop){
+            max-width: 405px;
+        }       
     }
     &-delete{
         vertical-align: bottom;
@@ -182,6 +280,32 @@
             position: absolute;
             right: 5px;
             bottom: 10px;
+        }
+    }
+    &-flex{
+        @media(min-width:$notebook){
+            display: flex;
+            width: calc(100% - 20px);
+            margin: 0 -10px;
+        }
+        @media(min-width:$desktop){
+            width: calc(100% - 30px);
+            margin: 0 -15px;
+        }
+    }
+    &-col{
+        @media(min-width:$notebook){            
+            width: calc(50% - 20px);
+            margin: 0 10px;
+        }
+        @media(min-width:$desktop){
+            width: calc(50% - 30px);
+            margin: 0 15px;
+        }
+    }
+    &-resume{
+        @media(min-width:$desktop){
+            width: 83%;            
         }
     }
 }

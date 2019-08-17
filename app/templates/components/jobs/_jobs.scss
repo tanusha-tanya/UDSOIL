@@ -1,4 +1,7 @@
-.jobs{
+.jobs{   
+    @media(min-width:$notebook){
+        margin-top: 115px;
+    } 
     &-title{
         font-weight: 600;
         font-size: 20px;
@@ -8,7 +11,16 @@
         @media(min-width:$tablet){
             font-size: 34px;
             line-height: 40px;
-        }  
+        }
+        @media(min-width:$notebook){
+            max-width: 66%;
+            position: relative;
+            margin: 0 auto;
+        }
+        @media(min-width:$desktop){
+            font-size: 48px;
+            line-height: 64px;
+        }
     }
     &-h3{
         font-weight: 600;
@@ -19,13 +31,27 @@
             font-size: 20px;
             line-height: 40px;
         }   
+        @media(min-width:$notebook){
+            letter-spacing: 0.15px;
+        }
+        @media(min-width:$desktop){
+            font-size: 24px;           
+        }
     }
     &-h4{
         font-weight: 600;
         font-size: 14px;
         line-height: 16px; 
         margin: 14px 0; 
-        color: #282828; 
+        color: #282828;
+        @media(min-width:$tablet){
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @media(min-width:$notebook){
+            letter-spacing: 0.5px;
+        }         
     }   
     &-openner{
         display: flex;
@@ -34,6 +60,12 @@
         @media(min-width:$tablet){
             border: none;
             padding: 16px 88px;
+        }
+        @media(min-width:$notebook){
+            padding: 20px 26px;
+        }
+        @media(min-width:$desktop){
+            padding: 26px 16px;
         }
     }
     &-svg{
@@ -44,9 +76,17 @@
             height: 40px;
             margin-right: 16px;
         }
+        @media(min-width:$notebook){
+            margin-right: 26px;
+        }
     }
     &-content{
         display: none;
+    }
+    &-ul{
+        @media(min-width:$notebook){
+            margin-bottom: 43px;
+        } 
     }
     &-li{
         list-style:none;
@@ -56,6 +96,15 @@
         margin: 15px 0;
         position: relative;
         padding-left: 32px;
+        @media(min-width:$tablet){
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @media(min-width:$notebook){
+            letter-spacing: 0.15px;
+            margin: 30px 0;
+        }        
         &:before{
             content: '';
             position: absolute;
@@ -84,12 +133,18 @@
         background-image: url(../images/svg/team-bg.svg);
         background-repeat: no-repeat;
         background-position: center bottom;
+        @media(min-width:$notebook){
+            border-top: 1px solid  #F0F1F2;
+        }
         .jobs-content{
             display: block;
             padding: 14px 32px; 
             @media(min-width: $tablet){
-                padding: 20px 48px  20px  144px;
-            }        
+                padding: 0 48px  20px  144px;
+            }
+            @media(min-width:$notebook){
+                padding-left: 93px;
+            }                    
         }
         .jobs-svg{
             transform: rotate(90deg)
@@ -107,6 +162,9 @@
         text-decoration: none;
         justify-content: space-between;
         align-items: center;
+        @media(min-width:$notebook){
+            margin-left: 0;
+        }
         span{
             font-weight: 600;
             font-size: 16px;
@@ -140,4 +198,22 @@
             }
         }
     }
+    &-spoiler{
+        @media(min-width:$notebook){
+            max-width: 1040px;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 30px;
+        } 
+        @media(min-width:$desktop){
+            max-width: 1504px;
+        }        
+    }  
+    &-item{
+        @media(min-width:$notebook){
+            max-width: 66%;
+            position: relative;
+            margin: 0 auto;
+        } 
+    }    
 }
