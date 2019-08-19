@@ -1,0 +1,17 @@
+.gamburger__dark{
+    display: flex;
+    .gamburger-title{
+        color: #282828;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .gamburger-toggler{        
+        span{            
+            background: #282828;            
+            &:before, &:after{                
+                background: #282828;                
+            }           
+        }
+    }
+}

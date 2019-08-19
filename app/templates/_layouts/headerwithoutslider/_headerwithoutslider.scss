@@ -1,0 +1,62 @@
+.withoutslider{
+    margin-bottom: 33px;
+    @media(min-width: $tablet){
+        margin-bottom: 56px;    
+    }
+    &-title{
+        position: relative;
+        padding: 0 32px;
+        margin: 0 auto;
+        @media(min-width: $tablet){
+            padding: 0 72px;
+        }
+        @media(min-width: $notebook){
+            padding: 0;
+            max-width: 1040px;
+            margin-top: 100px;
+        }
+        @media(min-width: $desktop){
+            max-width: 1504px;
+            margin-top: 130px;
+        }
+        &:before{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 4px;
+            left: 0;
+            top: 15px;
+            position: absolute;
+            background: #FCCA00;
+            @media(min-width: $tablet){
+                width: 48px;
+            }
+            @media(min-width: $notebook){
+                width: 88px;
+                left: -120px;
+                top: 35px;
+            }
+            @media(min-width: $desktop){
+                width: 157px;
+                height: 8px;                
+                left: -200px;
+                top: 28px;
+            }
+        }
+    }
+    &-h1{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        @media(min-width: $tablet){
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 40px;
+        }
+        @media(min-width: $notebook){
+            font-weight: 600;
+            font-size: 56px;
+            line-height: 64px;
+        }
+    }
+}  

@@ -1,0 +1,7 @@
+mixin newsList(image, text, date)
+    article.news-item
+        .news-preview
+            img.news-img(src=image)
+        a(href="newsdetail.html").news-notice
+            p= text            
+        time.news-date= date

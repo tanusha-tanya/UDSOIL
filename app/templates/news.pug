@@ -1,0 +1,15 @@
+extends _layouts/default
+block title
+  title Новости
+block header
+  include _layouts/headerwithoutslider/headerwithoutslider
+block content 
+  main.content-main
+    .withoutslider-title
+      h1.withoutslider-h1 Новости
+    .container      
+      include components/news/news  
+    include components/showmore/showmore
+block footer
+  include components/mobilemenu/mobilemenu
+  include _includes/scripts 

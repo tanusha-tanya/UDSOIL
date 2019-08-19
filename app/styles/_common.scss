@@ -100,7 +100,8 @@ body{
             animation-name: movetranslate; 
             animation-duration: 3s;
             animation-delay: .3s; 
-            animation-fill-mode: forwards;                     
+            animation-fill-mode: forwards;  
+            box-shadow: 0px 0.666704px 2.00011px rgba(0, 0, 0, 0.2);                   
             &:after{
                 content: '';
                 position: absolute;

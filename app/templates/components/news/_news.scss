@@ -1,0 +1,15 @@
+.news{
+    margin-bottom: 56px;
+    @media(min-width: $tablet){
+        margin: 32px -8px 56px -8px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media(min-width: $notebook){
+        margin-top: 58px; 
+        margin-bottom: 96px;
+    }
+    @media(min-width: $desktop){        
+        margin: 75px -16px 127px -16px;
+    }
+}

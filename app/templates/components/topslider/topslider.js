@@ -1,5 +1,5 @@
 $(document).ready(function() {   
-    const topSlider = document.querySelector('.topslider');
+    let topSlider = document.querySelector('.topslider');
     if(topSlider){
         $('.topslider').owlCarousel({        
             //autoplay:true,

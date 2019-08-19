@@ -1,0 +1,17 @@
+.showmore{
+    background: #FFCC08;
+    padding: 16px 0;
+    text-align: center;
+    display: block; 
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;  
+    color: #282828;
+    text-decoration: none;
+    letter-spacing: 0.15px;
+    text-align: center;
+    @media(min-width:$tablet){
+        padding: 28px 0;
+    }
+}
