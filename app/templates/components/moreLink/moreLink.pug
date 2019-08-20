@@ -1,5 +1,5 @@
-mixin moreLink(color, text)
-    a(class="more-link more-link__"+color href="#")
+mixin moreLink(color, text, href)
+    a(class="more-link more-link__"+color href=href)
         span.more-text= text
         span.more-arrow 
             svg.more-svg(role="img")(width="8")(height="12"): use(xlink:href="#more")

@@ -11,12 +11,14 @@
     @media(min-width: $tablet){
         margin: 0 72px;
         width: calc(100% - 144px);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.07);
     }
     @media(min-width: $notebook){
         width: 180px;
         margin: 0;
         height: auto;
         border-left: 1px solid  #E6E7E8;
+        box-shadow: none;
     }
     @media(min-width: $desktop){
         width: 270px;

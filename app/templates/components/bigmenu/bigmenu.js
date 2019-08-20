@@ -6,14 +6,16 @@ if(bigmenu){
         li.addEventListener('click', () =>{
             if(!li.classList.contains('open')){
                 for(let i = 0; i < menuLi.length; i++){
-                    menuLi[i].classList.remove('open');                
+                    menuLi[i].classList.remove('open'); 
                 }
                 li.classList.add('open');
                 menuUl.classList.add('open');
+                bigmenu.classList.add('open');  
             }          
             else{
                 li.classList.remove('open');
                 menuUl.classList.remove('open');
+                bigmenu.classList.remove('open'); 
             }
         })
     })
@@ -24,6 +26,7 @@ if(bigmenu){
                     menuLi[i].classList.remove('open');                
                 }
                 menuUl.classList.remove('open');
+                bigmenu.classList.remove('open'); 
             }
         }
     })

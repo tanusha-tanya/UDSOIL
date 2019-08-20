@@ -1,7 +1,7 @@
 .news{
     margin-bottom: 56px;
     @media(min-width: $tablet){
-        margin: 32px -8px 56px -8px;
+        margin: 32px 0 56px 0;
         display: flex;
         flex-wrap: wrap;
     }
@@ -10,6 +10,16 @@
         margin-bottom: 96px;
     }
     @media(min-width: $desktop){        
-        margin: 75px -16px 127px -16px;
+        margin: 75px 0 127px -0;
+    }
+    &-flex{
+        @media(min-width: $tablet){
+            margin: 0 -8px;
+            display: flex;
+            flex-wrap: wrap;
+        }        
+        @media(min-width: $desktop){        
+            margin: 0 -16px 0 -16px;
+        }
     }
 }

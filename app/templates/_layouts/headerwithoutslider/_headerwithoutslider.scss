@@ -35,6 +35,11 @@
                 width: 88px;
                 left: -120px;
                 top: 35px;
+                transform: translate(-100px, 0);
+                animation-name: movetranslate; 
+                animation-duration: 3s;
+                animation-delay: .3s; 
+                animation-fill-mode: forwards;  
             }
             @media(min-width: $desktop){
                 width: 157px;

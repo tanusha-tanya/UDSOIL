@@ -5,11 +5,12 @@ block header
   include _layouts/headerwithoutslider/headerwithoutslider
 block content 
   main.content-main
-    .withoutslider-title
-      h1.withoutslider-h1(data-aos="fade-left" data-aos-duration="3000") Новости
-    .container      
-      include components/news/news  
-    include components/showmore/showmore
+    .newsdetail
+      .container
+        include components/newsdetail/newsdetail
+        include components/newsgallery/newsgallery
+        include components/sharebuttons/sharebuttons
+    include components/pagination/pagination
 block footer
   include components/mobilemenu/mobilemenu
   include _includes/scripts 
