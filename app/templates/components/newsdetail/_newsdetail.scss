@@ -1,3 +1,90 @@
 .newsdetail{
     border-top: 1px solid #FFCC08;
+    &-content{
+        margin: 32px 0;
+    }
+    &-date{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #7C7C7C;
+        margin-bottom: 10px;
+        display: block;
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+    }
+    &-anons{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 22px 0;
+    }
+    &-pick{
+        margin: 22px 0;
+    }
+    &-img{
+        max-width: 100%;
+    }
+    &-text{
+        p{
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    } 
+    &-quote{
+        background-color: #FAFBFC;
+        background-image: url(../images/svg/team-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        margin: 31px -32px;
+        padding: 32px; 
+        &:before {
+            content: '';
+            width: 36px;
+            height: 32px;
+            display: block;
+            background-repeat: no-repeat;
+            background: url(../images/svg/quote.svg);
+            margin-bottom: 27px;
+            position: relative;
+        }
+        &-header{
+            position: relative; 
+            margin-bottom: 15px;           
+            &:after{
+                content: '';
+                width: 120px;
+                height: 4px;
+                background: #FFCC08;
+                position: absolute;
+                left: 0;
+            }
+        }
+        &-name{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;            
+        } 
+        &-description{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #7C7C7C;
+            margin: 5px 0;
+        }
+        &-content{
+            p{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 20px; 
+            }
+        }
+    }
 }

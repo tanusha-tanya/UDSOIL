@@ -1,0 +1,25 @@
+.sharebuttons{
+    margin: 24px -4px;
+    font-size: 0;
+    display: flex;
+    &-link{
+        display: inline-block;
+        text-decoration: none;
+        width: 48px;
+        height: 40px;
+        margin: 0 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        &__fb{
+            background: #4968B4;
+        }
+        &__vk{
+            background: #5177AA;
+        }
+        &__ok{
+            background: #E78100;
+        }
+    }
+}

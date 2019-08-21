@@ -1,6 +1,7 @@
 @import
   'owl.carousel',
   'owl.theme.default',
+  'magnific-popup',
   'breackpoints',
   'typography',
   'variables', 
@@ -35,4 +36,6 @@
   '../templates/components/news/news',
   '../templates/components/showmore/showmore',
   '../templates/components/newsList/newsList',
-  '../templates/components/newsdetail/newsdetail'
+  '../templates/components/newsdetail/newsdetail',
+  '../templates/components/newsgallery/newsgallery',
+  '../templates/components/sharebuttons/sharebuttons'

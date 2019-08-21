@@ -1,0 +1,16 @@
+.newsgallery{
+    margin-top: 50px;
+    &-h2{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+    }
+    &-pick{
+        margin: 16px 0;
+        display: block;
+    }
+    &-img{
+        width: 100%;
+    }
+}
