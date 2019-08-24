@@ -1,7 +1,13 @@
 .newsdetail{
     border-top: 1px solid #FFCC08;
+    @media(min-width:$tablet){
+        margin-top: -29px;
+    }
     &-content{
         margin: 32px 0;
+        @media(min-width:$tablet){
+            margin: 54px 0;
+        }
     }
     &-date{
         font-weight: 500;
@@ -10,18 +16,30 @@
         color: #7C7C7C;
         margin-bottom: 10px;
         display: block;
+        @media(min-width:$tablet){
+            font-size: 16px;
+            letter-spacing: 0.15px;
+        }
     }
     &-title{
         font-weight: 600;
         font-size: 20px;
         line-height: 32px;
         letter-spacing: 0.15px;
+        @media(min-width:$tablet){
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
     }
     &-anons{
-        font-weight: 700;
+        font-weight: 600;
         font-size: 14px;
         line-height: 24px;
         margin: 22px 0;
+        @media(min-width:$tablet){
+            font-size: 16px;
+        }
     }
     &-pick{
         margin: 22px 0;
@@ -44,6 +62,10 @@
         background-position: center bottom;
         margin: 31px -32px;
         padding: 32px; 
+        @media(min-width:$tablet){
+            margin: 41px 0;
+            padding: 31px 64px;
+        }
         &:before {
             content: '';
             width: 36px;
@@ -53,6 +75,9 @@
             background: url(../images/svg/quote.svg);
             margin-bottom: 27px;
             position: relative;
+            @media(min-width:$tablet){
+                float: right;
+            }
         }
         &-header{
             position: relative; 
@@ -64,6 +89,9 @@
                 background: #FFCC08;
                 position: absolute;
                 left: 0;
+                @media(min-width:$tablet){
+                    width: 80px;
+                }
             }
         }
         &-name{
@@ -79,11 +107,17 @@
             margin: 5px 0;
         }
         &-content{
+            @media(min-width:$tablet){
+                margin-top: 11px;
+            }
             p{
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 24px;
                 margin-bottom: 20px; 
+                &:last-child{
+                    margin-bottom: 0; 
+                }
             }
         }
     }

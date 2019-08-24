@@ -5,12 +5,27 @@
         font-size: 20px;
         line-height: 32px;
         letter-spacing: 0.15px;
+        @media(min-width:$tablet){
+            font-size: 24px;
+        }
     }
-    &-pick{
+    &-item{
         margin: 16px 0;
         display: block;
+        @media(min-width:$tablet){
+            margin: 8px;
+            width: calc(50% - 16px);
+        }
     }
     &-img{
         width: 100%;
     }
+    &-flex{
+        @media(min-width:$tablet){
+           margin: 32px -8px;
+           display: flex;
+           flex-wrap: wrap;
+        }
+    }
+
 }
