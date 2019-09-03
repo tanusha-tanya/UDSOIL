@@ -1,6 +1,12 @@
-.newsdetail{
-    border-top: 1px solid #FFCC08;
+.newsdetail{    
     @media(min-width:$tablet){
+        margin-top: -29px;
+    }
+    @media(min-width:$notebook){
+        width: 66%;
+        margin: 0 auto;
+        position: relative;
+        border-top: 0;
         margin-top: -29px;
     }
     &-content{
@@ -31,6 +37,10 @@
             line-height: 40px;
             letter-spacing: 0.25px;
         }
+        @media(min-width:$notebook){
+            font-size: 40px;
+            line-height: 56px;
+        }
     }
     &-anons{
         font-weight: 600;
@@ -39,6 +49,11 @@
         margin: 22px 0;
         @media(min-width:$tablet){
             font-size: 16px;
+        }
+        @media(min-width:$notebook){
+            font-size: 18px;
+            line-height: 24px;
+            margin: 34px 0;
         }
     }
     &-pick{
@@ -53,6 +68,9 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
+            @media(min-width:$notebook){
+                font-size: 16px;
+            }
         }
     } 
     &-quote{

@@ -1,0 +1,20 @@
+.withoutslider__withoutshadow{  
+    border-bottom: 1px solid #FFCC08;
+    padding-bottom: 30px;  
+    .header-middle{
+        @media(min-width: $notebook){
+            top: 20px;
+            box-shadow: none;
+        } 
+        &:after{
+            background: transparent;
+        }       
+    }
+    .bigmenu.open:before{
+        @media(min-width: $notebook){
+            bottom: -63px;
+            z-index: 100; 
+            height: 78px;
+        }
+    }
+}
