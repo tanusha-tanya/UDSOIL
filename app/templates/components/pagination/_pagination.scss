@@ -1,0 +1,76 @@
+.pagination{
+    margin-top: 40px;
+    display: flex;
+    @media(min-width: $tablet){
+        margin-top: 67px;
+    }
+    &-link{
+        background: #FFCC08;
+        height: 60px;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 22px 40px;
+        position: relative;
+        text-decoration: none;
+        @media(min-width: $tablet){
+            height: 104px;
+            padding-left: 109px;
+            padding-top: 44px; 
+        }
+        &__left{
+            margin-right: 1px;
+            padding-left: 0;
+            padding-right: 109px; 
+            text-align: right;           
+        }        
+    }
+    &-text{
+        display: none;
+        @media(min-width: $tablet){
+            display: block;
+            color: #282828;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.15px;
+            text-decoration: none;
+        }
+    }
+    &-arrow{
+        position: relative;
+        width: 32px;
+        display: block;
+        @media(min-width: $tablet){
+            left: -73px;
+            top: 10px;
+        }
+        &:before{
+            content: '';
+            background: #282828;
+            width: 31px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+        }
+        &__left{
+            position: absolute;
+            right: 40px; 
+            @media(min-width: $tablet){
+                top: 54px;
+                right: 35px;
+                left: auto;
+            }
+            .pagination-svg{
+                position: absolute;
+                left: -11px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &-svg{
+        position: absolute;
+        right: -9px;
+    }
+}
