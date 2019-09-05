@@ -9,6 +9,9 @@
         border-top: 0;
         margin-top: -29px;
     }
+    @media(min-width:$desktop){
+        margin-top: 0;
+    }
     &-content{
         margin: 32px 0;
         @media(min-width:$tablet){
@@ -44,6 +47,10 @@
             font-size: 40px;
             line-height: 56px;
         }
+        @media(min-width:$desktop){
+            font-size: 56px;
+            line-height: 64px;
+        }       
     }
     &-anons{
         font-weight: 600;
@@ -57,6 +64,13 @@
             font-size: 18px;
             line-height: 24px;
             margin: 34px 0;
+        }
+        @media(min-width:$desktop){
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.15px;
+            margin: 43px 0;
         }
     }
     &-pick{
@@ -74,6 +88,16 @@
             @media(min-width:$notebook){
                 font-size: 16px;
             }
+            @media(min-width:$desktop){
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 32px;
+                letter-spacing: 0.5px;
+                margin-bottom: 38px;
+            }
+        }
+        @media(min-width:$desktop){
+            margin: 56px 0;
         }
     } 
     &-quote{
@@ -89,6 +113,9 @@
         }
         @media(min-width:$notebook){
             padding: 31px 72px 58px 72px;
+        }
+        @media(min-width:$desktop){
+            padding: 46px 96px 54px 96px;
         }
         &:before {
             content: '';
@@ -119,6 +146,9 @@
                 @media(min-width:$notebook){
                     width: 88px;
                 }
+                @media(min-width:$desktop){
+                    width: 128px;
+                }
             }
         }
         &-name{
@@ -127,7 +157,13 @@
             line-height: 24px;
             @media(min-width:$notebook){
                 font-size: 16px;
-            }            
+            }  
+            @media(min-width:$desktop){
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+            }          
         } 
         &-description{
             font-weight: 500;
@@ -139,6 +175,9 @@
         &-content{
             @media(min-width:$tablet){
                 margin-top: 11px;
+            }
+            @media(min-width:$desktop){
+                margin-top: 25px;
             }
             p{
                 font-weight: 500;
@@ -152,6 +191,14 @@
                     font-size: 16px;
                     letter-spacing: 0.15px;
                     margin-top: 28px;
+                }
+                @media(min-width:$desktop){
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 32px;
+                    letter-spacing: 0.5px;
+                    margin-top: 0px;
+                    margin-bottom: 0;
                 }
             }
 

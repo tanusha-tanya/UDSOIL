@@ -4,6 +4,9 @@
     @media(min-width: $tablet){
         margin-top: 67px;
     }
+    @media(min-width: $desktop){
+        margin-top: 117px;
+    }
     &-link{
         background: #FFCC08;
         height: 60px;
@@ -12,17 +15,39 @@
         padding: 22px 40px;
         position: relative;
         text-decoration: none;
+        transition: .3s;
         @media(min-width: $tablet){
             height: 104px;
             padding-left: 109px;
             padding-top: 44px; 
+        }
+        @media(min-width: $notebook){
+            &:hover{
+                background: #F4C40A;
+                .pagination-arrow__right{
+                    &:before{
+                        width: 35px;
+                    }                   
+                    .pagination-svg{
+                        right: -14px; 
+                    }
+                }
+                .pagination-arrow__left{
+                    &:before{
+                        width: 35px;
+                    }
+                    .pagination-svg{
+                        left: -14px; 
+                    }
+                }
+            } 
         }
         &__left{
             margin-right: 1px;
             padding-left: 0;
             padding-right: 109px; 
             text-align: right;           
-        }        
+        }               
     }
     &-text{
         display: none;
@@ -53,6 +78,7 @@
             position: absolute;
             left: 0;
             bottom: -8px;
+            transition: width .3s, right .3s, left .3s;
         }
         &__left{
             position: absolute;
@@ -61,10 +87,15 @@
                 top: 54px;
                 right: 35px;
                 left: auto;
+                transition: right .3s;
+            }
+            &:before{
+                left: auto;
+                right: 0;
             }
             .pagination-svg{
                 position: absolute;
-                left: -11px;
+                left: -9px;
                 transform: rotate(180deg);
             }
         }
@@ -72,5 +103,6 @@
     &-svg{
         position: absolute;
         right: -9px;
+        transition: right .3s, left .3s;
     }
 }

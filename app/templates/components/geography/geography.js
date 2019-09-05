@@ -25,7 +25,7 @@
           //Удмуртская республика
         }
       ];  
-      var highlightedDistrict;  
+      let highlightedDistrict;  
       let iconImageSize =  [32, 47];
       if($(window).width() > 1919){
         iconImageSize =  [48,56];
@@ -76,7 +76,7 @@
     zoomer = 6;
   }  
   
-  var myMap = new ymaps.Map("map", {        
+  let myMap = new ymaps.Map("map", {        
     center: [58.01, 56.22],        
     zoom: zoomer,     
     controls: ['zoomControl'],   
@@ -85,6 +85,6 @@
   myMap.behaviors.disable('drag');
 }
 const geographyMap = document.getElementById('map');
-if(geographyMap){
+if(geographyMap){  
   ymaps.ready(init);
 }

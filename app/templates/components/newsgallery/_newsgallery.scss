@@ -13,6 +13,11 @@
             line-height: 40px;
             letter-spacing: 0.25px
         }
+        @media(min-width:$desktop){
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 64px;
+        }
     }
     &-item{
         margin: 16px 0;
@@ -20,6 +25,10 @@
         @media(min-width:$tablet){
             margin: 4px 8px;
             width: calc(50% - 16px);
+        }
+        @media(min-width:$desktop){
+            margin: 16px;
+            width: calc(50% - 32px);
         }
     }
     &-img{
@@ -30,6 +39,9 @@
            margin: 32px -8px;
            display: flex;
            flex-wrap: wrap;
+        }
+        @media(min-width:$desktop){
+            margin: 32px -16px;            
         }
     }
     &-pick{
