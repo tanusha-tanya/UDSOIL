@@ -1,10 +1,11 @@
 .contacts{
     @media(min-width: $notebook){           
-        margin: 110px 20px 79px 20px;
+        margin: 110px -10px 79px -10px;
         display: flex;
+        box-sizing: border-box;
     }
     @media(min-width: $desktop){
-        margin: 132px 32px 137px 32px;
+        margin: 132px -16px 137px -16px;
     }
     &-left{
         @media(min-width: $notebook){           
@@ -45,7 +46,7 @@
             @media(min-width: $desktop){
                 width: 157px;
                 height: 8px;                
-                left: -243px;
+                left: -184px;
                 top: 28px;
             }
         }
@@ -165,7 +166,11 @@
         @media(min-width: $notebook){           
             margin: 0 10px;
             width: calc(59% - 20px)
-        }      
+        }  
+        @media(min-width: $desktop){ 
+            margin: 0 16px;           
+            width: calc(59% - 32px)
+        }     
     }
     &-container{
         width:100%;

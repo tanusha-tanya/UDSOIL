@@ -1,0 +1,13 @@
+extends _layouts/default
+include _layouts/headerInner/headerInner
+block title
+  title Производство
+block header
+  +headerInner('Производство', 'background-image:url(/images/production.jpg)')  
+block content 
+  main.content-main
+    .container  
+      include components/production/production            
+block footer
+  include components/mobilemenu/mobilemenu
+  include _includes/scripts 
