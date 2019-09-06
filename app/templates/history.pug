@@ -1,0 +1,13 @@
+extends _layouts/default
+include _layouts/headerInner/headerInner
+block title
+  title Наша история
+block header
+  +headerInner('Наша история', 'background-image:url(/images/history.jpg)')  
+block content 
+  main.content-main
+    .container  
+      include components/history/history            
+block footer
+  include components/mobilemenu/mobilemenu
+  include _includes/scripts 
