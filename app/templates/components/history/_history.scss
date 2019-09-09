@@ -12,4 +12,61 @@
     &-decription{
         font-weight: 600;
     }
+    &-years{
+        background: #FFCC08;
+        margin: 0 -32px;
+        padding: 20px 32px; 
+    }
+}
+.years{     
+    &-title{
+        display: none;
+    }
+    &-pic{
+        margin: 17px 0;
+    }
+    &-img{
+        width: 100%;
+    }
+    &-text{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;        
+    }
+    &-toggler{        
+        position: relative;
+        padding-bottom: 11px;
+        overflow: hidden;
+        border-bottom: 4px solid #fff;
+        .slick-track{
+            margin-left: -58px;
+        }
+    }
+    &-toggle{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.5px;
+        color: #4F4F4F;  
+        text-decoration: none;
+        width: 54px;
+    }    
+}
+.slick-current{
+    .years-toggle{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin-left: -5px;
+    }
+}
+.slick-active{
+    &:nth-of-type(4){
+        .years-toggle{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 32px;
+            color:  #7C7C7C;
+        }
+    }    
 }

@@ -106,6 +106,15 @@
     &-fieldset{
         position: relative;
         display: block;
+        &:hover{
+            .hr-label{
+                transform: translateY(-15px);
+                @media(min-width: $tablet){
+                    font-size: 14px;
+                    transform: translateY(-20px);
+                } 
+            }            
+        }
     }
     &-label{
         position: absolute;
