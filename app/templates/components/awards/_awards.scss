@@ -1,0 +1,67 @@
+.awards{
+    margin: 30px 0;    
+    @media(min-width: $tablet){
+        margin-top: 54px; 
+    }
+    @media(min-width: $notebook){
+        width: 66%;
+        margin: 54px auto;
+        position: relative;
+    }
+    &-h2{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 30px;
+        @media(min-width: $tablet){
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.25px;
+        }
+    }  
+    &-items{
+        display: flex;
+        flex-wrap: wrap;
+        @media(min-width: $tablet){
+            width: 75%;
+            margin: 0 auto; 
+            justify-content: space-between;
+        }
+        @media(min-width: $notebook){
+            width: calc(100% + 30%);
+            margin: 0 -15%;
+            position: relative;
+            padding-bottom: 50px;
+        }
+    }
+    &-item{
+        margin: 23px auto;
+        position: relative;
+        display: block;
+        text-align: center;
+        @media(min-width: $tablet){
+            margin: 23px 0;
+        }
+        @media(min-width: $notebook){            
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+                transition: opacity .3s;                
+            }
+        }
+    }
+    &-description{
+        position: absolute;
+        opacity: 0;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        letter-spacing: 0.15px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+        color:  #282828;
+        transition: opacity .3s;
+    }
+}

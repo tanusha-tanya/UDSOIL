@@ -6,24 +6,71 @@
         margin: 37px 0;
         p{
             margin-bottom: 14px;
+            @media(min-width:$tablet){
+                margin-bottom: 29px;
+            }
 
+        }
+        @media(min-width:$tablet){
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+        }
+        @media(min-width:$notebook){
+            width: 66%;
+            margin: 0 auto;
+            position: relative;
         }
     }
     &-decription{
         font-weight: 600;
+        @media(min-width:$tablet){
+            margin: 48px 0;
+        }
     }
     &-years{
+        box-sizing: border-box;
         background: #FFCC08;
         margin: 0 -32px;
         padding: 20px 32px; 
+        @media(min-width:$tablet){
+            margin: 0 -72px;
+            padding: 20px 72px; 
+        }
+        @media(min-width:$notebook){
+            width: 66%;
+            margin: 0 auto;
+            position: relative;
+        }
     }
 }
 .years{     
     &-title{
         display: none;
+        @media(min-width:$tablet){
+            display: block;
+            position: absolute;
+            left: calc(50% + 16px);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            &:after{
+                content: '';
+                width: 128px;
+                height: 4px;
+                display: block;
+                background: #fff;
+                margin-left: -25px;
+            }
+        }
     }
     &-pic{
         margin: 17px 0;
+        @media(min-width:$tablet){
+            margin: 0 8px; 
+            width: calc(50% - 16px)
+        }
     }
     &-img{
         width: 100%;
@@ -31,7 +78,13 @@
     &-text{
         font-weight: 500;
         font-size: 16px;
-        line-height: 24px;        
+        line-height: 24px;
+        @media(min-width:$tablet){
+            margin: 0 8px; 
+            padding-top: 50px;
+            width: calc(50% - 16px);
+            letter-spacing: 0.15px;
+        }        
     }
     &-toggler{        
         position: relative;
@@ -39,7 +92,10 @@
         overflow: hidden;
         border-bottom: 4px solid #fff;
         .slick-track{
-            margin-left: -58px;
+            margin-left: -40px;
+        }
+        @media(min-width:$tablet){
+            display: none;
         }
     }
     &-toggle{
@@ -50,23 +106,76 @@
         color: #4F4F4F;  
         text-decoration: none;
         width: 54px;
-    }    
+        transition: color .3s, font-size .3s;
+        &:focus, &:hover{
+            outline: none;
+        }
+        &.last{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 32px;
+            color:  #7C7C7C;
+        }
+    } 
+    &-item{
+        display: none;
+        &:first-of-type{
+            display: block;
+            @media(min-width:$tablet){
+                display: flex;
+            }
+        }
+        @media(min-width:$tablet){
+            display: flex;
+            width: 75%;
+            position: relative;
+            margin: 27px auto;
+            &:nth-of-type(even){
+               flex-direction: row-reverse; 
+               .years-title{
+                   left: auto;
+                   text-align: right;
+                   right: calc(50% + 16px);
+                   &:after{
+                        margin-left: 0;
+                        margin-right: -25px;
+                   }
+                }
+                .years-text{
+                    text-align: right;
+                }
+            }
+        }
+        @media(min-width:$notebook){
+            width: 100%;            
+        }
+    }
+    &-items{
+        @media(min-width:$tablet){
+            display: flex;
+            flex-direction: column-reverse;
+        } 
+        @media(min-width:$notebook){
+            width: 100%;            
+        }
+    } 
+}
+.slick-track{
+    .years-item{
+        display: block;
+        @media(min-width:$tablet){
+            display: flex;
+        }
+    }
 }
 .slick-current{
     .years-toggle{
         font-weight: 600;
         font-size: 24px;
         line-height: 32px;
-        margin-left: -5px;
+        margin-left: -13px;
     }
 }
-.slick-active{
-    &:nth-of-type(4){
-        .years-toggle{
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 32px;
-            color:  #7C7C7C;
-        }
-    }    
-}
+
+
+   
