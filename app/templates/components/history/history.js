@@ -1,10 +1,9 @@
 let yearsToggler = document.querySelector('.years-toggler');
-if(yearsToggler){
-  if ($(window).width() < 768){
-    let toggleLast = $('.years-toggle')[3]
-    $(toggleLast).addClass('last')
 
-    $('.years-items').slick({
+if(yearsToggler){
+  let toggleLast = $('.years-toggle')[3]
+  $(toggleLast).addClass('last')
+  $('.years-items').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -12,9 +11,13 @@ if(yearsToggler){
       fade: true,
       infinite: false,
       asNavFor: '.years-toggler',
-    });
+      responsive: [{
+        breakpoint: 768,
+        settings: "unslick"
+      }]
+  });
 
-    $('.years-toggler').slick({
+  $('.years-toggler').slick({
       slidesToShow: 5,
       slidesToScroll: 1,
       asNavFor: '.years-items',
@@ -24,9 +27,9 @@ if(yearsToggler){
       centerMode: true,
       centerPadding: '1px',
       focusOnSelect: true,    
-    });
+  });
 
-    $('.years-items').on('afterChange', function(event, slick, currentSlide){
+  $('.years-items').on('afterChange', function(event, slick, currentSlide){
       $(toggleLast).removeClass('last')
       $('.years-toggle').removeClass('last')
       let lastItemNumber = currentSlide + 3;
@@ -35,6 +38,5 @@ if(yearsToggler){
       let firstItem = $('.years-toggle')[firstItemNumber];
       $(lastItem).addClass('last');
       $(firstItem).addClass('last')
-    })
-  }
+  })
 }

@@ -1,5 +1,5 @@
 .awards{
-    margin: 30px 0;    
+    margin-top: 30px;    
     @media(min-width: $tablet){
         margin-top: 54px; 
     }
@@ -12,7 +12,6 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 30px;
         @media(min-width: $tablet){
             font-size: 34px;
             line-height: 40px;
@@ -34,11 +33,7 @@
             padding-bottom: 50px;
         }
     }
-    &-item{
-        margin: 23px auto;
-        position: relative;
-        display: block;
-        text-align: center;
+    &-item{               
         @media(min-width: $tablet){
             margin: 23px 0;
         }
@@ -50,18 +45,50 @@
             }
         }
     }
+    &-block{
+        margin: 23px 0;
+        position: relative;
+        display: block; 
+        &.hide{
+            display: none;
+        }  
+    } 
     &-description{
-        position: absolute;
-        opacity: 0;
-        bottom: 0;
-        left: 10px;
-        right: 10px;
-        letter-spacing: 0.15px;
+        margin: 20px 0;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
+        letter-spacing: 0.15px;
+    }   
+    &-links{
+        margin-top: 38px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
         text-decoration: none;
-        color:  #282828;
-        transition: opacity .3s;
+        position: relative;
+        color: #282828;
+        &:before{
+            content: '';
+            width: 30px;
+            height: 2px;
+            position: absolute;
+            background: #FFCC08;
+            display: block;
+            bottom: -3px;
+        }
+    }
+    &-more{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.15px;
+        background: #FFCC08;
+        height: 64px;
+        margin: 0 -32px;
+        margin-top: 30px;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 15px;
     }
 }
