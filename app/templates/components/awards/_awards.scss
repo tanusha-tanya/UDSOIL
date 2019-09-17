@@ -1,10 +1,10 @@
 .awards{
     margin-top: 30px;    
     @media(min-width: $tablet){
-        margin-top: 54px; 
+        margin-top: 48px; 
     }
     @media(min-width: $notebook){
-        width: 66%;
+        width: 100%;
         margin: 54px auto;
         position: relative;
     }
@@ -16,55 +16,100 @@
             font-size: 34px;
             line-height: 40px;
             letter-spacing: 0.25px;
+            margin-bottom: 17px;
         }
     }  
-    &-items{
-        display: flex;
-        flex-wrap: wrap;
+    &-items{        
         @media(min-width: $tablet){
-            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
             margin: 0 auto; 
             justify-content: space-between;
         }
-        @media(min-width: $notebook){
-            width: calc(100% + 30%);
-            margin: 0 -15%;
+        @media(min-width: $notebook){            
+            &:hover{
+                .awards-item{
+                    opacity: 0.7;
+                }
+            }
+        }  
+    }
+    &-item{
+        @media(min-width:$tablet){
+            width: calc(37% - 16px);
+            margin: 0 8px;
+        }              
+        @media(min-width: $notebook){            
+            width: auto;
             position: relative;
-            padding-bottom: 50px;
+            &:hover{
+                .awards-item-link{
+                    display: flex;
+                    position: absolute;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0;
+                    left:0;
+                    bottom: 0;
+                    right:0;
+                    width: 100%;
+                    height:100%;
+                }
+            }
+        }
+        &-link{
+            display: none;
         }
     }
-    &-item{               
-        @media(min-width: $tablet){
-            margin: 23px 0;
-        }
+    &-img{
         @media(min-width: $notebook){            
-            opacity: 0.7;
-            &:hover{
-                opacity: 1;
-                transition: opacity .3s;                
-            }
+            width: 100%;
         }
     }
     &-block{
-        margin: 23px 0;
+        margin-top: 23px;
+        margin-bottom: 31px;
         position: relative;
         display: block; 
+        @media(min-width:$tablet){
+            display: flex;
+            margin: 15px -8px;
+        }
+        @media(min-width: $notebook){ 
+            position: static;           
+            &:hover{
+                .awards-item{
+                    opacity: 1;
+                }
+            }
+        }
         &.hide{
             display: none;
-        }  
+            @media(min-width: $notebook){
+                display: flex;
+            }
+        }        
     } 
     &-description{
-        margin: 20px 0;
+        margin: 16px 0;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.15px;
+        @media(min-width:$tablet){
+            width: calc(63% - 16px);
+            margin: 0 8px;
+        } 
+        @media(min-width: $notebook){
+            display: none;
+        }
     }   
-    &-links{
-        margin-top: 38px;
+    &-link{
+        margin-top: 15px;
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
+        display: block;
         text-decoration: none;
         position: relative;
         color: #282828;
@@ -76,7 +121,7 @@
             background: #FFCC08;
             display: block;
             bottom: -3px;
-        }
+        }        
     }
     &-more{
         font-weight: 500;
@@ -86,9 +131,39 @@
         background: #FFCC08;
         height: 64px;
         margin: 0 -32px;
-        margin-top: 30px;
+        margin-top: 48px;
         text-align: center;
         box-sizing: border-box;
         padding-top: 15px;
+        @media(min-width:$tablet){
+           height: 91px;
+           margin: 0 -74px;
+           margin-top: 60px;
+           padding-top: 30px;
+        }
+        @media(min-width: $notebook){
+            display: none;
+        }
+    }
+    &-arrows{
+        @media(min-width: $notebook){
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+        }
+    }
+    &-js-description{
+        display: none;
+        @media(min-width: $notebook){
+            display: block;
+            margin-top: 40px;
+            height: 40px;
+            box-sizing: border-box;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+        }
     }
 }

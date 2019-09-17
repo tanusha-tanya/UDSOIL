@@ -1,16 +1,13 @@
-.history{    
+.history{  
+    @media(min-width:$desktop){
+        display: flex;
+        margin: 0 -15px; 
+    } 
     &-content{
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
-        margin: 37px 0;
-        p{
-            margin-bottom: 14px;
-            @media(min-width:$tablet){
-                margin-bottom: 29px;
-            }
-
-        }
+        margin: 37px 0;        
         @media(min-width:$tablet){
             font-weight: 500;
             font-size: 16px;
@@ -20,13 +17,38 @@
         @media(min-width:$notebook){
             width: 66%;
             margin: 0 auto;
+            margin-bottom: 56px; 
             position: relative;
+        } 
+        @media(min-width:$desktop){
+            width: calc(50% - 30px);
+            margin: 0 15px;             
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+        }
+        p{
+            margin-bottom: 14px;
+            @media(min-width:$tablet){
+                margin-bottom: 26px;
+            }
+            @media(min-width:$desktop){
+                margin-bottom: 40px;
+            }
         }
     }
     &-decription{
         font-weight: 600;
         @media(min-width:$tablet){
             margin: 48px 0;
+        }
+        @media(min-width:$notebook){
+            margin: 54px 0 40px 0;
+        }
+        @media(min-width:$desktop){
+            line-height: 24px;
+            margin-top: 60px;
         }
     }
     &-years{
@@ -42,6 +64,11 @@
             width: 66%;
             margin: 0 auto;
             position: relative;
+        }
+        @media(min-width:$desktop){
+            width: calc(50% - 30px);
+            margin: 0 15px; 
+            padding: 0;
         }
     }
 }
@@ -90,10 +117,16 @@
         position: relative;
         padding-bottom: 11px;
         overflow: hidden;
-        border-bottom: 4px solid #fff;
-        .slick-track{
-            margin-left: -40px;
-        }
+        margin-right: -40px; 
+        &:after{
+            content: '';
+            position:absolute;
+            bottom: 0;
+            left: 0;
+            right: 40px;
+            height: 4px;
+            background: #fff;
+        }    
         @media(min-width:$tablet){
             display: none;
         }
@@ -109,13 +142,7 @@
         transition: color .3s, font-size .3s;
         &:focus, &:hover{
             outline: none;
-        }
-        &.last{
-            font-weight: 600;
-            font-size: 12px;
-            line-height: 32px;
-            color:  #7C7C7C;
-        }
+        }        
     } 
     &-item{
         display: none;
@@ -148,7 +175,10 @@
         }
         @media(min-width:$notebook){
             width: 100%;            
-        }
+        }    
+        @media(min-width:$desktop){
+            width: 66%; 
+        }    
     }
     &-items{
         @media(min-width:$tablet){
@@ -157,7 +187,10 @@
         } 
         @media(min-width:$notebook){
             width: 100%;            
-        }
+        }        
+        @media(min-width:$desktop){
+            margin: 30px auto; 
+        } 
     } 
 }
 .slick-track{
@@ -171,9 +204,8 @@
 .slick-current{
     .years-toggle{
         font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
-        margin-left: -13px;
+        font-size: 24px;               
+        color: #282828;
     }
 }
 

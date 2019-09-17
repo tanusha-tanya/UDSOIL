@@ -11,32 +11,21 @@ if(yearsToggler){
       fade: true,
       infinite: false,
       asNavFor: '.years-toggler',
+      mobileFirst: true,
       responsive: [{
-        breakpoint: 768,
-        settings: "unslick"
+        breakpoint: 767,
+        settings: "unslick"       
       }]
   });
 
   $('.years-toggler').slick({
-      slidesToShow: 5,
+      slidesToShow: 4,
       slidesToScroll: 1,
       asNavFor: '.years-items',
       dots: false,
       arrows: false, 
       infinite: false,
-      centerMode: true,
-      centerPadding: '1px',
+      centerMode: false,
       focusOnSelect: true,    
   });
-
-  $('.years-items').on('afterChange', function(event, slick, currentSlide){
-      $(toggleLast).removeClass('last')
-      $('.years-toggle').removeClass('last')
-      let lastItemNumber = currentSlide + 3;
-      let firstItemNumber = currentSlide - 1;
-      let lastItem = $('.years-toggle')[lastItemNumber];
-      let firstItem = $('.years-toggle')[firstItemNumber];
-      $(lastItem).addClass('last');
-      $(firstItem).addClass('last')
-  })
 }

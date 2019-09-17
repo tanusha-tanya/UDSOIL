@@ -39,8 +39,8 @@ if(peopleslider){
                 }
             }) 
             let items = $('.peopleslider-slider .owl-item:not(.cloned)'),
-            total = items.length,
-            current = 1;
+                total = items.length,
+                current = 1;
             $('.peopleslider-counter').text(current +'/' + total);
 
             slider.on('changed.owl.carousel', function(event) {
