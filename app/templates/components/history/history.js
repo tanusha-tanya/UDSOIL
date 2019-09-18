@@ -1,9 +1,8 @@
 let yearsToggler = document.querySelector('.years-toggler');
 
-if(yearsToggler){
-  let toggleLast = $('.years-toggle')[3]
-  $(toggleLast).addClass('last')
-  $('.years-items').slick({
+if(yearsToggler){   
+  let  yearsSlick = function(){
+    $('.years-items').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
@@ -16,16 +15,24 @@ if(yearsToggler){
         breakpoint: 767,
         settings: "unslick"       
       }]
-  });
+    });
 
-  $('.years-toggler').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.years-items',
-      dots: false,
-      arrows: false, 
-      infinite: false,
-      centerMode: false,
-      focusOnSelect: true,    
-  });
+    $('.years-toggler').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.years-items',
+        dots: false,
+        arrows: false, 
+        infinite: false,
+        centerMode: false,
+        focusOnSelect: true,    
+    });
+  }
+  yearsSlick();	
+  $(window).resize(function () {		
+		clearTimeout(window.resizedFinished);
+		window.resizedFinished = setTimeout(function(){
+			yearsSlick();	
+		}, 250);      
+	});
 }

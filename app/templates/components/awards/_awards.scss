@@ -8,6 +8,9 @@
         margin: 54px auto;
         position: relative;
     }
+    @media(min-width: $desktop){
+        margin: 91px auto;
+    }
     &-h2{
         font-weight: 600;
         font-size: 24px;
@@ -17,6 +20,11 @@
             line-height: 40px;
             letter-spacing: 0.25px;
             margin-bottom: 17px;
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 64px;
         }
     }  
     &-items{        
@@ -76,7 +84,8 @@
             margin: 15px -8px;
         }
         @media(min-width: $notebook){ 
-            position: static;           
+            position: static;   
+            margin: 15px 0;        
             &:hover{
                 .awards-item{
                     opacity: 1;

@@ -1,0 +1,12 @@
+extends _layouts/default
+include _layouts/headerInner/headerInner
+block title
+  title Реализация
+block header
+  +headerInner('Реализация нефти', 'background-image:url(/images/realization.jpg)')  
+block content 
+  main.content-main    
+    include components/realization/realization               
+block footer
+  include components/mobilemenu/mobilemenu
+  include _includes/scripts 
