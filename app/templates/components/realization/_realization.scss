@@ -1,29 +1,118 @@
 .realization{
+    &-blockgray{
+        background-color: #FAFBFC;        
+        padding: 25px 0;
+        @media(min-width: $notebook){
+            padding: 40px 0;
+        }
+        &__image{
+            background-image: url(../images/svg/team-bg.svg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: contain;
+        }
+    }
+    &-content{
+        @media(min-width: $notebook){
+            width: 66%;
+            margin: 0 auto;
+            position: relative; 
+        }  
+    }
     &-logo{
+        text-align: center;
         border-bottom: 8px solid #FFCC08;
+    }
+    &-svg{
+        @media(min-width: $tablet){
+            width: 307px;
+            height: 116px;
+            position: relative; 
+        }
+        @media(min-width: $notebook){
+            width: 456px;
+            height: 172px;
+        }
+        @media(min-width: $desktop){
+            width: 545px;
+            height: 206px;
+        }                
     }
     &-text{
         font-weight: 600;
         font-size: 14px;
         line-height: 24px;
         margin: 24px 0; 
+        @media(min-width: $tablet){
+            font-size: 16px;
+            margin-top: 46px;
+        } 
+        @media(min-width: $notebook){
+            letter-spacing: 0.15px;           
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+            margin-top: 50px;
+        } 
     }
     &-icons{
+        display: flex;
+        flex-wrap: wrap;  
+        @media(min-width: $desktop){
+            margin: 0 -15px;              
+        }     
         &-item{
             text-align: center;
+            margin: 0 auto;
             margin-bottom: 15px;
+            max-width: 300px;
+            position: relative;            
+            @media(min-width: $tablet){
+                width: 100%;
+                max-width: 470px;
+                margin:24px 0;
+                display: flex;
+                text-align: left; 
+                align-items: center;               
+            } 
+            @media(min-width: $desktop){
+                width: calc(50% - 30px);
+                margin: 24px 15px;
+                max-width: 50%;            
+            }            
         }
-        &-svg{
-            margin: 30px 0;
-            margin-bottom: 20px;    
-        }
+        &-circle{
+            width: 96px;
+            height: 96px;
+            background: #FAFBFC;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            position: relative;
+            margin-bottom: 20px;
+            @media(min-width: $tablet){       
+                margin:0;
+                margin-right: 16px;             
+            }
+        }  
         &-text{
             font-weight: 600;
             font-size: 16px;
             line-height: 32px;
+            @media(min-width: $tablet){       
+                font-size: 24px;
+            }            
             span{
                 font-size: 24px;
                 letter-spacing: -0.03em;
+                @media(min-width: $tablet){       
+                    font-size: 36px;
+                }
             }
         }
         &-grey{
@@ -31,26 +120,51 @@
             font-size: 14px;
             line-height: 24px;
             color: #7C7C7C; 
-            padding: 0 30px;           
+            padding: 0 30px; 
+            @media(min-width: $tablet){       
+                font-size: 16px;
+                padding: 0;
+            }          
         }    
     }
-    &-list{
-        padding: 30px 0;
+    &-list{        
         &-title{
             font-weight: 600;
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.15px;  
+            @media(min-width: $tablet){       
+                font-size: 20px;
+            } 
+        }
+        &-ul{
+            @media(min-width: $tablet){       
+                max-width: 700px;
+            }
+            @media(min-width: $desktop){
+                max-width: 100%;  
+                width: 900px;         
+            }
         }
         &-li{
-          margin: 19px 0; 
-          list-style: none;
+            margin: 19px 0; 
+            list-style: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            @media(min-width: $tablet){       
+                display: flex;
+                font-size: 16px;
+                margin: 28px 0;
+            }
+            @media(min-width: $desktop){
+                font-size: 18px;
+                line-height: 32px;             
+            }
         }
         &-marker{
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 32px;
-            letter-spacing: 0.5px;
+            font-weight: 600;            
             padding-left: 15px;
             position: relative;
             margin-bottom: 6px;
@@ -63,7 +177,17 @@
                 border-radius: 100px;
                 position: absolute;
                 left: 0;
-                top: 12px;
+                top: 8px;
+            }
+            @media(min-width: $tablet){       
+                width: 200px;
+                margin-right: 20px;
+                flex-shrink: 0;
+                flex-grow: 1;                
+            }
+            @media(min-width: $desktop){
+                margin-right: 30px; 
+                width: 25%;            
             }
         }
     }
@@ -73,6 +197,348 @@
         line-height: 24px;
         p{
             margin: 15px 0;
+        }
+        @media(min-width: $tablet){       
+            font-size: 16px;
+            p{
+                margin: 22px 0;
+            }               
+        }
+    }
+    &-advantages{        
+        margin-top: 38px;
+        @media(min-width: $tablet){       
+            margin-top: 53px;  
+            margin-bottom: 20px;         
+        }
+        &-titile{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            @media(min-width: $tablet){       
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px;              
+            }
+        }
+        &-items{
+            display: flex;
+            flex-wrap: wrap; 
+            @media(min-width: $tablet){       
+                margin: 16px 0;
+            }           
+        }
+        &-item{            
+            box-sizing: border-box;
+            text-align: center;
+            margin: 16px auto;
+            position: relative;
+            margin-bottom: 34px;
+            padding: 0 26px;
+            max-width: 300px;
+            @media(min-width: $tablet){       
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px; 
+                padding: 0 10px;             
+            }
+            @media(min-width: $notebook){
+                padding: 0 20px;  
+            }
+        }
+        &-circle{
+           width: 104px;
+           height: 104px; 
+           background: #FFCC08;
+           position: relative;
+           margin: 0 auto;
+           box-sizing: border-box;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           border-radius: 100%;
+        }
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;  
+            letter-spacing: 0.15px;
+            margin-top: 14px;
+        }
+    } 
+    &-partners{        
+        &-h2{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.15px;
+            margin: 10px 0;
+            @media(min-width: $tablet){       
+                font-size: 34px;
+                line-height: 40px; 
+                letter-spacing: 0.25px;            
+            }
+        }
+        &-carousel{
+            margin: 30px 0;
+            margin-right: -32px;
+            @media(min-width: $tablet){       
+                margin-right: -72px;
+            }
+            @media(min-width: $notebook){       
+                margin-right: -50%;
+            }
+        }
+    }
+    &-brands{ 
+        @media(min-width: $notebook){
+            margin-bottom:40px;
+        }         
+        &-title{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            margin-bottom: 24px;
+            @media(min-width: $tablet){
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }   
+        &-items{
+            @media(min-width: $tablet){
+                columns: 3;
+            }
+        }           
+        &-name{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+            margin: 4px 0;
+            list-style: none;
+            padding-left: 30px;
+            position: relative;
+            @media(min-width: $tablet){
+                padding-left: 20px;
+            }
+            &:before{
+              content: '';
+              display: block;
+              width: 16px;
+              height: 14px;
+              background: url('../images/svg/brand.svg');
+              position: absolute;
+              left: 0px;  
+              top: 8px;
+            }
+        }
+    }
+    &-contact{
+        margin: 30px 0;
+        @media(min-width: $tablet){
+            margin: 49px 0;
+        }
+        @media(min-width: $notebook){
+            margin: 57px 0 80px 0;          
+        }
+        &-title{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            @media(min-width: $tablet){
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }
+        &-block{
+            @media(min-width: $tablet){
+                display: flex;
+                margin: 32px 0;
+            }
+            @media(min-width: $notebook){
+                margin-top:40px;
+            } 
+        }
+        &-pick{
+            margin: 16px auto;
+            width: 200px;
+            position: relative;
+            display: block; 
+            @media(min-width: $tablet){
+                margin: 0;
+                flex-grow: 1;
+                flex-shrink: 0;
+            }  
+        }
+        &-img{
+            width: 100%;       
+        }
+        &-description{
+            text-align: center;
+            @media(min-width: $tablet){
+                text-align:left;  
+                width: calc(100% - 20px);                              
+            }
+        } 
+        &-name{
+            border-bottom: 4px solid #FFCC08;
+            padding-bottom: 4px; 
+            @media(min-width: $tablet){
+               padding-left: 10px;
+            } 
+            @media(min-width: $notebook){
+                padding-left: 24px;
+                border-bottom: 8px solid #FFCC08;
+            }                       
+        }
+        &-strong{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px; 
+            @media(min-width: $tablet){
+                text-align:left;
+                font-size: 16px;
+            }
+            @media(min-width: $notebook){
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 0.15px;
+            }
+        }
+        &-grey{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color:#828282;
+            margin: 10px 0;
+            @media(min-width: $notebook){
+                font-weight: 600;
+                font-size: 16px;                
+                letter-spacing: 0.5px;
+            }
+        }
+        &-items{
+            @media(min-width: $tablet){
+                margin-left: 10px;
+            } 
+            @media(min-width: $notebook){
+                margin-left: 0;
+                display: flex;
+                flex-wrap:wrap;
+            } 
+        }
+        &-item{
+            margin: 20px 0;
+            @media(min-width: $tablet){
+                margin: 10px 0;                
+            } 
+            @media(min-width: $notebook){
+                width: calc(50% - 24px);
+                margin: 20px 0 0 24px;          
+            } 
+        }
+        &-desc{
+            font-size: 16px;
+            line-height: 24px; 
+            color: #9A9A9A;
+            @media(min-width: $notebook){
+                letter-spacing: 0.5px;         
+            } 
+        }
+        &-phone{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.15px;
+            color: #282828;
+            text-decoration: none;
+        }
+    }
+    &-protocols{        
+        &-h2{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.15px; 
+            @media(min-width: $tablet){
+                font-size: 34px;
+                line-height: 40px;
+                letter-spacing: 0.25px;
+                margin-top: 10px;
+            } 
+        }
+        &-descriptions{
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 24px;
+            @media(min-width: $tablet){
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 0.15px;
+                margin-top: 0;
+            }
+        }
+        &-items{
+            margin: 18px 0;
+            display: flex;
+            flex-wrap: wrap;
+            @media(min-width: $tablet){
+                margin: 18px -8px;
+            }
+            @media(min-width: $tablet){
+                margin: 30px -8px;
+            }
+        }
+        &-item{      
+            position: relative;      
+            margin: 16px auto;
+            background: #fff;
+            padding: 24px 20px;
+            max-width: 300px;
+            box-sizing: border-box;
+            border: 1px solid #F0F1F2;
+            @media(min-width: $tablet){
+                margin: 8px;
+                width: calc(50% - 16px);
+                max-width: 50%;
+            }
+        }
+        &-name{
+            padding-left: 66px;
+            display: block;
+            position: relative;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #282828;
+            text-decoration: none;
+            margin-bottom: 9px;
+            &:before{
+                content: '';
+                display: block;
+                background-repeat: no-repeat;
+                width: 48px;
+                height: 48px;
+                position: absolute;
+                left: 0px;
+                top: 0;
+            }
+            &__pdf{
+                &:before{                    
+                    background-image: url('../images/svg/pdf.svg');
+                }
+            }
+        }
+        &-size{
+           margin-left: 66px;
+           color: #7C7C7C;
+           font-weight: 500;
+           font-size: 14px;
+           line-height: 24px;
         }
     }
 }
