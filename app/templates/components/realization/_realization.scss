@@ -135,6 +135,11 @@
             letter-spacing: 0.15px;  
             @media(min-width: $tablet){       
                 font-size: 20px;
+            }
+            @media(min-width: $desktop){       
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 20px;
             } 
         }
         &-ul{
@@ -160,7 +165,11 @@
             }
             @media(min-width: $desktop){
                 font-size: 18px;
-                line-height: 32px;             
+                line-height: 32px; 
+                margin: 16px 0;
+                p{
+                    width: calc(75% - 30px);
+                }           
             }
         }
         &-marker{
@@ -204,13 +213,23 @@
                 margin: 22px 0;
             }               
         }
+        @media(min-width: $desktop){       
+            font-size: 18px;
+            line-height: 32px;
+            p{
+                margin: 26px 0;
+            }               
+        }
     }
     &-advantages{        
         margin-top: 38px;
         @media(min-width: $tablet){       
             margin-top: 53px;  
             margin-bottom: 20px;         
-        }
+        }       
+        @media(min-width: $desktop){       
+            margin: 72px 0;           
+        } 
         &-titile{
             font-weight: 600;
             font-size: 16px;
@@ -221,13 +240,19 @@
                 font-size: 20px;
                 line-height: 32px;              
             }
+            @media(min-width: $desktop){                   
+                font-size: 24px;     
+            }
         }
         &-items{
             display: flex;
             flex-wrap: wrap; 
             @media(min-width: $tablet){       
                 margin: 16px 0;
-            }           
+            } 
+            @media(min-width: $desktop){       
+                margin: 16px -15px;
+            }          
         }
         &-item{            
             box-sizing: border-box;
@@ -241,10 +266,19 @@
                 font-weight: 600;
                 font-size: 20px;
                 line-height: 32px; 
-                padding: 0 10px;             
+                padding: 0 10px;  
+                margin: 16px 8px;
+                max-width: 50%;
+                width: calc(50% - 16px)           
             }
             @media(min-width: $notebook){
                 padding: 0 20px;  
+            }
+            @media(min-width: $desktop){       
+                margin: 16px 15px;
+                width: calc(25% - 30px);
+                max-width: 25%;
+                padding: 0;
             }
         }
         &-circle{
@@ -279,6 +313,10 @@
                 line-height: 40px; 
                 letter-spacing: 0.25px;            
             }
+            @media(min-width: $desktop){ 
+                font-size: 40px;
+                line-height: 56px;
+            }
         }
         &-carousel{
             margin: 30px 0;
@@ -290,6 +328,18 @@
                 margin-right: -50%;
             }
         }
+        &-item{
+            margin: 0 16px;
+            @media(min-width: $desktop){       
+                margin: 0 32px;
+            }
+        }
+        &-svg{
+            @media(min-width: $desktop){       
+                width: 224px;
+                height: 160px;
+            }
+        }        
     }
     &-brands{ 
         @media(min-width: $notebook){
@@ -305,10 +355,17 @@
                 font-size: 20px;
                 line-height: 32px;
             }
+            @media(min-width: $desktop){       
+                font-size: 24px;
+                line-height: 32px;
+            }
         }   
         &-items{
             @media(min-width: $tablet){
                 columns: 3;
+            }
+            @media(min-width: $desktop){       
+                columns: 4;
             }
         }           
         &-name{
@@ -352,6 +409,11 @@
                 font-size: 20px;
                 line-height: 32px;
             }
+            @media(min-width: $desktop){
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 32px;
+            }            
         }
         &-block{
             @media(min-width: $tablet){
@@ -360,6 +422,9 @@
             }
             @media(min-width: $notebook){
                 margin-top:40px;
+            } 
+            @media(min-width: $desktop){
+                margin: 34px 0;
             } 
         }
         &-pick{
@@ -371,7 +436,10 @@
                 margin: 0;
                 flex-grow: 1;
                 flex-shrink: 0;
-            }  
+            } 
+            @media(min-width: $desktop){
+                width: 272px;
+            }   
         }
         &-img{
             width: 100%;       
@@ -380,17 +448,18 @@
             text-align: center;
             @media(min-width: $tablet){
                 text-align:left;  
-                width: calc(100% - 20px);                              
+                width: calc(100% - 20px);  
+                position: relative;                            
             }
         } 
         &-name{
             border-bottom: 4px solid #FFCC08;
             padding-bottom: 4px; 
             @media(min-width: $tablet){
-               padding-left: 10px;
+               padding-left: 24px;
             } 
             @media(min-width: $notebook){
-                padding-left: 24px;
+                padding-left: 38px;
                 border-bottom: 8px solid #FFCC08;
             }                       
         }
@@ -407,6 +476,11 @@
                 line-height: 32px;
                 letter-spacing: 0.15px;
             }
+            @media(min-width: $desktop){
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 32px;
+            } 
         }
         &-grey{
             font-weight: 500;
@@ -419,15 +493,23 @@
                 font-size: 16px;                
                 letter-spacing: 0.5px;
             }
+            @media(min-width: $desktop){
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+            } 
         }
         &-items{
             @media(min-width: $tablet){
-                margin-left: 10px;
+                margin-left: 24px;
             } 
             @media(min-width: $notebook){
                 margin-left: 0;
                 display: flex;
                 flex-wrap:wrap;
+            } 
+            @media(min-width: $desktop){
+                padding-bottom: 110px;
             } 
         }
         &-item{
@@ -436,9 +518,10 @@
                 margin: 10px 0;                
             } 
             @media(min-width: $notebook){
-                width: calc(50% - 24px);
-                margin: 20px 0 0 24px;          
-            } 
+                width: calc(50% - 38px);
+                margin: 20px 0 0 38px;          
+            }
+            
         }
         &-desc{
             font-size: 16px;
@@ -446,6 +529,10 @@
             color: #9A9A9A;
             @media(min-width: $notebook){
                 letter-spacing: 0.5px;         
+            } 
+            @media(min-width: $desktop){
+                font-size: 18px;
+                line-height: 40px;
             } 
         }
         &-phone{
@@ -455,6 +542,45 @@
             letter-spacing: 0.15px;
             color: #282828;
             text-decoration: none;
+            @media(min-width: $desktop){
+                font-size: 20px;
+                line-height: 32px;
+            } 
+        }
+        &-link{
+            color: #282828;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            background: #FFCC08;
+            border-radius: 100px;
+            width: 100%;
+            height: 56px;
+            box-sizing: border-box;
+            display: block;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 332px;
+            position: relative;
+            margin: 0 auto;
+            transition: background .3s;
+            &:hover{
+                background: #F4C40A;
+            }
+            @media(min-width: $notebook){
+                position: absolute;
+                bottom: 0;
+                left: 238px;
+            }
+            @media(min-width: $desktop){       
+                left: 320px;
+                bottom: 48px;
+            }
+        }
+        &-svg{
+            margin-left: 5px;
         }
     }
     &-protocols{        
@@ -469,6 +595,11 @@
                 letter-spacing: 0.25px;
                 margin-top: 10px;
             } 
+            @media(min-width: $desktop){       
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 56px;
+            }
         }
         &-descriptions{
             font-weight: 600;
@@ -481,6 +612,11 @@
                 letter-spacing: 0.15px;
                 margin-top: 0;
             }
+            @media(min-width: $desktop){       
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 32px;
+            }
         }
         &-items{
             margin: 18px 0;
@@ -489,8 +625,11 @@
             @media(min-width: $tablet){
                 margin: 18px -8px;
             }
-            @media(min-width: $tablet){
+            @media(min-width: $notebook){
                 margin: 30px -8px;
+            }
+            @media(min-width: $desktop){
+                margin: 30px -16px;
             }
         }
         &-item{      
@@ -506,6 +645,10 @@
                 width: calc(50% - 16px);
                 max-width: 50%;
             }
+            @media(min-width: $desktop){
+                width: calc(50% - 32px);
+                margin: 16px;
+            }
         }
         &-name{
             padding-left: 66px;
@@ -517,6 +660,12 @@
             color: #282828;
             text-decoration: none;
             margin-bottom: 9px;
+            @media(min-width: $desktop){       
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+            }
             &:before{
                 content: '';
                 display: block;
