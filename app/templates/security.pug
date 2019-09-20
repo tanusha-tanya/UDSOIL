@@ -1,0 +1,12 @@
+extends _layouts/default
+include _layouts/headerInner/headerInner
+block title
+  title Производственная безопасность
+block header
+  +headerInner('Производственная безопасность', 'background-image:url(/images/security.jpg)')  
+block content 
+  main.content-main    
+    include components/security/security              
+block footer
+  include components/mobilemenu/mobilemenu
+  include _includes/scripts 
