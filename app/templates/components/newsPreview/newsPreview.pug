@@ -2,8 +2,8 @@ mixin newsPreview(image, text, date)
     article.articles-item
         .articles-left
             .articles-preview
-                img.articles-img(src=image)
+                img.articles-img(src=image alt="")
         .articles-right
             a(href="newsdetail.html").articles-notice
                 p= text            
-            time.articles-date= date
+            time(datetime='2001-05-15').articles-date= date

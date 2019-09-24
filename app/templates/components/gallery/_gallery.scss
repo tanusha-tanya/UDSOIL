@@ -76,12 +76,11 @@
             margin: 0 8px;
             margin-bottom: 48px;
         }
-        @media(min-width:$notebook){
-            width: calc(33% - 16px);
+        @media(min-width:$notebook){            
             margin-bottom: 37px;
         }
         @media(min-width:$desktop){
-            width: calc(33% - 32px);
+            width: calc(41% - 32px);
             margin: 0 16px;
             margin-bottom: 105px;
         }

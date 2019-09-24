@@ -1,0 +1,159 @@
+.contactperson{
+    margin: 30px 0;
+    @media(min-width: $tablet){
+        margin: 49px 0;
+    }
+    @media(min-width: $notebook){
+        margin: 57px auto 80px auto; 
+        position: relative;
+        width: 66%;         
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        @media(min-width: $tablet){
+            font-size: 20px;
+            line-height: 32px;
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+        }            
+    }
+    &-block{
+        @media(min-width: $tablet){
+            display: flex;
+            margin: 32px 0;
+        }
+        @media(min-width: $notebook){
+            margin-top:40px;
+        } 
+        @media(min-width: $desktop){
+            margin: 34px 0;
+        } 
+    }
+    &-pick{
+        margin: 16px auto;
+        width: 200px;
+        position: relative;
+        display: block; 
+        @media(min-width: $tablet){
+            margin: 0;
+            flex-grow: 1;
+            flex-shrink: 0;
+        } 
+        @media(min-width: $desktop){
+            width: 272px;
+        }   
+    }
+    &-img{
+        width: 100%;       
+    }
+    &-description{
+        text-align: center;
+        @media(min-width: $tablet){
+            text-align:left;  
+            width: calc(100% - 20px);  
+            position: relative;                            
+        }
+    } 
+    &-name{
+        border-bottom: 4px solid #FFCC08;
+        padding-bottom: 4px; 
+        @media(min-width: $tablet){
+           padding-left: 24px;
+        } 
+        @media(min-width: $notebook){
+            padding-left: 38px;
+            border-bottom: 8px solid #FFCC08;
+        }                       
+    }
+    &-strong{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px; 
+        @media(min-width: $tablet){
+            text-align:left;
+            font-size: 16px;
+        }
+        @media(min-width: $notebook){
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.15px;
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+        } 
+    }
+    &-grey{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color:#828282;
+        margin: 10px 0;
+        @media(min-width: $notebook){
+            font-weight: 600;
+            font-size: 16px;                
+            letter-spacing: 0.5px;
+        }
+        @media(min-width: $desktop){
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+        } 
+    }
+    &-items{
+        @media(min-width: $tablet){
+            margin-left: 24px;
+        } 
+        @media(min-width: $notebook){
+            margin-left: 0;
+            display: flex;
+            flex-wrap:wrap;
+        } 
+        @media(min-width: $desktop){
+            padding-bottom: 110px;
+        } 
+    }
+    &-item{
+        margin: 20px 0;
+        @media(min-width: $tablet){
+            margin: 10px 0;                
+        } 
+        @media(min-width: $notebook){
+            width: calc(50% - 38px);
+            margin: 20px 0 0 38px;          
+        }
+        
+    }
+    &-desc{
+        font-size: 16px;
+        line-height: 24px; 
+        color: #9A9A9A;
+        @media(min-width: $notebook){
+            letter-spacing: 0.5px;         
+        } 
+        @media(min-width: $desktop){
+            font-size: 18px;
+            line-height: 40px;
+        } 
+    }
+    &-phone{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: #282828;
+        text-decoration: none;
+        @media(min-width: $desktop){
+            font-size: 20px;
+            line-height: 32px;
+        } 
+    }    
+}
+    

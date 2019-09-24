@@ -1,7 +1,7 @@
 mixin newsList(image, text, date)
     article.news-item(data-aos="fade-up" data-aos-duration="3000")
         .news-preview
-            img.news-img(src=image)
+            img.news-img(src=image alt="")
         a(href="newsdetail.html").news-notice
             p= text            
-        time.news-date= date
+        time(datetime='2001-05-15').news-date= date

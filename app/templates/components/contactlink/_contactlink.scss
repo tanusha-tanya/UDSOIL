@@ -1,0 +1,24 @@
+.contactlink{
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
+    box-sizing: border-box;  
+    color: #282828;
+    text-decoration: none;
+    background: #FFCC08;
+    transition: background .3s;    
+    &:hover{
+        background:#F4C40A;
+    }
+    @media(min-width: $desktop){
+        height: 88px;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+    }    
+    &-svg{
+        margin-left: 8px;
+    }
+}
