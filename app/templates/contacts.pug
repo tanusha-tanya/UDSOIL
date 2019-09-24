@@ -4,11 +4,10 @@ block title
 block header
   include _layouts/headerwithoutslider/headerwithoutslider
 block content 
-  main.content-main    
+  main.content-main
+    include components/contactsbanner/contactsbanner    
     .container      
-      include components/contacts/contacts 
-      include components/contactperson/contactperson 
-    include components/contactlink/contactlink 
+      include components/contacts/contacts
 block footer
   include components/mobilemenu/mobilemenu
   include _includes/scripts 

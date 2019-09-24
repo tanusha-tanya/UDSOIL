@@ -1,0 +1,12 @@
+.contactsbanner{
+    @media(min-width:$desktop){
+        height: 480px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        filter: grayscale(100%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
