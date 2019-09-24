@@ -22,6 +22,7 @@ if(peopleslider){
                 items:1,
                 dots: false,
                 nav:true,
+                loop:true,
                 navContainer: '.peopleslider-arrows',
                 navElement: 'div class="peopleslider-arrow"',
                 navText: ['<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>','<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>'],
@@ -30,9 +31,8 @@ if(peopleslider){
                         items:1                        
                     },
                     1280:{
-                        items:2,
+                        items:1,
                         center:true,   
-                        loop: true,
                         autoWidth:true,                   
                         margin: 17,                      
                     }
@@ -44,7 +44,7 @@ if(peopleslider){
             $('.peopleslider-counter').text(current +'/' + total);
 
             slider.on('changed.owl.carousel', function(event) {
-                current = event.item.index + 1;
+                current = event.item.index - 1;
                 changeCurrent(current)
             });  
             function changeCurrent(current){
@@ -53,7 +53,7 @@ if(peopleslider){
                 }
                 if (current > total){
                   current = 1;
-                }                
+                }                              
                 $('.peopleslider-counter').text(current +'/' + total);
               }
         }
