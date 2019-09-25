@@ -14,6 +14,8 @@
         margin-bottom: 112px;    
     }
     &-row{  
+        display: flex;
+        flex-direction: column;
         @media(min-width: $desktop){                
             display: table-row;                   
         }      
@@ -89,6 +91,7 @@
         @media(min-width: $desktop){
             display: table-cell;
             padding: 16px 20px;
+            max-width: 400px;
             &:first-of-type{
                 padding-left: 32px;
             }
@@ -147,6 +150,8 @@
             position: relative;
             border-bottom: 1px solid #F0F1F2;
             margin: 0;
+            order: -1;
+            padding: 10px;
             @media(min-width: $tablet){
                 padding: 17px 0;
             }
@@ -181,6 +186,9 @@
         @media(min-width: $tablet){
             padding: 20px 17px; 
         }
+        @media(min-width: $desktop){
+            padding: 20px 0; 
+        }
     }
     &-title{
         text-align: center;
@@ -190,7 +198,7 @@
         margin: 0 50px;
         position: relative;
         &:before{
-            content: '№';
+            content: '';
             margin-right: 5px; 
             font-size: 12px;
             line-height: 24px;  
@@ -206,6 +214,7 @@
         }
         @media(min-width: $desktop){
             margin: 0;
+            text-align: left;
         }
     }
 }
