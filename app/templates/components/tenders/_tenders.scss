@@ -48,6 +48,9 @@
         &__open{
             background: #FAFBFC;
             height: auto;
+            @media(min-width: $desktop){
+                background: #FFF;
+            }
             .table-cell__opener:before{
                 transform: rotate(90deg);
             }
@@ -100,6 +103,8 @@
             line-height: 24px;
             color: #282828;
             text-decoration: none;
+            display: block;
+            padding-bottom: 5px;
             &:after{
                 content: '';
                 background: #FFCC08;
@@ -107,7 +112,7 @@
                 position: absolute;
                 width: 32px;
                 left: 0;
-                bottom: -5px; 
+                bottom: 0; 
                 transition: width .3s;
             }
             &:hover{

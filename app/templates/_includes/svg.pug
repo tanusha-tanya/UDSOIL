@@ -18,14 +18,5 @@ script.
 script.
   AOS.init({
       once: true,
-      disable: window.innerWidth < 767
-  });
-  $(window).resize(function () {
-    clearTimeout(window.resizedFinished);
-    window.resizedFinished = setTimeout(function(){
-        AOS.init({
-          once: true,
-          disable: window.innerWidth < 767
-      });
-    }, 250);      
+      disable: 767
   });
