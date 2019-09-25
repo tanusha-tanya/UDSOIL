@@ -56,6 +56,7 @@ gulp.task('js-libs', function() {
 					'./node_modules/jquery/dist/jquery.js',
 					'app/libs/foreachpolyfill.js',
 					'./node_modules/aos/dist/aos.js',
+					'./node_modules/bodymovin/build/player/bodymovin.js',
 					'./node_modules/owl.carousel/dist/owl.carousel.js',
 					'./node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 				    './node_modules/chart.js/dist/Chart.js',

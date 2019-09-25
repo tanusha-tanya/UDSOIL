@@ -1,34 +1,15 @@
 .notfound{
-    text-align: center;    
-    @media(min-width:$notebook){       
-        margin: 50px 0;        
-    }
-    @media(min-width:$desktop){       
-        margin-bottom: 100px;        
-    }
-    &-pick{
-       position: relative;
-    }
-    
-    &-svg{
-        @media(min-width:$tablet){        
-            width: 600px;
-            height: 200px;        
-        }        
-    }   
-    &-text{        
-        font-weight: 600;
-        font-size: 16px;        
-        color: #7C7C7C;
-        letter-spacing: 0.25px;
-        @media(min-width:$notebook){        
-            font-size: 24px;           
-        }
-        @media(min-width:$desktop){        
-            font-weight: 600;
-            font-size: 34px;
-            line-height: 40px;  
-            margin-top: 60px;      
-        }
-    }
+    position: relative;
+    width: 100%;
+}
+.notfounded{
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.oil{
+    position: absolute;
+    width: 6%;
+    top: 44%;
+    left: 47%;
 }
