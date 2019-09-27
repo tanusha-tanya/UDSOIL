@@ -20,9 +20,8 @@
             padding-top: 66%;
         }
     }
-    &-img{
+    &-img, iframe, svg{
         width: 100%;
-        height: auto;
         @media(min-width: $tablet){
             position: absolute;
             width: 100%;

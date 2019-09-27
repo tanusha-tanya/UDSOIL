@@ -18,6 +18,9 @@
             width: calc(25% - 16px);
             letter-spacing: 0.15px;
         }
+        @media(min-width: $desktop){
+            font-size: 18px;
+        }
         svg{
             color: #FFCC08;
             fill: #FFCC08;
@@ -108,5 +111,19 @@
                 margin-right: 16px;
             }
         }  
+    }
+}
+.container__gray{
+    margin: 30px 0;
+    background: #FAFBFC;
+    padding: 10px 0;
+    @media(min-width: $tablet){
+        margin: 57px 0;        
+    }
+    @media(min-width: $notebook){
+        margin-bottom: 49px;
+    }
+    @media(min-width: $desktop){
+        margin-top: 62px;        
     }
 }

@@ -98,7 +98,7 @@ body{
             align-items: center; 
             transform: translate(0, -50px);
             animation-name: movetranslate; 
-            animation-duration: 3s;
+            animation-duration: 1s;
             animation-delay: .3s; 
             animation-fill-mode: forwards;  
             box-shadow: 0px 0.666704px 2.00011px rgba(0, 0, 0, 0.2);                   
@@ -136,6 +136,8 @@ body{
 }
 .content-main{
     min-height: 30vh;
+    flex-shrink: 0;
+    flex-grow: 1;
 }
 .container{
     position: relative;

@@ -99,6 +99,31 @@
         @media(min-width:$desktop){
             margin: 56px 0;
         }
+        a{
+            position: relative;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #282828;
+            text-decoration: none;
+            display: inline-block;
+            padding-bottom: 5px;
+            &:after{
+                content: '';
+                background: #FFCC08;
+                height: 2px;
+                position: absolute;
+                width: 32px;
+                left: 0;
+                bottom: 0; 
+                transition: width .3s;
+            }
+            &:hover{
+                &:after{
+                    width: 0;
+                }
+            }
+        }
     } 
     &-quote{
         background-color: #FAFBFC;

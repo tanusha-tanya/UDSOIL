@@ -33,7 +33,8 @@
         height: 550px;
         box-sizing: border-box;
         background-size: cover;
-        background-position: 32% top;
+        //background-position: 32% top;
+        background-position: right top;
         background-repeat: no-repeat;
         filter: grayscale(100%);
         position: absolute;
@@ -113,7 +114,7 @@
                 top: calc(50% - 2px);
                 transform: translate(-100px, 0);
                 animation-name: movetranslate; 
-                animation-duration: 3s;
+                animation-duration: 1s;
                 animation-delay: .3s; 
                 animation-fill-mode: forwards;         
             }
@@ -139,7 +140,7 @@
             text-indent: 200px;
             transform: translate(-120px, 0);
             animation-name: movetranslate; 
-            animation-duration: 3s;
+            animation-duration: 1s;
             animation-delay: .3s; 
             animation-fill-mode: forwards;                  
         }
@@ -220,7 +221,7 @@
             right: 0;
             transform: translate(0, 50px);
             animation-name: movetranslate; 
-            animation-duration: 3s;
+            animation-duration: 1s;
             animation-delay: .3s; 
             animation-fill-mode: forwards;
         } 
