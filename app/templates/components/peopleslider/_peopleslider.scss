@@ -30,6 +30,7 @@
             @media(min-width:$tablet){
                 display: flex;
                 position: relative;
+                margin: 0 auto;
                 padding: 40px 0 40px 72px;
                 &:after{
                     content: '';
@@ -51,16 +52,7 @@
                 width: 1248px;
                 padding: 64px 0 64px 96px;
             }
-        }
-        @media(min-width:$notebook){
-            .owl-item{
-                opacity: 0.5;
-                transition: opacity .3s;
-                &.center{
-                    opacity: 1;
-                }
-            }
-        }
+        }       
     }
     &-controllers{
         display: flex;

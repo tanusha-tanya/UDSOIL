@@ -1,4 +1,4 @@
-  function init(){
+  /*function init(){
     ymaps.borders.load('RU', {
       lang: "ru",
       quality: 1       
@@ -87,4 +87,4 @@
 const geographyMap = document.getElementById('map');
 if(geographyMap){  
   ymaps.ready(init);
-}
+}*/

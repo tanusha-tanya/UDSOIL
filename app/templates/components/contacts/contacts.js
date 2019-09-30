@@ -1,4 +1,4 @@
-const contactsmap = document.querySelector('#contactsmap');
+/*const contactsmap = document.querySelector('#contactsmap');
 if(contactsmap){
     ymaps.ready(init);
     function init(){ 
@@ -17,4 +17,4 @@ if(contactsmap){
         });
             myMap.geoObjects.add(myPlacemark);
     };        
-}
+}*/
