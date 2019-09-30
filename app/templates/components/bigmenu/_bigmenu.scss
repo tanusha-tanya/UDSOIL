@@ -81,15 +81,15 @@
                 position: absolute;
                 right: -3px;
                 top: 8px;
-                transform: rotate(40deg);
+                transform: rotate(45deg);
                 transition: transform .3s;
                 @media(min-width:$desktop){
-                    width: 7px;
-                    height: 7px;
+                    width: 6px;
+                    height: 6px;
                     border-bottom: 2px solid #FFCC08;
                     border-right: 2px solid #FFCC08;
-                    top: 5px;
-                    right: -5px;
+                    top: 6px;
+                    right: -5px;                   
                 }
             }
             &:hover{

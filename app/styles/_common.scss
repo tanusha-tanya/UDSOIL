@@ -102,6 +102,9 @@ body{
             animation-delay: .3s; 
             animation-fill-mode: forwards;  
             box-shadow: 0px 0.666704px 2.00011px rgba(0, 0, 0, 0.2);                   
+            border-radius: 2px;
+            justify-content: space-between;
+            padding-right:0;
             &:after{
                 content: '';
                 position: absolute;
@@ -116,6 +119,7 @@ body{
             max-width: 1504px;
             top: 64px;
             height: 104px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.07);
             &:after{
                 top: 104px;
             }
