@@ -51,11 +51,14 @@
         list-style: none;
         position: relative;
         cursor: pointer;
+        @media(min-width: $notebook){
+            margin: 0 20px 0 10px;
+        }
         @media(min-width: $desktop){
             margin: 0 20px;
         }
         &__sub{
-            padding-right: 10px;
+            padding-right: 10px;            
             &:before{
                 content: '';
                 position: absolute;

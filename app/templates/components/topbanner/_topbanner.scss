@@ -19,7 +19,7 @@
             max-width: 1504px;
         }
         .topslider-icon{
-            @media(min-width:$notebook){
+            @media(min-width:$desktop){
                 left: calc(50% - 63px);
             }
         }

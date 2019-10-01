@@ -72,11 +72,10 @@ body{
     &-top{
         display: flex;
         justify-content: space-between;
-        padding-top: 13px; 
-        padding-bottom: 11px; 
+        padding: 15px 0;               
         position: relative;  
         align-items: center;
-        box-sizing: border-box;
+        box-sizing: border-box;        
         @media(min-width: $tablet){
             padding-bottom: 13px; 
         }
@@ -115,6 +114,10 @@ body{
                 left: 0;
             }
         }
+        @media(min-width: $notebook){
+            padding: 0 20px;
+            padding-right:0;
+        }
         @media(min-width: $desktop){
             max-width: 1504px;
             top: 64px;
@@ -126,15 +129,15 @@ body{
         }
         .lang-link{
             display: none;
-            @media(min-width: $notebook){
-                display: block;
-                position: static;
-                margin: 0 24px;
-            }
             @media(min-width: $tablet){
                 margin: 0;
                 margin-right: 24px;
             }
+            @media(min-width: $notebook){
+                display: block;
+                position: static;
+                margin: 0 24px;
+            }            
         }
     }
 }

@@ -1,3 +1,9 @@
+.mobilemenu  .header-lang{
+    position: absolute;
+    right: 24px;
+    bottom: 32px;    
+}
+
 .lang-link{
     display: block;
     width: 40px;
@@ -15,12 +21,7 @@
     transition: background .3s;
     &:hover{
         background: #F4C40A;
-    }
-    @media(min-width: $tablet){
-        position: absolute;
-        right: 100px;
-        top: 10px;
-    }
+    }    
     @media(min-width: $desktop){
         width: 56px;
         height: 56px;
