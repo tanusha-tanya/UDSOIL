@@ -4,7 +4,9 @@
         display: block;
         margin: 0 15px;
         box-sizing: border-box;
-        padding: 8px 0;                
+        padding: 8px 0;  
+        flex-grow: 1;
+        flex-shrink: 0;              
     } 
     @media(min-width:$desktop){
         margin: 0 50px;        
@@ -24,6 +26,7 @@
     &-ul{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         &.open{
             &:after{
                 content: '';
@@ -50,13 +53,10 @@
         margin: 0 10px;
         list-style: none;
         position: relative;
-        cursor: pointer;
-        @media(min-width: $notebook){
-            margin: 0 20px 0 10px;
-        }
-        @media(min-width: $desktop){
-            margin: 0 20px;
-        }
+        cursor: pointer; 
+        @media(min-width:$desktop){
+            margin: 0;                    
+        }       
         &__sub{
             padding-right: 10px;            
             &:before{
@@ -71,7 +71,7 @@
                 height: 4px;
                 opacity: background .3s;
                 @media(min-width:$desktop){
-                    top: 60px;
+                    top: 60px;                    
                 }
             }
             &:after{
