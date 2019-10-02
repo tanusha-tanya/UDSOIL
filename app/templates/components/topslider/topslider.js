@@ -23,3 +23,37 @@ if(bottomScroll){
         window.scrollTo(0, document.querySelector(".header").scrollHeight);
     })   
 }
+
+let smallBanner = document.querySelectorAll(".topslider-background");
+
+let changeImage = () =>{
+    smallBanner.forEach((banner)=> {
+        let smallImg = banner.dataset.image;
+        let currentPath = banner.style.backgroundImage;        
+        if(window.innerWidth < 779 && smallImg){ 
+            banner.style.backgroundImage = `url(${smallImg})`
+        }
+        else{          
+            banner.style.backgroundImage = currentPath
+        } 
+
+        $(window).resize(function () {		
+            clearTimeout(window.resizedFinishedSlider);
+            window.resizedFinishedSlider = setTimeout(function(){       
+                if(window.innerWidth < 779 && smallImg){ 
+                    banner.style.backgroundImage = `url(${smallImg})`
+                }
+                else{          
+                    banner.style.backgroundImage = currentPath
+                } 
+            }, 250);      
+        });                        
+    })    
+} 
+
+if(smallBanner.length > 0){         
+    changeImage();
+}
+     
+
+

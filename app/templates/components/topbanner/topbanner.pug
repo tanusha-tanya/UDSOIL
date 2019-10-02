@@ -1,9 +1,9 @@
-mixin topbanner(h1, image)
+mixin topbanner(h1, image, imageSmall)
     .topbanner 
         .topslider-item   
             .topslider-container
                 h1.topslider-title= h1
-            .topslider-background(style=image)   
+            .topslider-background(style=image, data-image=imageSmall)   
     .topbanner-nav
         a(href="#").topslider-icon#js-bottomscroll            
             img.topslider-icon-move(src="/images/svg/pump_move.svg" alt="")(width="40")(height="40")

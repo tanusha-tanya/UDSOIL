@@ -2,7 +2,7 @@ let awards = document.querySelector('.awards');
 let yearsToggler = document.querySelector('.years-toggler');
 
 let awardCarousel = () =>{
-	if(window.innerWidth > 1279){			
+	if(window.innerWidth > 1139){			
 		if(!$('.awards-items').hasClass('owl-loaded')){				
 			$('.awards-items').owlCarousel({
 				items:4,
@@ -12,7 +12,7 @@ let awardCarousel = () =>{
 				navElement: 'div class="peopleslider-arrow"',
 				navText: ['<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>','<svg role="img" width="11" height="14"><use xlink:href="#triangle"></use></svg>'],
 				responsive:{
-					1920 : {
+					1800 : {
 						items:6,										
 					}
 				}
@@ -65,7 +65,7 @@ let  yearsSlick = function(){
   } 	
 
 let awarDescriptionShow = () =>{
-	if(window.innerWidth > 1279){
+	if(window.innerWidth > 1139){
 		let description = document.querySelector('.awards-js-description');
 		let awardsItem = document.querySelectorAll('.awards-item');
 		
@@ -98,13 +98,13 @@ if(awards){
 		}
 	})
 	awardCarousel();	
-	awarDescriptionShow();		
+	awarDescriptionShow();
+
+	if(yearsToggler){ 
+		yearsSlick();
+	}	
+		
 }	
-
-if(yearsToggler){ 
-	yearsSlick();
-}
-
 $(window).resize(function () {		
 	clearTimeout(window.resizedFinished);
 	window.resizedFinished = setTimeout(function(){
@@ -112,4 +112,5 @@ $(window).resize(function () {
 	  awardCarousel();	
 	  awarDescriptionShow();	
 	}, 250);      
-  });
+  });	
+
