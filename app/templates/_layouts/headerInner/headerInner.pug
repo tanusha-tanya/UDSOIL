@@ -1,4 +1,4 @@
-mixin headerInner(h1, descript, image)
+mixin headerInner(h1, descript, imageSmall, imageBig)
     include ../../components/topbanner/topbanner
     header.header
         .container
@@ -10,4 +10,4 @@ mixin headerInner(h1, descript, image)
             include ../../components/headerLang/headerLang
             include ../../components/headerWidget/headerWidget
         .header-topslider
-            +topbanner(h1, descript, image)
+            +topbanner(h1, descript, imageSmall, imageBig)

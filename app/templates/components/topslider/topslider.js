@@ -5,7 +5,7 @@ $(document).ready(function() {
             //autoplay:true,
             //autoplayTimeout:3000,
             autoplayHoverPause:true,
-            loop:true,
+            loop: false,
             items:1,
             smartSpeed:50,
             dots: false,
@@ -26,34 +26,29 @@ if(bottomScroll){
 
 let smallBanner = document.querySelectorAll(".topslider-background");
 
-let changeImage = () =>{
-    smallBanner.forEach((banner)=> {
-        let smallImg = banner.dataset.image;
-        let currentPath = banner.style.backgroundImage;        
-        if(window.innerWidth < 779 && smallImg){ 
-            banner.style.backgroundImage = `url(${smallImg})`
-        }
-        else{          
-            banner.style.backgroundImage = currentPath
-        } 
-
-        $(window).resize(function () {		
-            clearTimeout(window.resizedFinishedSlider);
-            window.resizedFinishedSlider = setTimeout(function(){       
-                if(window.innerWidth < 779 && smallImg){ 
-                    banner.style.backgroundImage = `url(${smallImg})`
-                }
-                else{          
-                    banner.style.backgroundImage = currentPath
-                } 
-            }, 250);      
-        });                        
+let changeImage = () =>{    
+    smallBanner.forEach((banner)=> {        
+        let smallImg = banner.dataset.imagesmall;
+        let bigImg = banner.dataset.imagebig;  
+        if(smallImg){
+            if(window.innerWidth < 779){ 
+                banner.style.backgroundImage = `url(${smallImg})`            
+            }
+            else{   
+                banner.style.backgroundImage = `url(${bigImg})`
+            } 
+        }                                
     })    
 } 
 
 if(smallBanner.length > 0){         
-    changeImage();
+    changeImage();    
+    $(window).resize(function () {		
+        clearTimeout(window.resizedFinishedSlider);
+        window.resizedFinishedSlider = setTimeout(function(){       
+            changeImage();
+        }, 250);      
+    });  
 }
      
-
 

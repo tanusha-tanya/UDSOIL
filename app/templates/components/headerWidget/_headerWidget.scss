@@ -106,6 +106,9 @@
         margin: 0 10px;
         align-items: center;
         box-sizing: border-box;
+        @media(min-width: $notebook){
+            align-items: baseline;
+        }
         @media(min-width: $desktop){
             margin: 0 12px;
         }
