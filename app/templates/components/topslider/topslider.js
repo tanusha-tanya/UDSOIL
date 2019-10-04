@@ -31,7 +31,7 @@ let changeImage = () =>{
         let smallImg = banner.dataset.imagesmall;
         let bigImg = banner.dataset.imagebig;  
         if(smallImg){
-            if(window.innerWidth < 779){ 
+            if(window.innerWidth < 767){ 
                 banner.style.backgroundImage = `url(${smallImg})`            
             }
             else{   

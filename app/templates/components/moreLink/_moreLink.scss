@@ -58,6 +58,8 @@
             transition: width .3s;
             @media(min-width: $desktop){
                 width: 31px;
+                bottom: 5px;
+
             }
         }
     }
@@ -69,7 +71,7 @@
         @media(min-width: $desktop){
             width: 11px;
             height: 14px;
-            bottom: -3px;
+            bottom: -1px
         }
     }
 }

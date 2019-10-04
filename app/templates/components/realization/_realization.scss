@@ -6,10 +6,16 @@
             padding: 40px 0;
         }
         &__image{
-            background-image: url('../images/svg/team-bg.svg');
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: contain;
+            background-image: url('../images/svg/realization-bg.svg');
+            background-repeat: no-repeat;            
+            background-position: -62px bottom;
+            @media(min-width: $tablet){
+                background-position: center bottom;
+                background-size: contain;
+            }
+            @media(min-width: $desktop){
+                background-position: center 40px;             
+            }
         }
     }
     &-content{
@@ -140,6 +146,7 @@
                 font-size: 24px;
                 line-height: 32px;
                 margin-bottom: 20px;
+                letter-spacing: normal; 
             } 
         }
         &-ul{
@@ -148,7 +155,7 @@
             }
             @media(min-width: $desktop){
                 max-width: 100%;  
-                width: 900px;         
+                       
             }
         }
         &-li{
@@ -157,11 +164,13 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 24px;
-            letter-spacing: 0.5px;
             @media(min-width: $tablet){       
                 display: flex;
                 font-size: 16px;
                 margin: 28px 0;
+            }
+            @media(min-width: $notebook){
+                letter-spacing: 0.15px;
             }
             @media(min-width: $desktop){
                 font-size: 18px;
@@ -175,8 +184,10 @@
         &-marker{
             font-weight: 600;            
             padding-left: 15px;
+            font-size: 14px;
             position: relative;
             margin-bottom: 6px;
+            letter-spacing: 0.5px;
             &:before{
                 content: '';
                 background: #FFCC08;
@@ -187,16 +198,22 @@
                 position: absolute;
                 left: 0;
                 top: 8px;
+                @media(min-width: $desktop){
+                    top: 13px;
+                }
             }
             @media(min-width: $tablet){       
                 width: 200px;
                 margin-right: 20px;
                 flex-shrink: 0;
-                flex-grow: 1;                
+                flex-grow: 1; 
+                font-weight: bold;  
+                font-size: 16px;             
             }
             @media(min-width: $desktop){
                 margin-right: 30px; 
-                width: 25%;            
+                width: 25%;  
+                font-size: 18px;          
             }
         }
     }
@@ -307,15 +324,20 @@
             font-size: 20px;
             line-height: 32px;
             letter-spacing: 0.15px;
-            margin: 10px 0;
             @media(min-width: $tablet){       
                 font-size: 34px;
                 line-height: 40px; 
-                letter-spacing: 0.25px;            
+                letter-spacing: 0.25px; 
+                margin-top: 13px;           
+            }
+            @media(min-width: $notebook){      
+                margin-top: 5px;           
             }
             @media(min-width: $desktop){ 
                 font-size: 40px;
                 line-height: 56px;
+                letter-spacing: normal; 
+                margin-top: 15px;   
             }
         }
         &-carousel{
@@ -327,9 +349,19 @@
             @media(min-width: $notebook){       
                 margin-right: -50%;
             }
+            .slick-slide{
+                &:hover, &:focus{
+                outline: none;
+                border: none;
+                }
+            }
         }
         &-item{
-            margin: 0 16px;
+            margin: 0 16px; 
+            &:hover, &:focus{
+                outline: none;
+                border: none;
+            }           
             @media(min-width: $desktop){       
                 margin: 0 32px;
             }
@@ -358,6 +390,7 @@
             @media(min-width: $desktop){       
                 font-size: 24px;
                 line-height: 32px;
+                letter-spacing: normal;
             }
         }   
         &-items{
@@ -413,6 +446,7 @@
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 32px;
+                letter-spacing: normal;
             }            
         }
         &-block{
@@ -599,6 +633,7 @@
                 font-weight: 600;
                 font-size: 40px;
                 line-height: 56px;
+                letter-spacing: normal;
             }
         }
         &-descriptions{
@@ -616,6 +651,7 @@
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 32px;
+                letter-spacing: normal;
             }
         }
         &-items{
@@ -634,7 +670,7 @@
         }
         &-item{      
             position: relative;      
-            margin: 16px auto;
+            margin: 8px auto;
             background: #fff;
             padding: 24px 20px;
             max-width: 300px;
@@ -647,7 +683,7 @@
             }
             @media(min-width: $desktop){
                 width: calc(50% - 32px);
-                margin: 16px;
+                margin: 8px 16px;
             }
         }
         &-name{

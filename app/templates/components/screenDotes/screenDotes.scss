@@ -44,7 +44,11 @@
             width: 4px;
             height: 4px;
             border-radius: 100%;
-            background: #E0E0E0;            
+            background: #E0E0E0; 
+            @media(min-width:$desktop){ 
+                width: 6px;
+                height: 6px;
+            }          
         }
         &.active{
             &:before{

@@ -6,7 +6,7 @@ if(oil){
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'animation/oil.json' // the path to the animation json
+        path: '/animation/oil.json' // the path to the animation json
     }); 
 }
 
@@ -16,6 +16,6 @@ if(notFounded){
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'animation/404.json' // the path to the animation json
+        path: '/animation/404.json' // the path to the animation json
     }); 
 }

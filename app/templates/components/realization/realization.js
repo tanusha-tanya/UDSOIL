@@ -4,9 +4,10 @@ $('.realization-partners-carousel').slick({
     dots: false,
     arrows: false,   
     variableWidth: true,
+    swipeToSlide: true,    
     autoplay: true,
-    autoplaySpeed: 2000,
-    infinite: true,
+    autoplaySpeed: 1000,
+    infinite: true,   
     responsive: [
         {
             breakpoint: 1279,
