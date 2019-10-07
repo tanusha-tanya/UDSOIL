@@ -174,18 +174,7 @@
         left: 32px;
         top: 469px;
         z-index: 100;          
-        box-sizing: border-box;     
-        img{            
-            @media(min-width: $tablet){
-                display: block;
-                position: relative;
-                z-index: 90;
-            }
-            @media(min-width: $desktop){
-                width: 64px;
-                height: 64px; 
-            } 
-        }
+        box-sizing: border-box;    
         @media(min-width: $tablet){
             left: 72px;
             top: 530px;
@@ -193,8 +182,8 @@
             height: 40px;
         }
         @media(min-width: $notebook){
-            left: 0;
-            top: 470px;
+            left: calc(50% - 20px);
+            top: 510px;
             margin: 0 auto;                     
         }  
         @media(min-width: $desktop){
@@ -202,7 +191,18 @@
             top: 700px;
             width: 64px;
             height: 64px;              
-        }        
+        }  
+        img{            
+            @media(min-width: $tablet){
+                display: block;
+                position: relative;
+                z-index: 90;               
+            }
+            @media(min-width: $desktop){                
+                width: 64px;
+                height: 64px; 
+            } 
+        }      
     }
     &-arrows{
         position: absolute;

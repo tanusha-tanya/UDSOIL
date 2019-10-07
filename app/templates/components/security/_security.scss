@@ -13,6 +13,13 @@
         margin-bottom: 120px;
     }
     &-content{
+        margin: 30px 0;
+        @media(min-width: $tablet){
+            margin: 54px 0;    
+        }
+        @media(min-width: $desktop){
+            margin: 74px 0;    
+        }
         p{
             margin: 15px 0;
             font-weight: 500;
@@ -29,48 +36,55 @@
          
         }        
     }
-    &-documents{
-        margin: 40px 0;
-        @media(min-width: $tablet){
-            margin-top: 80px;   
-        }
+    &-documents{   
         @media(min-width: $notebook){
             letter-spacing: 0.15px;
-        } 
-        @media(min-width: $desktop){
-            margin: 120px auto;
-        }
+        }         
         &-item{
-            margin: 30px 0;             
-            @media(min-width: $tablet){
-                margin: 40px 0;   
+            margin: 0 -32px; 
+            padding: 21px 32px;
+            border-bottom: 1px solid #F0F1F2;  
+            transition: .3s background;            
+            @media(min-width: $tablet){  
+                margin: 0;
+            }
+            @media(min-width: $desktop){  
+                margin: 17px 0;
+                border-bottom: none; 
+                padding: 21px 32px 0 32px;
+            }
+            &:hover{
+                background: #FAFBFC; 
             }
             .security-documents-list{
                 display: none;
+                border-top: 1px solid #F0F1F2; 
+                margin: 0 -32px;
+                margin-top: 20px;
+                padding: 0 32px;   
+                @media(min-width: $tablet){                         
+                    padding: 0;
+                } 
                 @media(min-width: $desktop){
                     display: block;
                 }
             }
             &.active{
-                background: #FAFBFC;
-                margin: 30px -32px;
-                padding: 20px 32px 5px 32px;               
+                background: #FAFBFC; 
+                padding-bottom:0;
+                border-bottom: none; 
+                @media(min-width: $desktop){
+                    background: #fff;                        
+                }                           
                 .security-documents-list{
                     display: block;  
-                    border-top: 1px solid #F0F1F2; 
-                    margin: 0 -32px;
-                    margin-top: 20px;
-                    padding: 0 32px;                   
-                } 
-                .security-documents-li{
-                    border-top: 1px solid #F0F1F2;
-                    &:first-of-type{
-                        border-top: 0;
-                    }
-                }
+                    @media(min-width: $desktop){
+                        background: #fff;                        
+                    } 
+                }                 
                 .security-documents-title{
                     &:before{
-                        transform: rotate(180deg);
+                        transform: rotate(95deg);
                         @media(min-width: $desktop){
                             transform: rotate(0);
                         }  
@@ -94,6 +108,7 @@
             @media(min-width: $desktop){
                 font-size: 24px;
                 line-height: 32px;
+                padding: 20px 0;
                 padding-left: 100px;
                 cursor: auto;
             }
@@ -110,13 +125,14 @@
                 transition: transform .3s;
                 @media(min-width: $tablet){
                     top: 5px;   
+                    left: -18px;
                 }
                 @media(min-width: $desktop){
                     background: url(../images/svg/ico.svg);
                     width: 48px;
                     height: 48px;
-                    left: 32px;
-                    top: 0;
+                    left: 0;
+                    top: calc(50% - 24px);
                 }
             }
         } 
@@ -128,25 +144,48 @@
         }        
         &-li{
             list-style: none;
-            padding: 15px 0;
-            @media(min-width: $tablet){                
-                &:before{
+            padding-top: 8px;
+            padding-bottom: 15px;
+            border-top: 1px solid #F0F1F2;
+            &:first-of-type{
+                border-top: 0;
+            }
+            @media(min-width: $tablet){ 
+                display: flex;
+                padding: 0;
+                align-items: baseline;                
+            }           
+            &:before{
+                @media(min-width: $tablet){   
                     counter-increment: myCounter;
                     content:counter(myCounter);
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 24px;            
                     color:  #7C7C7C;  
-                    margin: 0 40px 0 24px;                  
-                }            
-            }
-            @media(min-width: $desktop){
-                margin: 33px 0;
-                &:before{
+                    display: block;                    
+                    box-sizing: border-box; 
+                    width: 56px;     
+                    text-align: center;                                              
+                } 
+                @media(min-width: $desktop){
                     font-size: 16px;
                     line-height: 24px;   
                     letter-spacing: 0.15px;              
-                } 
+                }           
+            }            
+        }
+        &-wrap{
+            @media(min-width: $tablet){
+                padding-top: 8px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+                border-left: 1px solid #F0F1F2; 
+                width: calc(100% - 56px);
+                box-sizing: border-box;
+            }
+            @media(min-width: $desktop){
+                padding-top: 18px;              
             }
         }
         &-link{
@@ -156,15 +195,22 @@
             text-decoration: none;
             color: #282828;
             position: relative;
+            padding: 5px 0;
             &:after{
                 content: '';
                 display: block;
                 position: absolute;
                 background: #FFCC08;
-                width: 32px;
+                width: 30%;
                 height: 2px;
                 left: 0;
-                bottom: -4px;
+                bottom: 0px;
+                transition: width .3s;
+            }
+            &:hover{
+                &:after{
+                    width: 0;  
+                }
             }
             @media(min-width: $tablet){
                 font-weight: 500;
