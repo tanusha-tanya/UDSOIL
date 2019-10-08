@@ -4,14 +4,14 @@
         @media(min-width:$tablet){   
             display: block;
             position: fixed;
-            right: 20px;
+            right: 0;
             top: 50vh;
         }
-        @media(min-width:$notebook){ 
-            right: 50px;            
+        @media(min-width:1200px){ 
+            right: 50px;          
         }
-        @media(min-width:$desktop){
-            right: 80px;  
+        @media(min-width:1900px){
+            right: 100px;  
         }  
     }
     &-icon{

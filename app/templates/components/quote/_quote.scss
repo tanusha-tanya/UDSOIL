@@ -5,7 +5,7 @@
     box-sizing: border-box;
     @media(min-width:$tablet){
         margin: 0 72px;
-        padding: 70px 80px;
+        padding: 80px;
     }
     @media(min-width: $notebook){
         margin: 0 auto;
@@ -85,7 +85,10 @@
         position: relative;
         margin: 0 auto;
         max-width: 500px; 
-        margin-top: 44px;       
+        margin-top: 44px;
+        @media(min-width: $tablet){   
+            margin-top: 50px;  
+        }  
         @media(min-width:$notebook){
             width: 41%;
         }
@@ -103,6 +106,8 @@
         letter-spacing: 0.15px;
         @media(min-width:$tablet){
             margin-top: 15px;
+            font-size: 18px;           
+            letter-spacing: 0.5px;
         }
         @media(min-width: $notebook){
             position: absolute;
@@ -143,6 +148,8 @@
             letter-spacing: normal;
             @media(min-width:$tablet){
                 margin-top: 10px;
+                font-size: 14px;
+                font-weight: 600;
             }
             @media(min-width: $desktop){
                 font-weight: 600;

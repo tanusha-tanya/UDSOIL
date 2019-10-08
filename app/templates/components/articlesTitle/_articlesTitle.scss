@@ -50,7 +50,7 @@
         left: 32px;
         display: block;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 600;        
         @media(min-width: $tablet){
             writing-mode:  vertical-lr;    
             transform: rotate(180deg);            
@@ -59,6 +59,7 @@
             left: 16px;
             bottom: auto;
             top: 52px;
+            letter-spacing: 0.25px;
         } 
         @media(min-width: $notebook){            
             font-size: 48px;

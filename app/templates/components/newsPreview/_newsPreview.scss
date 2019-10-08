@@ -40,7 +40,10 @@
         text-decoration: none;
         display: block;
         @media(min-width: $tablet){
-            margin-top: -5px;
+            margin-top: 0;
+        }
+        @media(min-width: $notebook){
+            margin-top: 11px;
         }
         p{
             font-weight: 600;             
