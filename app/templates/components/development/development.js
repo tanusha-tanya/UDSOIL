@@ -5,7 +5,7 @@ if(graph){
     canvasWidth = 278,
     dataLabels =  graph.dataset.labels.split(','),
     dataPoints =  graph.dataset.points.split(','),
-    font = '13';
+    font = '10';
     let chartData;
     
     if ($(window).width() > 1990){

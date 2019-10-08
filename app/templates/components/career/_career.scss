@@ -24,9 +24,11 @@
         font-size: 12px;
         line-height: 16px;
         &>p{
+            color: #4F4F4F;
+            letter-spacing: 0.15px;
             @media(min-width:$tablet){
                 max-width: 384px;
-                margin-top: 18px;
+                margin-top: 18px;                
             }
             @media(min-width:$desktop){
                 font-weight: 500;
@@ -39,6 +41,16 @@
     &-figure{
         margin: 28px 0;
         text-align: center;
+        color:  #4F4F4F;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.15px;
+        span{
+            font-weight: 600;
+            color:  #282828;
+            letter-spacing: normal;
+        }
         @media(min-width:$tablet){
             margin-top: 46px;
             width: 37%;
@@ -84,10 +96,11 @@
         }        
     }
     &-offer{
-        font-weight: 700;
+        font-weight: 600;
         font-size: 14px;
         line-height: 24px;
         margin: 28px 0;
+        margin-bottom: 32px;
         @media(min-width:$tablet){
             width: calc(67% - 50px);
             margin-left: 50px;

@@ -33,7 +33,7 @@
            width: 184px;
            height: 41px; 
         }
-    }
+    }   
     &-item{
         margin: 20px 0;
         @media(min-width: $tablet){
@@ -52,7 +52,7 @@
     }
     &-title{
         color: #9A9A9A;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 12px;
         line-height: 16px;
         letter-spacing: 0.15px;
@@ -63,7 +63,7 @@
         }
     }
     &-info{
-        font-weight: 400;
+        font-weight: 500;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.15px;
@@ -186,7 +186,8 @@
             width: 33%;
         }
     }
-    &-contacts{
+    &-contacts{       
+        margin: 34px 0;        
         @media(min-width: $tablet){
             display: flex;
             margin-top: 20px;
@@ -217,5 +218,8 @@
         @media(min-width: $tablet){
             order: -1;
         }
+    }
+    &-picom{
+        margin-top: 35px;
     }
 }

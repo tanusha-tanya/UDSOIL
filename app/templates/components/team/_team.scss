@@ -55,7 +55,7 @@
     &-content{
         p{
             margin: 20px 0;
-            font-weight: 600;
+            font-weight: 500;
             @media(min-width: $tablet){
                 font-weight: 500;
                 font-size: 16px;
@@ -84,7 +84,10 @@
     &-video{
         position: relative;
         height: 0;
-        padding-top:62%;       
+        padding-top:62%;  
+        display: flex;
+        justify-content: center; 
+        margin-top: 50px;    
         &:after{
             content: '';
             position: absolute;
@@ -103,19 +106,25 @@
         &-button{            
             cursor: pointer;
             position: absolute;
-            top: calc(50% - 20px);
-            left: calc(50% - 20px);
+            top: calc(50% - 20px);            
             width: 40px;
             height: 40px;
             z-index: 50;
+            box-sizing: border-box;
             @media(min-width: $tablet){
                 display: flex;
-                width: 175px;
+                width: auto;
                 height: 48px;                
                 align-items: center;
                 background: #FFCC08;
-                border-radius: 50px;
-                left: calc(50% - 88px);
+                border-radius: 50px;               
+                padding-right: 20px;
+                padding-left: 4px;
+            }
+            @media(min-width: $desktop){
+                padding-right: 25px;
+                padding-left: 9px;
+                height: 57px;   
             }
             svg{
                 width: 40px;
@@ -130,6 +139,12 @@
                     font-weight: 600;
                     font-size: 14px;
                     line-height: 24px;
+                }
+                @media(min-width: $desktop){
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.15px;
                 }
             }
         }
