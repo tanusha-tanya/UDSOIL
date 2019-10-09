@@ -8,6 +8,7 @@
         }
         @media(min-width: $notebook){
             height: 584px;
+            margin-top: 110px;
         }
         @media(min-width: $desktop){
             height: 856px;
@@ -44,7 +45,8 @@
             @media(min-width: $notebook){
                 font-size: 48px;
                 line-height: 64px;
-                top: 51px;
+                top: 49px;
+                letter-spacing: normal;
             } 
             @media(min-width: $desktop){
                 font-size: 72px;

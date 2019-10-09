@@ -13,6 +13,7 @@
         @media(min-width:$notebook){
             font-size: 48px;
             line-height: 64px;
+            margin-top: 100px;  
         }
         @media(min-width:$desktop){
             font-size: 72px;
@@ -23,13 +24,16 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 16px;
+        @media(min-width:$notebook){
+            margin-bottom: 14px;
+        }
         &>p{
             color: #4F4F4F;
             letter-spacing: 0.15px;
             @media(min-width:$tablet){
                 max-width: 384px;
                 margin-top: 18px;                
-            }
+            }            
             @media(min-width:$desktop){
                 font-weight: 500;
                 font-size: 16px;
@@ -52,8 +56,8 @@
             letter-spacing: normal;
         }
         @media(min-width:$tablet){
-            margin-top: 46px;
             width: 37%;
+            text-align: left;
         }
         @media(min-width:$desktop){
             text-align: left;
@@ -63,7 +67,11 @@
         border-radius: 100%;
         width: 100%;
         max-width: 224px;
-        @media(min-width:$tablet){
+        @media(min-width:$notebook){
+            max-width: 232px; 
+            margin-left: 10px;
+        }
+        @media(min-width:$desktop){
             max-width: 352px; 
         }
     }
@@ -73,11 +81,17 @@
         font-weight: 500;
         font-size: 12px;
         line-height: 16px;
-        @media(min-width:$desktop){
+        max-width: 200px;        
+        position: relative;
+        margin: 0 auto;
+        @media(min-width:$notebook){
             font-weight: 500;
-            font-size: 16px;
-            line-height: 24px;   
-            padding: 0 72px; 
+            font-size: 12px;
+            line-height: 16px; 
+            letter-spacing: 0.15px;  
+            max-width: 200px;
+            margin-left: 20px;
+            text-align: center;
         }
         @media(min-width:$desktop){
             text-align: center;
@@ -109,6 +123,12 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 24px;
+            margin-bottom: 20px;
+        }
+        @media(min-width:$notebook){
+            .checklist{
+                max-width: 508px;
+            }            
         }
         @media(min-width:$desktop){
             font-weight: 600;
@@ -121,6 +141,7 @@
             display: flex;
             width: 100%;
             align-content: flex-start;
+            margin-top: 15px;
         }
     }
 }

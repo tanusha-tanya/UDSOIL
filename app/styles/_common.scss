@@ -64,7 +64,7 @@ body{
         height: 640px;  
     }
     @media(min-width: $notebook){
-        height: 659px;  
+        height: 650px;  
     }
     @media(min-width: $desktop){
         height: 944px;
@@ -172,6 +172,7 @@ body{
     @media(min-width: $notebook){
         margin: 0 auto;
         padding: 64px 80px;
+        padding-bottom: 59px;
         position: relative;
         max-width: 1040px;  
         display: flex;    
@@ -261,6 +262,9 @@ body{
         line-height: 22px;
         letter-spacing: 0.15px;
         position: relative;
+        @media(min-width:$notebook){
+            letter-spacing: 0.15px;
+        }
         @media(min-width:$desktop){
             font-weight: 500;
             font-size: 20px;

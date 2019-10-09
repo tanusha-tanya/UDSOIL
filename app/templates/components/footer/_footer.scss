@@ -221,5 +221,8 @@
     }
     &-picom{
         margin-top: 35px;
+        @media(min-width: $tablet){
+            margin-top: 0;
+        }
     }
 }

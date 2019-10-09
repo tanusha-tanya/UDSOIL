@@ -9,7 +9,9 @@
         background-size: contain;
     }
     @media(min-width: $notebook){
-        padding: 64px 0;        
+        padding: 50px 0;  
+        padding-bottom: 0;   
+        margin-top: 110px;   
     }
     &-title{
         font-size: 24px;
@@ -26,10 +28,12 @@
         @media(min-width: $notebook){
             font-size: 48px;
             line-height: 64px;
+            letter-spacing: normal;
         }
         @media(min-width: $desktop){
             font-size: 72px;
             line-height: 90px;
+
         }
         &:after{
             content: '';
@@ -43,6 +47,10 @@
                 bottom: auto;
                 top: 70px;
                 width: 40px;
+            }
+            @media(min-width: $notebook){                
+                width: 24px;
+                top: 89px;
             }
             @media(min-width: $desktop){
                 height: 8px;
@@ -74,6 +82,8 @@
         }
         @media(min-width: $notebook){
             width: calc(41% - 20px);
+            padding: 0 20px 30px 50px;
+            margin-top: -20px;
         }
     }
     &-right{
@@ -101,7 +111,10 @@
             @media(min-width: $tablet){
                 width: 32px;
                 height: 32px;
-            }            
+            }                        
+        }
+        @media(min-width: $notebook){
+            margin-top: -60px;
         }
         &-button{            
             cursor: pointer;
