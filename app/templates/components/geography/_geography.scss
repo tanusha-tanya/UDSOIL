@@ -1,4 +1,7 @@
-.geography{    
+.geography{ 
+    @media(min-width: $desktop){
+        margin-top: 137px;   
+    }    
     &-map{
         height: 472px;
         width: 100%;

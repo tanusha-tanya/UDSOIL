@@ -8,12 +8,12 @@ if(graph){
     font = '10';
     let chartData;
     
-    if ($(window).width() > 1990){
+    if ($(window).width() > 1779){
         canvasHeight = 552;
         canvasWidth = 916;
         font = '18'
     }
-    else if ($(window).width() > 1280){
+    else if ($(window).width() > 1279){
         canvasHeight = 384;
         canvasWidth = 637;
         font = '13'

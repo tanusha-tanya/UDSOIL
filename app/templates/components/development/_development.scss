@@ -4,7 +4,7 @@
     padding: 0 32px;
     @media(min-width: $tablet){
         margin: 90px auto;
-        padding: 0 40px;        
+        padding: 0 72px;        
     }
     @media(min-width: $notebook){        
         margin: 0 auto;
@@ -17,6 +17,7 @@
     }
     @media(min-width: $desktop){
         max-width: 1504px;
+        margin-top: 150px;
     } 
     &-title{
         font-size: 24px;
@@ -25,6 +26,7 @@
             font-size: 34px;
             line-height: 40px;
             letter-spacing: 0.25px;
+            margin-bottom: 10px;
         }
         @media(min-width: $notebook){
             font-size: 48px;
@@ -48,10 +50,19 @@
             //margin-right: 30px;
             //height: 385px;
         }
-        @media(min-width: $notebook){
-            width: calc(66% - 20px);             
+        @media(min-width: $notebook){   
+            margin-top:20px;                
         }
-    }  
+        @media(min-width: $desktop){
+            margin-top:40px; 
+            margin-right: 40px;            
+        }
+    } 
+    &-col{
+        @media(min-width: $notebook){   
+            width: calc(66% - 20px);
+        }
+    } 
     &-content{
         background: #FAFBFC;
         margin: 0 -32px;
@@ -68,6 +79,7 @@
             width: calc(44% - 20px);
             display: block; 
             margin-left: 20px;
+            margin-top: 0;
         }
     } 
     &-item{

@@ -1,5 +1,8 @@
 .career{
-    margin-top: 57px;   
+    margin-top: 57px; 
+    @media(min-width:$desktop){
+        margin-top: 145px;
+    }
     &-title{
         font-weight: 600;
         font-size: 24px;
@@ -26,6 +29,9 @@
         line-height: 16px;
         @media(min-width:$notebook){
             margin-bottom: 14px;
+        }
+        @media(min-width:$desktop){
+            margin-bottom: 43px;
         }
         &>p{
             color: #4F4F4F;
@@ -97,6 +103,7 @@
             text-align: center;
             max-width: 352px;
             padding: 0 20px;
+            margin-left: 0;
         }
         span{
             font-weight: 600;
@@ -127,13 +134,16 @@
         }
         @media(min-width:$notebook){
             .checklist{
-                max-width: 508px;
+                max-width: 508px;   
             }            
         }
         @media(min-width:$desktop){
             font-weight: 600;
             font-size: 24px;
             line-height: 32px;
+            .checklist{
+                max-width: 700px;
+            }   
         }
     }
     &-flex{
