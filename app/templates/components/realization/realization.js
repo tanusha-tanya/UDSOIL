@@ -1,26 +1,22 @@
-$('.realization-partners-carousel').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,   
-    variableWidth: true,
-    swipeToSlide: true,    
-    autoplay: true,
-    autoplaySpeed: 1000,
-    infinite: true,   
-    responsive: [
-        {
-            breakpoint: 1279,
-            settings: {
-                slidesToShow: 4,                
-            }
+var owl = $('.realization-partners-carousel');
+owl.owlCarousel({
+    nav:false,
+    dots:false,
+    loop:true,
+    margin:16,    
+    autoplay:true,
+    autoWidth:true,
+    autoplayTimeout:3000,
+    responsive:{
+        0:{
+            items:1
         },
-        {   
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2,
-            }
-        }              
-    ]
-})
+        767:{
+            items:4
+        },
+        1279:{
+            items:6
+        }
+    }
+});
 

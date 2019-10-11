@@ -1,7 +1,7 @@
 .realization{
     &-blockgray{
-        background-color: #FAFBFC;        
-        padding: 25px 0;
+        background-color: #FAFBFC;  
+        padding: 25px 0;     
         @media(min-width: $notebook){
             padding: 40px 0;
         }
@@ -34,6 +34,7 @@
             width: 307px;
             height: 116px;
             position: relative; 
+            margin-top: 5px;
         }
         @media(min-width: $notebook){
             width: 456px;
@@ -133,12 +134,16 @@
             }          
         }    
     }
-    &-list{        
+    &-list{   
+        padding-top: 40px; 
+        @media(min-width: $tablet){       
+            padding-top: 54px;
+        }    
         &-title{
             font-weight: 600;
             font-size: 16px;
             line-height: 24px;
-            letter-spacing: 0.15px;  
+            letter-spacing: 0.15px; 
             @media(min-width: $tablet){       
                 font-size: 20px;
             }
@@ -159,7 +164,7 @@
             }
         }
         &-li{
-            margin: 19px 0; 
+            margin: 27px 0; 
             list-style: none;
             font-weight: 500;
             font-size: 14px;
@@ -186,7 +191,7 @@
             padding-left: 15px;
             font-size: 14px;
             position: relative;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             letter-spacing: 0.5px;
             &:before{
                 content: '';
@@ -221,15 +226,18 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 24px;
+        margin: 40px 0;
         p{
             margin: 15px 0;
         }
-        @media(min-width: $tablet){       
+        @media(min-width: $tablet){ 
+            margin: 50px 0;
             font-size: 16px;
+            letter-spacing: 0.15px;
             p{
                 margin: 22px 0;
-            }               
-        }
+            }
+        }        
         @media(min-width: $desktop){       
             font-size: 18px;
             line-height: 32px;
@@ -345,6 +353,8 @@
             margin-right: -32px;
             @media(min-width: $tablet){       
                 margin-right: -72px;
+                margin: 40px 0;
+                width: calc(100% + 72px);
             }
             @media(min-width: $notebook){       
                 margin-right: -50%;
@@ -357,7 +367,7 @@
             }
         }
         &-item{
-            margin: 0 16px; 
+            width: 160px;         
             &:hover, &:focus{
                 outline: none;
                 border: none;
@@ -382,7 +392,7 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.15px;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
             @media(min-width: $tablet){
                 font-size: 20px;
                 line-height: 32px;
@@ -426,7 +436,8 @@
         }
     }
     &-contact{
-        margin: 30px 0;
+        margin-top: 30px;
+        margin-bottom: 40px;
         @media(min-width: $tablet){
             margin: 49px 0;
         }
@@ -441,6 +452,7 @@
             @media(min-width: $tablet){
                 font-size: 20px;
                 line-height: 32px;
+                max-width: 320px;
             }
             @media(min-width: $desktop){
                 font-weight: 600;
@@ -452,7 +464,7 @@
         &-block{
             @media(min-width: $tablet){
                 display: flex;
-                margin: 32px 0;
+                margin: 22px 0;
             }
             @media(min-width: $notebook){
                 margin-top:40px;
@@ -476,7 +488,9 @@
             }   
         }
         &-img{
-            width: 100%;       
+            width: 100%;     
+            height: 320px;
+            object-fit: cover; 
         }
         &-description{
             text-align: center;
@@ -504,6 +518,7 @@
             @media(min-width: $tablet){
                 text-align:left;
                 font-size: 16px;
+                letter-spacing: 0.15px;
             }
             @media(min-width: $notebook){
                 font-size: 20px;
@@ -521,11 +536,15 @@
             font-size: 14px;
             line-height: 16px;
             color:#828282;
-            margin: 10px 0;
+            margin: 10px 0;  
+            @media(min-width: $tablet){
+                margin-top: 5px; 
+                letter-spacing: 0.5px;  
+            }         
             @media(min-width: $notebook){
                 font-weight: 600;
-                font-size: 16px;                
-                letter-spacing: 0.5px;
+                font-size: 16px;  
+                margin-bottom: 13px;            
             }
             @media(min-width: $desktop){
                 font-weight: 600;
@@ -547,10 +566,7 @@
             } 
         }
         &-item{
-            margin: 20px 0;
-            @media(min-width: $tablet){
-                margin: 10px 0;                
-            } 
+            margin: 20px 0;            
             @media(min-width: $notebook){
                 width: calc(50% - 38px);
                 margin: 20px 0 0 38px;          
@@ -561,9 +577,9 @@
             font-size: 16px;
             line-height: 24px; 
             color: #9A9A9A;
-            @media(min-width: $notebook){
-                letter-spacing: 0.5px;         
-            } 
+            @media(min-width: $tablet){
+                letter-spacing: 0.5px;   
+            }            
             @media(min-width: $desktop){
                 font-size: 18px;
                 line-height: 40px;
@@ -599,6 +615,7 @@
             max-width: 332px;
             position: relative;
             margin: 0 auto;
+            margin-top: 32px;
             transition: background .3s;
             &:hover{
                 background: #F4C40A;
@@ -617,12 +634,16 @@
             margin-left: 5px;
         }
     }
-    &-protocols{        
+    &-protocols{
+        @media(min-width: $tablet){
+            margin-bottom: 20px;
+        }
         &-h2{
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
             letter-spacing: 0.15px; 
+            margin-top: 7px;
             @media(min-width: $tablet){
                 font-size: 34px;
                 line-height: 40px;
@@ -640,7 +661,7 @@
             font-weight: 600;
             font-size: 12px;
             line-height: 16px;
-            margin-top: 24px;
+            margin-top: 14px;
             @media(min-width: $tablet){
                 font-size: 20px;
                 line-height: 32px;
@@ -658,6 +679,9 @@
             margin: 18px 0;
             display: flex;
             flex-wrap: wrap;
+            &:last-of-type{
+                margin-bottom:0;
+            }
             @media(min-width: $tablet){
                 margin: 18px -8px;
             }
@@ -695,8 +719,8 @@
             line-height: 24px;
             color: #282828;
             text-decoration: none;
-            margin-bottom: 9px;
-            @media(min-width: $desktop){       
+            margin-bottom: 9px;            
+            @media(min-width: $tablet){       
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 24px;
