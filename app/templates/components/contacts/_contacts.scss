@@ -1,13 +1,13 @@
-.contacts{
-    @media(min-width: $notebook){           
-        margin: 110px -10px 0 -10px;
+.contacts{      
+    @media(min-width: $notebook){
         display: flex;
         box-sizing: border-box;
+        margin: 352px -16px 0 -16px;
+        z-index: 40;
+        position: relative;
     }
     @media(min-width: $desktop){
         margin: 320px -16px 0 -16px;
-        z-index: 40;
-        position: relative;
     }
     &-left{
         @media(min-width: $notebook){           
@@ -22,7 +22,7 @@
     &-title{
         position: relative;
         margin: 0 auto; 
-        @media(min-width: $desktop){
+        @media(min-width: $notebook){
             position: absolute;
             top: -180px; 
         }     
@@ -69,16 +69,11 @@
         }
         @media(min-width: $notebook){
             font-weight: 600;
-            font-size: 48px;
-            line-height: 64px;
-        }
-        @media(min-width: $desktop){
-            font-weight: 600;
             font-size: 72px;
             line-height: 90px;
             letter-spacing: -0.5px;
             color: #fff;
-        }
+        }       
     }
     &-content{
         margin: 37px 0;

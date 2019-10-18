@@ -378,8 +378,7 @@
         }
         &-svg{
             @media(min-width: $desktop){       
-                width: 224px;
-                height: 160px;
+                width: 224px;                
             }
         }        
     }
@@ -455,6 +454,7 @@
                 max-width: 320px;
             }
             @media(min-width: $desktop){
+                max-width: 100%;
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 32px;
@@ -626,7 +626,7 @@
                 left: 238px;
             }
             @media(min-width: $desktop){       
-                left: 320px;
+                left: 305px;
                 bottom: 48px;
             }
         }

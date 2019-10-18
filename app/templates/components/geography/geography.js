@@ -1,10 +1,10 @@
-  /*function init(){
+function init(){
     ymaps.borders.load('RU', {
       lang: "ru",
       quality: 1       
     },{
       balloonPanelMaxMapArea: 0,
-    }).then(function (geojson) {         
+    }).then(function (geojson) {              
       var regions = [
         {
           code: geojson.features[43],
@@ -49,7 +49,8 @@
         myMap.geoObjects.add(myPlacemark);        
         geoObject.events.add('mouseenter', function (event) {
           let district = event.get('target');
-          district.options.set({fillOpacity: 1});        
+          district.options.set({fillOpacity: 1});           
+          myMap.balloon.open(regions[i].coord, regions[i].balloonContent);       
       });       
       // При выводе курсора за пределы объекта вернем опции по умолчанию.
       geoObject.events.add('mouseleave', function (event) {
@@ -57,15 +58,16 @@
         if (district !== highlightedDistrict) {
             district.options.set({fillOpacity: 0.5});
         }
+        myMap.balloon.close();  
     });
     // Подпишемся на событие клика.
-    geoObject.events.add('click', function (event) {        
+    geoObject.events.add('click', function (event) {             
         let district = event.get('target');
         // Если на карте выделен федеральный округ, то мы снимаем с него выделение.
         if (highlightedDistrict) {
             highlightedDistrict.options.set({fillOpacity: 0.5})
-        }
-        myMap.balloon.open(district.geometry._bounds[0], regions[i].balloonContent);
+        }    
+        myMap.balloon.open(regions[i].coord, regions[i].balloonContent);           
         district.options.set({fillOpacity: 1});
         highlightedDistrict = district;
     });      
@@ -87,4 +89,4 @@
 const geographyMap = document.getElementById('map');
 if(geographyMap){  
   ymaps.ready(init);
-}*/
+}
