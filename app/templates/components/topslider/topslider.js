@@ -2,8 +2,8 @@ $(document).ready(function() {
     let topSlider = document.querySelector('.topslider');
     if(topSlider){
         $('.topslider').owlCarousel({        
-            //autoplay:true,
-            //autoplayTimeout:3000,
+            autoplay:true,
+            autoplayTimeout:3400,
             autoplayHoverPause:true,
             loop: false,
             items:1,
