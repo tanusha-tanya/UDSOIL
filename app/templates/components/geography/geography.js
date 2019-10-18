@@ -9,19 +9,19 @@ function init(){
         {
           code: geojson.features[43],
           coord: [54.271500, 56.525537],
-          balloonContent: '<h2 style="font-family: Raleway,  Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #000">Республика Башкортостан</h2> <p style="color: 4F4F4F; font-size: 12px; font-family: Raleway,  Arial, Helvetica, sans-serif;">Работаем с 2019 года</p>',
+          balloonContent: '<h2 style="font-family: Raleway,  Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #000">Республика Башкортостан</h2> <p style="color: 4F4F4F; font-size: 12px; font-family: Raleway,  Arial, Helvetica, sans-serif;">Работаем с 2019 года</p>'
           //Башкартостан
         },
         {
           code: geojson.features[38],
           coord: [59.117698, 56.225679],
-          balloonContent: '<h2 style="font-family: Raleway,  Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #000">Пермский край</h2> <p style="color: 4F4F4F; font-size: 12px; font-family: Raleway,  Arial, Helvetica, sans-serif;">Работаем с 2019 года</p>',
+          balloonContent: '<h2 style="font-family: Raleway,  Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #000">Пермский край</h2> <p style="color: 4F4F4F; font-size: 12px; font-family: Raleway,  Arial, Helvetica, sans-serif;">Работаем с 2013 года</p>',
           //Пермский край
         },
         {
           code: geojson.features[70],
           coord: [57.166784, 52.796972],
-          balloonContent: '<h2 style="font-family: Raleway,  Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #000">Удмуртская республика</h2> <p style="color: 4F4F4F; font-size: 12px; font-family: Raleway,  Arial, Helvetica, sans-serif;">Работаем с 2019 года</p>',
+          balloonContent: '<h2 style="font-family: Raleway,  Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; color: #000">Удмуртская республика</h2> <p style="color: 4F4F4F; font-size: 12px; font-family: Raleway,  Arial, Helvetica, sans-serif;">Работаем с 2013 года</p>',
           //Удмуртская республика
         }
       ];  
@@ -48,17 +48,16 @@ function init(){
         myMap.geoObjects.add(geoObject)
         myMap.geoObjects.add(myPlacemark);        
         geoObject.events.add('mouseenter', function (event) {
-          let district = event.get('target');
+          let district = event.get('target');          
           district.options.set({fillOpacity: 1});           
-          myMap.balloon.open(regions[i].coord, regions[i].balloonContent);       
-      });       
+          myMap.balloon.open(regions[i].coord, regions[i].balloonContent);  
+      });   
       // При выводе курсора за пределы объекта вернем опции по умолчанию.
       geoObject.events.add('mouseleave', function (event) {
-        let district = event.get('target')
+        let district = event.get('target')               
         if (district !== highlightedDistrict) {
             district.options.set({fillOpacity: 0.5});
-        }
-        myMap.balloon.close();  
+        }     
     });
     // Подпишемся на событие клика.
     geoObject.events.add('click', function (event) {             

@@ -47,7 +47,7 @@ if(graph){
                 }
             },  
             animation: {
-                duration: 3000,
+                duration: 5000,
                 easing: 'linear'
             },            
             plugins: {
@@ -110,14 +110,14 @@ if(graph){
                     var data = chartData.data.datasets[0].data;
                     var count = data.length;
                     data[count] = data[count - 1];
-                    MyChart.update({duration: 300});
+                    MyChart.update({duration: 500});
                     data[count] = dataPoints[count];
                     MyChart.update();
                     if (count < dataPoints.length) {
-                      setTimeout(next, 400);
+                      setTimeout(next, 500);
                     }
                   }
-                setTimeout(next, 400);     
+                setTimeout(next, 500);     
         } else {
                 inView = false;  
         }

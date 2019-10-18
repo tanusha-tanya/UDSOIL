@@ -78,6 +78,15 @@
         }
     } 
     &-name{
+        @media(min-width:$tablet){
+            position: absolute;
+            bottom: 10px;
+            left: 35%;
+            z-index: 300;
+        }
+        @media(min-width:$desktop){
+            bottom: 27px;
+        }
         &:before{
             content: '';
             display: block;
@@ -115,13 +124,7 @@
             font-size: 14px;
             line-height: 24px;
             color: #7C7C7C;
-        }
-        @media(min-width:$tablet){
-            position: absolute;
-            bottom: 35px;
-            left: 35%;
-            z-index: 300;
-        }
+        }       
     }
     &-text{
         position: relative;
