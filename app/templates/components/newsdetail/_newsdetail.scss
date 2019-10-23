@@ -158,7 +158,7 @@
         &-header{
             position: relative; 
             margin-bottom: 15px;           
-            &:after{
+            /*&:after{
                 content: '';
                 width: 120px;
                 height: 4px;
@@ -174,7 +174,7 @@
                 @media(min-width:$desktop){
                     width: 128px;
                 }
-            }
+            }*/
         }
         &-name{
             font-weight: 600;
