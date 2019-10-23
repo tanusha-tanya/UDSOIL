@@ -20,8 +20,7 @@ let awardCarousel = () =>{
 		}			
 	}
 	else{			
-		if($('.awards-items').hasClass('owl-loaded')){
-			
+		if($('.awards-items').hasClass('owl-loaded')){			
 			$('.awards-items').trigger('destroy.owl.carousel');
 		}	
 	}
@@ -114,3 +113,11 @@ $(window).resize(function () {
 	}, 250);      
   });	
 
+  $('.awards-item-link').magnificPopup({
+	type: 'image',
+	closeOnContentClick: true,
+	gallery: {
+		enabled: true,
+		navigateByImgClick: true
+	}
+  });

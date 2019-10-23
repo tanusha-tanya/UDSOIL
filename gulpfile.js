@@ -61,7 +61,8 @@ gulp.task('js-libs', function() {
 					'./node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 				    './node_modules/chart.js/dist/Chart.js',
 					'./node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js',
-					'./node_modules/slick-carousel/slick/slick.js'
+					'./node_modules/slick-carousel/slick/slick.js',
+					'./node_modules/magnific-popup/dist/jquery.magnific-popup.js'
                ])
                .pipe(concat('libs.js'))
                .pipe(gulp.dest('.tmp/scripts'))               

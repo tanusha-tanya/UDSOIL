@@ -19,7 +19,7 @@
             color:  #E0E0E0;
         }
         @media(min-width: $tablet){
-            width: 50%;
+            width: 33.33%;
             margin: 0;
         }
         @media(min-width: $desktop){
@@ -225,4 +225,33 @@
             margin-top: 0;
         }
     }
+    &-socials{
+        display: flex;
+        max-width: 128px;
+        flex-grow: 1;
+        align-items: center;
+        list-style: none;
+        justify-content: space-between;
+        &__item{
+            display: block;
+            height: 32px;
+            width: 32px;
+        }
+        &__link{
+            display: flex;
+            height: 100%;
+            background-color: #FFCC08;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item{
+            display: block;
+            height: 32px;
+            width: 32px;
+        }
+        &__icon{            
+            color: #282828;
+            fill: #282828;            
+        }
+    }    
 }
