@@ -253,5 +253,17 @@
             color: #282828;
             fill: #282828;            
         }
+        &__desktop{
+            display: none;
+            @media(min-width:$notebook){
+                display: flex;
+            }
+        }
+        &__mobile{
+            display: flex;
+            @media(min-width:$notebook){
+                display: none;
+            }
+        }
     }    
 }

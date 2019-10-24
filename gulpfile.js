@@ -6,10 +6,12 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const minifyCSS = require('gulp-clean-css');
 const prefix = require('gulp-autoprefixer');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const changed = require('gulp-changed');
+const uglify = require('gulp-uglify');
 const spritesmith = require('gulp.spritesmith');
 const svg = require('gulp-svg-sprite');
 const useref = require('gulp-useref');
@@ -31,6 +33,7 @@ gulp.task('styles', function() {
       precision: 10,
       includePaths: ['.']
     }).on('error', sass.logError))
+	.pipe(minifyCSS())    
     .pipe(prefix({browsers: ['> 5%', 'last 4 versions', 'Firefox ESR']}))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -48,6 +51,7 @@ gulp.task('scripts', function () {
     .pipe(concat('all.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(changed('.tmp/scripts'))
+	.pipe(uglify())
     .pipe(gulp.dest('.tmp/scripts'))
 });
 
@@ -65,6 +69,7 @@ gulp.task('js-libs', function() {
 					'./node_modules/magnific-popup/dist/jquery.magnific-popup.js'
                ])
                .pipe(concat('libs.js'))
+			   .pipe(uglify())
                .pipe(gulp.dest('.tmp/scripts'))               
 });
 

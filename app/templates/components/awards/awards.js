@@ -2,7 +2,7 @@ let awards = document.querySelector('.awards');
 let yearsToggler = document.querySelector('.years-toggler');
 
 let awardCarousel = () =>{
-	if(window.innerWidth > 1139){			
+	if(window.innerWidth > 1279){			
 		if(!$('.awards-items').hasClass('owl-loaded')){				
 			$('.awards-items').owlCarousel({
 				items:4,
@@ -64,7 +64,7 @@ let  yearsSlick = function(){
   } 	
 
 let awarDescriptionShow = () =>{
-	if(window.innerWidth > 1139){
+	if(window.innerWidth > 1279){
 		let description = document.querySelector('.awards-js-description');
 		let awardsItem = document.querySelectorAll('.awards-item');
 		
