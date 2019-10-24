@@ -35,9 +35,6 @@ if(ajaxforms.length > 0){
             if(button.classList.contains('disabled')){
                 return
             }
-            else{
-                form.submit()
-            }
         })
 
         files.forEach((file)=>{
